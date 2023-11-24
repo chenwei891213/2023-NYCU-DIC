@@ -1,0 +1,3466 @@
+Using: /RAID2/cad/synopsys/hspice/2020.03-sp2-2/hspice/linux64/hspice 147.sp
+ ****** HSPICE -- Q-2020.03-SP2-2 linux64 (Nov  1 2020) ******                  
+  Copyright (c) 1986 - 2023 by Synopsys, Inc. All Rights Reserved.              
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: 147.sp                                                            
+  Command line options: /RAID2/cad/synopsys/hspice/2020.03-sp2-2/hspice/linux64/hspice 147.sp
+  Start time: Thu Nov 23 23:46:20 2023
+ lic:  
+ lic: FLEXlm: SDK_12.6 
+ lic: USER:   dic098               HOSTNAME: ee23 
+ lic: HOSTID: "d85ed3efc413"       PID:      205177 
+ lic: Using FLEXlm license file: 
+ lic: 26585@lshc 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 31-mar-2024/2023.03 
+ lic: 166(in_use)/900(total) FLOATING license(s) on SERVER 26585@lshc 
+ lic:   
+1****** HSPICE -- Q-2020.03-SP2-2 linux64 (Nov  1 2020) ******                  
+ ******  
+ .title test adder
+
+ ****** circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 x1.                             adder_4bit         1.00 
+        2 x2.                             invx1_asap7_75t_r
+                                                                 1.00 
+        3 x3.                             invx1_asap7_75t_r
+                                                                 1.00 
+        4 x4.                             invx1_asap7_75t_r
+                                                                 1.00 
+        5 x5.                             invx1_asap7_75t_r
+                                                                 1.00 
+        6 x6.                             invx1_asap7_75t_r
+                                                                 1.00 
+        7 x1.xu3.                         xor2xp5_asap7_75t_r
+                                                                 1.00 
+        8 x1.xu4.                         nand2xp5_asap7_75t_r
+                                                                 1.00 
+        9 x1.xu5.                         fax1_asap7_75t_r   1.00 
+       10 x1.xu6.                         xnor2xp5_asap7_75t_r
+                                                                 1.00 
+       11 x1.xu7.                         nand2xp5_asap7_75t_r
+                                                                 1.00 
+       12 x1.xu8.                         nand2xp5_asap7_75t_r
+                                                                 1.00 
+       13 x1.xu9.                         or2x2_asap7_75t_r
+                                                                 1.00 
+       14 x1.xu10.                        nand2xp5_asap7_75t_r
+                                                                 1.00 
+       15 x1.xu11.                        xor2xp5_asap7_75t_r
+                                                                 1.00 
+       16 x1.xu12.                        invx1_asap7_75t_r
+                                                                 1.00 
+       17 x1.xu13.                        nand2xp5_asap7_75t_r
+                                                                 1.00 
+       18 x1.xu14.                        nand2xp5_asap7_75t_r
+                                                                 1.00 
+       19 x1.xu15.                        or2x2_asap7_75t_r
+                                                                 1.00 
+       20 x1.xu16.                        nand3xp33_asap7_75t_r
+                                                                 1.00 
+       21 x1.xu17.                        nand3xp33_asap7_75t_r
+                                                                 1.00 
+       22 x1.xu18.                        xnor2xp5_asap7_75t_r
+                                                                 1.00 
+       23 x1.xu19.                        xor2xp5_asap7_75t_r
+                                                                 1.00 
+       24 x1.xu20.                        invx1_asap7_75t_r
+                                                                 1.00 
+       25 x1.xu21.                        or2x2_asap7_75t_r
+                                                                 1.00 
+       26 x1.xu22.                        nand2xp5_asap7_75t_r
+                                                                 1.00 
+       27 x1.xu23.                        nand2xp5_asap7_75t_r
+                                                                 1.00 
+       28 x1.xu24.                        nand2xp5_asap7_75t_r
+                                                                 1.00 
+       29 x2.x_pm_invx1_asap7_75t_r%noxref_6.
+                                            pm_invx1_asap7_75t_r%noxref_6
+                                                                 1.00 
+       30 x2.x_pm_invx1_asap7_75t_r%noxref_5.
+                                            pm_invx1_asap7_75t_r%noxref_5
+                                                                 1.00 
+       31 x2.x_pm_invx1_asap7_75t_r%noxref_7.
+                                            pm_invx1_asap7_75t_r%noxref_7
+                                                                 1.00 
+       32 x2.x_pm_invx1_asap7_75t_r%noxref_8.
+                                            pm_invx1_asap7_75t_r%noxref_8
+                                                                 1.00 
+       33 x2.x_pm_invx1_asap7_75t_r%y.    pm_invx1_asap7_75t_r%y
+                                                                 1.00 
+       34 x2.x_pm_invx1_asap7_75t_r%a.    pm_invx1_asap7_75t_r%a
+                                                                 1.00 
+       35 x3.x_pm_invx1_asap7_75t_r%noxref_6.
+                                            pm_invx1_asap7_75t_r%noxref_6
+                                                                 1.00 
+       36 x3.x_pm_invx1_asap7_75t_r%noxref_5.
+                                            pm_invx1_asap7_75t_r%noxref_5
+                                                                 1.00 
+       37 x3.x_pm_invx1_asap7_75t_r%noxref_7.
+                                            pm_invx1_asap7_75t_r%noxref_7
+                                                                 1.00 
+       38 x3.x_pm_invx1_asap7_75t_r%noxref_8.
+                                            pm_invx1_asap7_75t_r%noxref_8
+                                                                 1.00 
+       39 x3.x_pm_invx1_asap7_75t_r%y.    pm_invx1_asap7_75t_r%y
+                                                                 1.00 
+       40 x3.x_pm_invx1_asap7_75t_r%a.    pm_invx1_asap7_75t_r%a
+                                                                 1.00 
+       41 x4.x_pm_invx1_asap7_75t_r%noxref_6.
+                                            pm_invx1_asap7_75t_r%noxref_6
+                                                                 1.00 
+       42 x4.x_pm_invx1_asap7_75t_r%noxref_5.
+                                            pm_invx1_asap7_75t_r%noxref_5
+                                                                 1.00 
+       43 x4.x_pm_invx1_asap7_75t_r%noxref_7.
+                                            pm_invx1_asap7_75t_r%noxref_7
+                                                                 1.00 
+       44 x4.x_pm_invx1_asap7_75t_r%noxref_8.
+                                            pm_invx1_asap7_75t_r%noxref_8
+                                                                 1.00 
+       45 x4.x_pm_invx1_asap7_75t_r%y.    pm_invx1_asap7_75t_r%y
+                                                                 1.00 
+       46 x4.x_pm_invx1_asap7_75t_r%a.    pm_invx1_asap7_75t_r%a
+                                                                 1.00 
+       47 x5.x_pm_invx1_asap7_75t_r%noxref_6.
+                                            pm_invx1_asap7_75t_r%noxref_6
+                                                                 1.00 
+       48 x5.x_pm_invx1_asap7_75t_r%noxref_5.
+                                            pm_invx1_asap7_75t_r%noxref_5
+                                                                 1.00 
+       49 x5.x_pm_invx1_asap7_75t_r%noxref_7.
+                                            pm_invx1_asap7_75t_r%noxref_7
+                                                                 1.00 
+       50 x5.x_pm_invx1_asap7_75t_r%noxref_8.
+                                            pm_invx1_asap7_75t_r%noxref_8
+                                                                 1.00 
+       51 x5.x_pm_invx1_asap7_75t_r%y.    pm_invx1_asap7_75t_r%y
+                                                                 1.00 
+       52 x5.x_pm_invx1_asap7_75t_r%a.    pm_invx1_asap7_75t_r%a
+                                                                 1.00 
+       53 x6.x_pm_invx1_asap7_75t_r%noxref_6.
+                                            pm_invx1_asap7_75t_r%noxref_6
+                                                                 1.00 
+       54 x6.x_pm_invx1_asap7_75t_r%noxref_5.
+                                            pm_invx1_asap7_75t_r%noxref_5
+                                                                 1.00 
+       55 x6.x_pm_invx1_asap7_75t_r%noxref_7.
+                                            pm_invx1_asap7_75t_r%noxref_7
+                                                                 1.00 
+       56 x6.x_pm_invx1_asap7_75t_r%noxref_8.
+                                            pm_invx1_asap7_75t_r%noxref_8
+                                                                 1.00 
+       57 x6.x_pm_invx1_asap7_75t_r%y.    pm_invx1_asap7_75t_r%y
+                                                                 1.00 
+       58 x6.x_pm_invx1_asap7_75t_r%a.    pm_invx1_asap7_75t_r%a
+                                                                 1.00 
+       59 x1.xu3.x_pm_xor2xp5_asap7_75t_r%noxref_14.
+                                            pm_xor2xp5_asap7_75t_r%noxref_14
+                                                                 1.00 
+       60 x1.xu3.x_pm_xor2xp5_asap7_75t_r%noxref_13.
+                                            pm_xor2xp5_asap7_75t_r%noxref_13
+                                                                 1.00 
+       61 x1.xu3.x_pm_xor2xp5_asap7_75t_r%noxref_15.
+                                            pm_xor2xp5_asap7_75t_r%noxref_15
+                                                                 1.00 
+       62 x1.xu3.x_pm_xor2xp5_asap7_75t_r%noxref_16.
+                                            pm_xor2xp5_asap7_75t_r%noxref_16
+                                                                 1.00 
+       63 x1.xu3.x_pm_xor2xp5_asap7_75t_r%noxref_17.
+                                            pm_xor2xp5_asap7_75t_r%noxref_17
+                                                                 1.00 
+       64 x1.xu3.x_pm_xor2xp5_asap7_75t_r%noxref_12.
+                                            pm_xor2xp5_asap7_75t_r%noxref_12
+                                                                 1.00 
+       65 x1.xu3.x_pm_xor2xp5_asap7_75t_r%y.
+                                            pm_xor2xp5_asap7_75t_r%y
+                                                                 1.00 
+       66 x1.xu3.x_pm_xor2xp5_asap7_75t_r%net047.
+                                            pm_xor2xp5_asap7_75t_r%net047
+                                                                 1.00 
+       67 x1.xu3.x_pm_xor2xp5_asap7_75t_r%noxref_10.
+                                            pm_xor2xp5_asap7_75t_r%noxref_10
+                                                                 1.00 
+       68 x1.xu3.x_pm_xor2xp5_asap7_75t_r%net048.
+                                            pm_xor2xp5_asap7_75t_r%net048
+                                                                 1.00 
+       69 x1.xu3.x_pm_xor2xp5_asap7_75t_r%noxref_11.
+                                            pm_xor2xp5_asap7_75t_r%noxref_11
+                                                                 1.00 
+       70 x1.xu3.x_pm_xor2xp5_asap7_75t_r%net019.
+                                            pm_xor2xp5_asap7_75t_r%net019
+                                                                 1.00 
+       71 x1.xu3.x_pm_xor2xp5_asap7_75t_r%b.
+                                            pm_xor2xp5_asap7_75t_r%b
+                                                                 1.00 
+       72 x1.xu3.x_pm_xor2xp5_asap7_75t_r%a.
+                                            pm_xor2xp5_asap7_75t_r%a
+                                                                 1.00 
+       73 x1.xu3.x_pm_xor2xp5_asap7_75t_r%net036.
+                                            pm_xor2xp5_asap7_75t_r%net036
+                                                                 1.00 
+       74 x1.xu4.x_pm_nand2xp5_asap7_75t_r%noxref_7.
+                                            pm_nand2xp5_asap7_75t_r%noxref_7
+                                                                 1.00 
+       75 x1.xu4.x_pm_nand2xp5_asap7_75t_r%noxref_8.
+                                            pm_nand2xp5_asap7_75t_r%noxref_8
+                                                                 1.00 
+       76 x1.xu4.x_pm_nand2xp5_asap7_75t_r%net16.
+                                            pm_nand2xp5_asap7_75t_r%net16
+                                                                 1.00 
+       77 x1.xu4.x_pm_nand2xp5_asap7_75t_r%a.
+                                            pm_nand2xp5_asap7_75t_r%a
+                                                                 1.00 
+       78 x1.xu4.x_pm_nand2xp5_asap7_75t_r%noxref_9.
+                                            pm_nand2xp5_asap7_75t_r%noxref_9
+                                                                 1.00 
+       79 x1.xu4.x_pm_nand2xp5_asap7_75t_r%noxref_10.
+                                            pm_nand2xp5_asap7_75t_r%noxref_10
+                                                                 1.00 
+       80 x1.xu4.x_pm_nand2xp5_asap7_75t_r%b.
+                                            pm_nand2xp5_asap7_75t_r%b
+                                                                 1.00 
+       81 x1.xu4.x_pm_nand2xp5_asap7_75t_r%y.
+                                            pm_nand2xp5_asap7_75t_r%y
+                                                                 1.00 
+       82 x1.xu5.x_pm_fax1_asap7_75t_r%noxref_21.
+                                            pm_fax1_asap7_75t_r%noxref_21
+                                                                 1.00 
+       83 x1.xu5.x_pm_fax1_asap7_75t_r%noxref_20.
+                                            pm_fax1_asap7_75t_r%noxref_20
+                                                                 1.00 
+       84 x1.xu5.x_pm_fax1_asap7_75t_r%net027.
+                                            pm_fax1_asap7_75t_r%net027
+                                                                 1.00 
+       85 x1.xu5.x_pm_fax1_asap7_75t_r%net27.
+                                            pm_fax1_asap7_75t_r%net27
+                                                                 1.00 
+       86 x1.xu5.x_pm_fax1_asap7_75t_r%net25.
+                                            pm_fax1_asap7_75t_r%net25
+                                                                 1.00 
+       87 x1.xu5.x_pm_fax1_asap7_75t_r%net067.
+                                            pm_fax1_asap7_75t_r%net067
+                                                                 1.00 
+       88 x1.xu5.x_pm_fax1_asap7_75t_r%net36.
+                                            pm_fax1_asap7_75t_r%net36
+                                                                 1.00 
+       89 x1.xu5.x_pm_fax1_asap7_75t_r%net079.
+                                            pm_fax1_asap7_75t_r%net079
+                                                                 1.00 
+       90 x1.xu5.x_pm_fax1_asap7_75t_r%net080.
+                                            pm_fax1_asap7_75t_r%net080
+                                                                 1.00 
+       91 x1.xu5.x_pm_fax1_asap7_75t_r%net37.
+                                            pm_fax1_asap7_75t_r%net37
+                                                                 1.00 
+       92 x1.xu5.x_pm_fax1_asap7_75t_r%net081.
+                                            pm_fax1_asap7_75t_r%net081
+                                                                 1.00 
+       93 x1.xu5.x_pm_fax1_asap7_75t_r%net082.
+                                            pm_fax1_asap7_75t_r%net082
+                                                                 1.00 
+       94 x1.xu5.x_pm_fax1_asap7_75t_r%noxref_18.
+                                            pm_fax1_asap7_75t_r%noxref_18
+                                                                 1.00 
+       95 x1.xu5.x_pm_fax1_asap7_75t_r%noxref_19.
+                                            pm_fax1_asap7_75t_r%noxref_19
+                                                                 1.00 
+       96 x1.xu5.x_pm_fax1_asap7_75t_r%sn.
+                                            pm_fax1_asap7_75t_r%sn
+                                                                 1.00 
+       97 x1.xu5.x_pm_fax1_asap7_75t_r%con.
+                                            pm_fax1_asap7_75t_r%con
+                                                                 1.00 
+       98 x1.xu5.x_pm_fax1_asap7_75t_r%ci.
+                                            pm_fax1_asap7_75t_r%ci
+                                                                 1.00 
+       99 x1.xu5.x_pm_fax1_asap7_75t_r%b. pm_fax1_asap7_75t_r%b
+                                                                 1.00 
+      100 x1.xu5.x_pm_fax1_asap7_75t_r%a. pm_fax1_asap7_75t_r%a
+                                                                 1.00 
+      101 x1.xu6.x_pm_xnor2xp5_asap7_75t_r%noxref_15.
+                                            pm_xnor2xp5_asap7_75t_r%noxref_15
+                                                                 1.00 
+      102 x1.xu6.x_pm_xnor2xp5_asap7_75t_r%noxref_12.
+                                            pm_xnor2xp5_asap7_75t_r%noxref_12
+                                                                 1.00 
+      103 x1.xu6.x_pm_xnor2xp5_asap7_75t_r%noxref_13.
+                                            pm_xnor2xp5_asap7_75t_r%noxref_13
+                                                                 1.00 
+      104 x1.xu6.x_pm_xnor2xp5_asap7_75t_r%noxref_14.
+                                            pm_xnor2xp5_asap7_75t_r%noxref_14
+                                                                 1.00 
+      105 x1.xu6.x_pm_xnor2xp5_asap7_75t_r%noxref_16.
+                                            pm_xnor2xp5_asap7_75t_r%noxref_16
+                                                                 1.00 
+      106 x1.xu6.x_pm_xnor2xp5_asap7_75t_r%noxref_17.
+                                            pm_xnor2xp5_asap7_75t_r%noxref_17
+                                                                 1.00 
+      107 x1.xu6.x_pm_xnor2xp5_asap7_75t_r%y.
+                                            pm_xnor2xp5_asap7_75t_r%y
+                                                                 1.00 
+      108 x1.xu6.x_pm_xnor2xp5_asap7_75t_r%noxref_11.
+                                            pm_xnor2xp5_asap7_75t_r%noxref_11
+                                                                 1.00 
+      109 x1.xu6.x_pm_xnor2xp5_asap7_75t_r%noxref_10.
+                                            pm_xnor2xp5_asap7_75t_r%noxref_10
+                                                                 1.00 
+      110 x1.xu6.x_pm_xnor2xp5_asap7_75t_r%net041.
+                                            pm_xnor2xp5_asap7_75t_r%net041
+                                                                 1.00 
+      111 x1.xu6.x_pm_xnor2xp5_asap7_75t_r%net43.
+                                            pm_xnor2xp5_asap7_75t_r%net43
+                                                                 1.00 
+      112 x1.xu6.x_pm_xnor2xp5_asap7_75t_r%net015.
+                                            pm_xnor2xp5_asap7_75t_r%net015
+                                                                 1.00 
+      113 x1.xu6.x_pm_xnor2xp5_asap7_75t_r%b.
+                                            pm_xnor2xp5_asap7_75t_r%b
+                                                                 1.00 
+      114 x1.xu6.x_pm_xnor2xp5_asap7_75t_r%a.
+                                            pm_xnor2xp5_asap7_75t_r%a
+                                                                 1.00 
+      115 x1.xu6.x_pm_xnor2xp5_asap7_75t_r%net29.
+                                            pm_xnor2xp5_asap7_75t_r%net29
+                                                                 1.00 
+      116 x1.xu7.x_pm_nand2xp5_asap7_75t_r%noxref_7.
+                                            pm_nand2xp5_asap7_75t_r%noxref_7
+                                                                 1.00 
+      117 x1.xu7.x_pm_nand2xp5_asap7_75t_r%noxref_8.
+                                            pm_nand2xp5_asap7_75t_r%noxref_8
+                                                                 1.00 
+      118 x1.xu7.x_pm_nand2xp5_asap7_75t_r%net16.
+                                            pm_nand2xp5_asap7_75t_r%net16
+                                                                 1.00 
+      119 x1.xu7.x_pm_nand2xp5_asap7_75t_r%a.
+                                            pm_nand2xp5_asap7_75t_r%a
+                                                                 1.00 
+      120 x1.xu7.x_pm_nand2xp5_asap7_75t_r%noxref_9.
+                                            pm_nand2xp5_asap7_75t_r%noxref_9
+                                                                 1.00 
+      121 x1.xu7.x_pm_nand2xp5_asap7_75t_r%noxref_10.
+                                            pm_nand2xp5_asap7_75t_r%noxref_10
+                                                                 1.00 
+      122 x1.xu7.x_pm_nand2xp5_asap7_75t_r%b.
+                                            pm_nand2xp5_asap7_75t_r%b
+                                                                 1.00 
+      123 x1.xu7.x_pm_nand2xp5_asap7_75t_r%y.
+                                            pm_nand2xp5_asap7_75t_r%y
+                                                                 1.00 
+      124 x1.xu8.x_pm_nand2xp5_asap7_75t_r%noxref_7.
+                                            pm_nand2xp5_asap7_75t_r%noxref_7
+                                                                 1.00 
+      125 x1.xu8.x_pm_nand2xp5_asap7_75t_r%noxref_8.
+                                            pm_nand2xp5_asap7_75t_r%noxref_8
+                                                                 1.00 
+      126 x1.xu8.x_pm_nand2xp5_asap7_75t_r%net16.
+                                            pm_nand2xp5_asap7_75t_r%net16
+                                                                 1.00 
+      127 x1.xu8.x_pm_nand2xp5_asap7_75t_r%a.
+                                            pm_nand2xp5_asap7_75t_r%a
+                                                                 1.00 
+      128 x1.xu8.x_pm_nand2xp5_asap7_75t_r%noxref_9.
+                                            pm_nand2xp5_asap7_75t_r%noxref_9
+                                                                 1.00 
+      129 x1.xu8.x_pm_nand2xp5_asap7_75t_r%noxref_10.
+                                            pm_nand2xp5_asap7_75t_r%noxref_10
+                                                                 1.00 
+      130 x1.xu8.x_pm_nand2xp5_asap7_75t_r%b.
+                                            pm_nand2xp5_asap7_75t_r%b
+                                                                 1.00 
+      131 x1.xu8.x_pm_nand2xp5_asap7_75t_r%y.
+                                            pm_nand2xp5_asap7_75t_r%y
+                                                                 1.00 
+      132 x1.xu9.x_pm_or2x2_asap7_75t_r%net15.
+                                            pm_or2x2_asap7_75t_r%net15
+                                                                 1.00 
+      133 x1.xu9.x_pm_or2x2_asap7_75t_r%noxref_11.
+                                            pm_or2x2_asap7_75t_r%noxref_11
+                                                                 1.00 
+      134 x1.xu9.x_pm_or2x2_asap7_75t_r%noxref_10.
+                                            pm_or2x2_asap7_75t_r%noxref_10
+                                                                 1.00 
+      135 x1.xu9.x_pm_or2x2_asap7_75t_r%noxref_9.
+                                            pm_or2x2_asap7_75t_r%noxref_9
+                                                                 1.00 
+      136 x1.xu9.x_pm_or2x2_asap7_75t_r%b.
+                                            pm_or2x2_asap7_75t_r%b
+                                                                 1.00 
+      137 x1.xu9.x_pm_or2x2_asap7_75t_r%noxref_8.
+                                            pm_or2x2_asap7_75t_r%noxref_8
+                                                                 1.00 
+      138 x1.xu9.x_pm_or2x2_asap7_75t_r%y.
+                                            pm_or2x2_asap7_75t_r%y
+                                                                 1.00 
+      139 x1.xu9.x_pm_or2x2_asap7_75t_r%a.
+                                            pm_or2x2_asap7_75t_r%a
+                                                                 1.00 
+      140 x1.xu9.x_pm_or2x2_asap7_75t_r%net7.
+                                            pm_or2x2_asap7_75t_r%net7
+                                                                 1.00 
+      141 x1.xu10.x_pm_nand2xp5_asap7_75t_r%noxref_7.
+                                            pm_nand2xp5_asap7_75t_r%noxref_7
+                                                                 1.00 
+      142 x1.xu10.x_pm_nand2xp5_asap7_75t_r%noxref_8.
+                                            pm_nand2xp5_asap7_75t_r%noxref_8
+                                                                 1.00 
+      143 x1.xu10.x_pm_nand2xp5_asap7_75t_r%net16.
+                                            pm_nand2xp5_asap7_75t_r%net16
+                                                                 1.00 
+      144 x1.xu10.x_pm_nand2xp5_asap7_75t_r%a.
+                                            pm_nand2xp5_asap7_75t_r%a
+                                                                 1.00 
+      145 x1.xu10.x_pm_nand2xp5_asap7_75t_r%noxref_9.
+                                            pm_nand2xp5_asap7_75t_r%noxref_9
+                                                                 1.00 
+      146 x1.xu10.x_pm_nand2xp5_asap7_75t_r%noxref_10.
+                                            pm_nand2xp5_asap7_75t_r%noxref_10
+                                                                 1.00 
+      147 x1.xu10.x_pm_nand2xp5_asap7_75t_r%b.
+                                            pm_nand2xp5_asap7_75t_r%b
+                                                                 1.00 
+      148 x1.xu10.x_pm_nand2xp5_asap7_75t_r%y.
+                                            pm_nand2xp5_asap7_75t_r%y
+                                                                 1.00 
+      149 x1.xu11.x_pm_xor2xp5_asap7_75t_r%noxref_14.
+                                            pm_xor2xp5_asap7_75t_r%noxref_14
+                                                                 1.00 
+      150 x1.xu11.x_pm_xor2xp5_asap7_75t_r%noxref_13.
+                                            pm_xor2xp5_asap7_75t_r%noxref_13
+                                                                 1.00 
+      151 x1.xu11.x_pm_xor2xp5_asap7_75t_r%noxref_15.
+                                            pm_xor2xp5_asap7_75t_r%noxref_15
+                                                                 1.00 
+      152 x1.xu11.x_pm_xor2xp5_asap7_75t_r%noxref_16.
+                                            pm_xor2xp5_asap7_75t_r%noxref_16
+                                                                 1.00 
+      153 x1.xu11.x_pm_xor2xp5_asap7_75t_r%noxref_17.
+                                            pm_xor2xp5_asap7_75t_r%noxref_17
+                                                                 1.00 
+      154 x1.xu11.x_pm_xor2xp5_asap7_75t_r%noxref_12.
+                                            pm_xor2xp5_asap7_75t_r%noxref_12
+                                                                 1.00 
+      155 x1.xu11.x_pm_xor2xp5_asap7_75t_r%y.
+                                            pm_xor2xp5_asap7_75t_r%y
+                                                                 1.00 
+      156 x1.xu11.x_pm_xor2xp5_asap7_75t_r%net047.
+                                            pm_xor2xp5_asap7_75t_r%net047
+                                                                 1.00 
+      157 x1.xu11.x_pm_xor2xp5_asap7_75t_r%noxref_10.
+                                            pm_xor2xp5_asap7_75t_r%noxref_10
+                                                                 1.00 
+      158 x1.xu11.x_pm_xor2xp5_asap7_75t_r%net048.
+                                            pm_xor2xp5_asap7_75t_r%net048
+                                                                 1.00 
+      159 x1.xu11.x_pm_xor2xp5_asap7_75t_r%noxref_11.
+                                            pm_xor2xp5_asap7_75t_r%noxref_11
+                                                                 1.00 
+      160 x1.xu11.x_pm_xor2xp5_asap7_75t_r%net019.
+                                            pm_xor2xp5_asap7_75t_r%net019
+                                                                 1.00 
+      161 x1.xu11.x_pm_xor2xp5_asap7_75t_r%b.
+                                            pm_xor2xp5_asap7_75t_r%b
+                                                                 1.00 
+      162 x1.xu11.x_pm_xor2xp5_asap7_75t_r%a.
+                                            pm_xor2xp5_asap7_75t_r%a
+                                                                 1.00 
+      163 x1.xu11.x_pm_xor2xp5_asap7_75t_r%net036.
+                                            pm_xor2xp5_asap7_75t_r%net036
+                                                                 1.00 
+      164 x1.xu12.x_pm_invx1_asap7_75t_r%noxref_6.
+                                            pm_invx1_asap7_75t_r%noxref_6
+                                                                 1.00 
+      165 x1.xu12.x_pm_invx1_asap7_75t_r%noxref_5.
+                                            pm_invx1_asap7_75t_r%noxref_5
+                                                                 1.00 
+      166 x1.xu12.x_pm_invx1_asap7_75t_r%noxref_7.
+                                            pm_invx1_asap7_75t_r%noxref_7
+                                                                 1.00 
+      167 x1.xu12.x_pm_invx1_asap7_75t_r%noxref_8.
+                                            pm_invx1_asap7_75t_r%noxref_8
+                                                                 1.00 
+      168 x1.xu12.x_pm_invx1_asap7_75t_r%y.
+                                            pm_invx1_asap7_75t_r%y
+                                                                 1.00 
+      169 x1.xu12.x_pm_invx1_asap7_75t_r%a.
+                                            pm_invx1_asap7_75t_r%a
+                                                                 1.00 
+      170 x1.xu13.x_pm_nand2xp5_asap7_75t_r%noxref_7.
+                                            pm_nand2xp5_asap7_75t_r%noxref_7
+                                                                 1.00 
+      171 x1.xu13.x_pm_nand2xp5_asap7_75t_r%noxref_8.
+                                            pm_nand2xp5_asap7_75t_r%noxref_8
+                                                                 1.00 
+      172 x1.xu13.x_pm_nand2xp5_asap7_75t_r%net16.
+                                            pm_nand2xp5_asap7_75t_r%net16
+                                                                 1.00 
+      173 x1.xu13.x_pm_nand2xp5_asap7_75t_r%a.
+                                            pm_nand2xp5_asap7_75t_r%a
+                                                                 1.00 
+      174 x1.xu13.x_pm_nand2xp5_asap7_75t_r%noxref_9.
+                                            pm_nand2xp5_asap7_75t_r%noxref_9
+                                                                 1.00 
+      175 x1.xu13.x_pm_nand2xp5_asap7_75t_r%noxref_10.
+                                            pm_nand2xp5_asap7_75t_r%noxref_10
+                                                                 1.00 
+      176 x1.xu13.x_pm_nand2xp5_asap7_75t_r%b.
+                                            pm_nand2xp5_asap7_75t_r%b
+                                                                 1.00 
+      177 x1.xu13.x_pm_nand2xp5_asap7_75t_r%y.
+                                            pm_nand2xp5_asap7_75t_r%y
+                                                                 1.00 
+      178 x1.xu14.x_pm_nand2xp5_asap7_75t_r%noxref_7.
+                                            pm_nand2xp5_asap7_75t_r%noxref_7
+                                                                 1.00 
+      179 x1.xu14.x_pm_nand2xp5_asap7_75t_r%noxref_8.
+                                            pm_nand2xp5_asap7_75t_r%noxref_8
+                                                                 1.00 
+      180 x1.xu14.x_pm_nand2xp5_asap7_75t_r%net16.
+                                            pm_nand2xp5_asap7_75t_r%net16
+                                                                 1.00 
+      181 x1.xu14.x_pm_nand2xp5_asap7_75t_r%a.
+                                            pm_nand2xp5_asap7_75t_r%a
+                                                                 1.00 
+      182 x1.xu14.x_pm_nand2xp5_asap7_75t_r%noxref_9.
+                                            pm_nand2xp5_asap7_75t_r%noxref_9
+                                                                 1.00 
+      183 x1.xu14.x_pm_nand2xp5_asap7_75t_r%noxref_10.
+                                            pm_nand2xp5_asap7_75t_r%noxref_10
+                                                                 1.00 
+      184 x1.xu14.x_pm_nand2xp5_asap7_75t_r%b.
+                                            pm_nand2xp5_asap7_75t_r%b
+                                                                 1.00 
+      185 x1.xu14.x_pm_nand2xp5_asap7_75t_r%y.
+                                            pm_nand2xp5_asap7_75t_r%y
+                                                                 1.00 
+      186 x1.xu15.x_pm_or2x2_asap7_75t_r%net15.
+                                            pm_or2x2_asap7_75t_r%net15
+                                                                 1.00 
+      187 x1.xu15.x_pm_or2x2_asap7_75t_r%noxref_11.
+                                            pm_or2x2_asap7_75t_r%noxref_11
+                                                                 1.00 
+      188 x1.xu15.x_pm_or2x2_asap7_75t_r%noxref_10.
+                                            pm_or2x2_asap7_75t_r%noxref_10
+                                                                 1.00 
+      189 x1.xu15.x_pm_or2x2_asap7_75t_r%noxref_9.
+                                            pm_or2x2_asap7_75t_r%noxref_9
+                                                                 1.00 
+      190 x1.xu15.x_pm_or2x2_asap7_75t_r%b.
+                                            pm_or2x2_asap7_75t_r%b
+                                                                 1.00 
+      191 x1.xu15.x_pm_or2x2_asap7_75t_r%noxref_8.
+                                            pm_or2x2_asap7_75t_r%noxref_8
+                                                                 1.00 
+      192 x1.xu15.x_pm_or2x2_asap7_75t_r%y.
+                                            pm_or2x2_asap7_75t_r%y
+                                                                 1.00 
+      193 x1.xu15.x_pm_or2x2_asap7_75t_r%a.
+                                            pm_or2x2_asap7_75t_r%a
+                                                                 1.00 
+      194 x1.xu15.x_pm_or2x2_asap7_75t_r%net7.
+                                            pm_or2x2_asap7_75t_r%net7
+                                                                 1.00 
+      195 x1.xu16.x_pm_nand3xp33_asap7_75t_r%noxref_12.
+                                            pm_nand3xp33_asap7_75t_r%noxref_12
+                                                                 1.00 
+      196 x1.xu16.x_pm_nand3xp33_asap7_75t_r%noxref_11.
+                                            pm_nand3xp33_asap7_75t_r%noxref_11
+                                                                 1.00 
+      197 x1.xu16.x_pm_nand3xp33_asap7_75t_r%net21.
+                                            pm_nand3xp33_asap7_75t_r%net21
+                                                                 1.00 
+      198 x1.xu16.x_pm_nand3xp33_asap7_75t_r%net22.
+                                            pm_nand3xp33_asap7_75t_r%net22
+                                                                 1.00 
+      199 x1.xu16.x_pm_nand3xp33_asap7_75t_r%noxref_9.
+                                            pm_nand3xp33_asap7_75t_r%noxref_9
+                                                                 1.00 
+      200 x1.xu16.x_pm_nand3xp33_asap7_75t_r%c.
+                                            pm_nand3xp33_asap7_75t_r%c
+                                                                 1.00 
+      201 x1.xu16.x_pm_nand3xp33_asap7_75t_r%noxref_10.
+                                            pm_nand3xp33_asap7_75t_r%noxref_10
+                                                                 1.00 
+      202 x1.xu16.x_pm_nand3xp33_asap7_75t_r%y.
+                                            pm_nand3xp33_asap7_75t_r%y
+                                                                 1.00 
+      203 x1.xu16.x_pm_nand3xp33_asap7_75t_r%b.
+                                            pm_nand3xp33_asap7_75t_r%b
+                                                                 1.00 
+      204 x1.xu16.x_pm_nand3xp33_asap7_75t_r%a.
+                                            pm_nand3xp33_asap7_75t_r%a
+                                                                 1.00 
+      205 x1.xu17.x_pm_nand3xp33_asap7_75t_r%noxref_12.
+                                            pm_nand3xp33_asap7_75t_r%noxref_12
+                                                                 1.00 
+      206 x1.xu17.x_pm_nand3xp33_asap7_75t_r%noxref_11.
+                                            pm_nand3xp33_asap7_75t_r%noxref_11
+                                                                 1.00 
+      207 x1.xu17.x_pm_nand3xp33_asap7_75t_r%net21.
+                                            pm_nand3xp33_asap7_75t_r%net21
+                                                                 1.00 
+      208 x1.xu17.x_pm_nand3xp33_asap7_75t_r%net22.
+                                            pm_nand3xp33_asap7_75t_r%net22
+                                                                 1.00 
+      209 x1.xu17.x_pm_nand3xp33_asap7_75t_r%noxref_9.
+                                            pm_nand3xp33_asap7_75t_r%noxref_9
+                                                                 1.00 
+      210 x1.xu17.x_pm_nand3xp33_asap7_75t_r%c.
+                                            pm_nand3xp33_asap7_75t_r%c
+                                                                 1.00 
+      211 x1.xu17.x_pm_nand3xp33_asap7_75t_r%noxref_10.
+                                            pm_nand3xp33_asap7_75t_r%noxref_10
+                                                                 1.00 
+      212 x1.xu17.x_pm_nand3xp33_asap7_75t_r%y.
+                                            pm_nand3xp33_asap7_75t_r%y
+                                                                 1.00 
+      213 x1.xu17.x_pm_nand3xp33_asap7_75t_r%b.
+                                            pm_nand3xp33_asap7_75t_r%b
+                                                                 1.00 
+      214 x1.xu17.x_pm_nand3xp33_asap7_75t_r%a.
+                                            pm_nand3xp33_asap7_75t_r%a
+                                                                 1.00 
+      215 x1.xu18.x_pm_xnor2xp5_asap7_75t_r%noxref_15.
+                                            pm_xnor2xp5_asap7_75t_r%noxref_15
+                                                                 1.00 
+      216 x1.xu18.x_pm_xnor2xp5_asap7_75t_r%noxref_12.
+                                            pm_xnor2xp5_asap7_75t_r%noxref_12
+                                                                 1.00 
+      217 x1.xu18.x_pm_xnor2xp5_asap7_75t_r%noxref_13.
+                                            pm_xnor2xp5_asap7_75t_r%noxref_13
+                                                                 1.00 
+      218 x1.xu18.x_pm_xnor2xp5_asap7_75t_r%noxref_14.
+                                            pm_xnor2xp5_asap7_75t_r%noxref_14
+                                                                 1.00 
+      219 x1.xu18.x_pm_xnor2xp5_asap7_75t_r%noxref_16.
+                                            pm_xnor2xp5_asap7_75t_r%noxref_16
+                                                                 1.00 
+      220 x1.xu18.x_pm_xnor2xp5_asap7_75t_r%noxref_17.
+                                            pm_xnor2xp5_asap7_75t_r%noxref_17
+                                                                 1.00 
+      221 x1.xu18.x_pm_xnor2xp5_asap7_75t_r%y.
+                                            pm_xnor2xp5_asap7_75t_r%y
+                                                                 1.00 
+      222 x1.xu18.x_pm_xnor2xp5_asap7_75t_r%noxref_11.
+                                            pm_xnor2xp5_asap7_75t_r%noxref_11
+                                                                 1.00 
+      223 x1.xu18.x_pm_xnor2xp5_asap7_75t_r%noxref_10.
+                                            pm_xnor2xp5_asap7_75t_r%noxref_10
+                                                                 1.00 
+      224 x1.xu18.x_pm_xnor2xp5_asap7_75t_r%net041.
+                                            pm_xnor2xp5_asap7_75t_r%net041
+                                                                 1.00 
+      225 x1.xu18.x_pm_xnor2xp5_asap7_75t_r%net43.
+                                            pm_xnor2xp5_asap7_75t_r%net43
+                                                                 1.00 
+      226 x1.xu18.x_pm_xnor2xp5_asap7_75t_r%net015.
+                                            pm_xnor2xp5_asap7_75t_r%net015
+                                                                 1.00 
+      227 x1.xu18.x_pm_xnor2xp5_asap7_75t_r%b.
+                                            pm_xnor2xp5_asap7_75t_r%b
+                                                                 1.00 
+      228 x1.xu18.x_pm_xnor2xp5_asap7_75t_r%a.
+                                            pm_xnor2xp5_asap7_75t_r%a
+                                                                 1.00 
+      229 x1.xu18.x_pm_xnor2xp5_asap7_75t_r%net29.
+                                            pm_xnor2xp5_asap7_75t_r%net29
+                                                                 1.00 
+      230 x1.xu19.x_pm_xor2xp5_asap7_75t_r%noxref_14.
+                                            pm_xor2xp5_asap7_75t_r%noxref_14
+                                                                 1.00 
+      231 x1.xu19.x_pm_xor2xp5_asap7_75t_r%noxref_13.
+                                            pm_xor2xp5_asap7_75t_r%noxref_13
+                                                                 1.00 
+      232 x1.xu19.x_pm_xor2xp5_asap7_75t_r%noxref_15.
+                                            pm_xor2xp5_asap7_75t_r%noxref_15
+                                                                 1.00 
+      233 x1.xu19.x_pm_xor2xp5_asap7_75t_r%noxref_16.
+                                            pm_xor2xp5_asap7_75t_r%noxref_16
+                                                                 1.00 
+      234 x1.xu19.x_pm_xor2xp5_asap7_75t_r%noxref_17.
+                                            pm_xor2xp5_asap7_75t_r%noxref_17
+                                                                 1.00 
+      235 x1.xu19.x_pm_xor2xp5_asap7_75t_r%noxref_12.
+                                            pm_xor2xp5_asap7_75t_r%noxref_12
+                                                                 1.00 
+      236 x1.xu19.x_pm_xor2xp5_asap7_75t_r%y.
+                                            pm_xor2xp5_asap7_75t_r%y
+                                                                 1.00 
+      237 x1.xu19.x_pm_xor2xp5_asap7_75t_r%net047.
+                                            pm_xor2xp5_asap7_75t_r%net047
+                                                                 1.00 
+      238 x1.xu19.x_pm_xor2xp5_asap7_75t_r%noxref_10.
+                                            pm_xor2xp5_asap7_75t_r%noxref_10
+                                                                 1.00 
+      239 x1.xu19.x_pm_xor2xp5_asap7_75t_r%net048.
+                                            pm_xor2xp5_asap7_75t_r%net048
+                                                                 1.00 
+      240 x1.xu19.x_pm_xor2xp5_asap7_75t_r%noxref_11.
+                                            pm_xor2xp5_asap7_75t_r%noxref_11
+                                                                 1.00 
+      241 x1.xu19.x_pm_xor2xp5_asap7_75t_r%net019.
+                                            pm_xor2xp5_asap7_75t_r%net019
+                                                                 1.00 
+      242 x1.xu19.x_pm_xor2xp5_asap7_75t_r%b.
+                                            pm_xor2xp5_asap7_75t_r%b
+                                                                 1.00 
+      243 x1.xu19.x_pm_xor2xp5_asap7_75t_r%a.
+                                            pm_xor2xp5_asap7_75t_r%a
+                                                                 1.00 
+      244 x1.xu19.x_pm_xor2xp5_asap7_75t_r%net036.
+                                            pm_xor2xp5_asap7_75t_r%net036
+                                                                 1.00 
+      245 x1.xu20.x_pm_invx1_asap7_75t_r%noxref_6.
+                                            pm_invx1_asap7_75t_r%noxref_6
+                                                                 1.00 
+      246 x1.xu20.x_pm_invx1_asap7_75t_r%noxref_5.
+                                            pm_invx1_asap7_75t_r%noxref_5
+                                                                 1.00 
+      247 x1.xu20.x_pm_invx1_asap7_75t_r%noxref_7.
+                                            pm_invx1_asap7_75t_r%noxref_7
+                                                                 1.00 
+      248 x1.xu20.x_pm_invx1_asap7_75t_r%noxref_8.
+                                            pm_invx1_asap7_75t_r%noxref_8
+                                                                 1.00 
+      249 x1.xu20.x_pm_invx1_asap7_75t_r%y.
+                                            pm_invx1_asap7_75t_r%y
+                                                                 1.00 
+      250 x1.xu20.x_pm_invx1_asap7_75t_r%a.
+                                            pm_invx1_asap7_75t_r%a
+                                                                 1.00 
+      251 x1.xu21.x_pm_or2x2_asap7_75t_r%net15.
+                                            pm_or2x2_asap7_75t_r%net15
+                                                                 1.00 
+      252 x1.xu21.x_pm_or2x2_asap7_75t_r%noxref_11.
+                                            pm_or2x2_asap7_75t_r%noxref_11
+                                                                 1.00 
+      253 x1.xu21.x_pm_or2x2_asap7_75t_r%noxref_10.
+                                            pm_or2x2_asap7_75t_r%noxref_10
+                                                                 1.00 
+      254 x1.xu21.x_pm_or2x2_asap7_75t_r%noxref_9.
+                                            pm_or2x2_asap7_75t_r%noxref_9
+                                                                 1.00 
+      255 x1.xu21.x_pm_or2x2_asap7_75t_r%b.
+                                            pm_or2x2_asap7_75t_r%b
+                                                                 1.00 
+      256 x1.xu21.x_pm_or2x2_asap7_75t_r%noxref_8.
+                                            pm_or2x2_asap7_75t_r%noxref_8
+                                                                 1.00 
+      257 x1.xu21.x_pm_or2x2_asap7_75t_r%y.
+                                            pm_or2x2_asap7_75t_r%y
+                                                                 1.00 
+      258 x1.xu21.x_pm_or2x2_asap7_75t_r%a.
+                                            pm_or2x2_asap7_75t_r%a
+                                                                 1.00 
+      259 x1.xu21.x_pm_or2x2_asap7_75t_r%net7.
+                                            pm_or2x2_asap7_75t_r%net7
+                                                                 1.00 
+      260 x1.xu22.x_pm_nand2xp5_asap7_75t_r%noxref_7.
+                                            pm_nand2xp5_asap7_75t_r%noxref_7
+                                                                 1.00 
+      261 x1.xu22.x_pm_nand2xp5_asap7_75t_r%noxref_8.
+                                            pm_nand2xp5_asap7_75t_r%noxref_8
+                                                                 1.00 
+      262 x1.xu22.x_pm_nand2xp5_asap7_75t_r%net16.
+                                            pm_nand2xp5_asap7_75t_r%net16
+                                                                 1.00 
+      263 x1.xu22.x_pm_nand2xp5_asap7_75t_r%a.
+                                            pm_nand2xp5_asap7_75t_r%a
+                                                                 1.00 
+      264 x1.xu22.x_pm_nand2xp5_asap7_75t_r%noxref_9.
+                                            pm_nand2xp5_asap7_75t_r%noxref_9
+                                                                 1.00 
+      265 x1.xu22.x_pm_nand2xp5_asap7_75t_r%noxref_10.
+                                            pm_nand2xp5_asap7_75t_r%noxref_10
+                                                                 1.00 
+      266 x1.xu22.x_pm_nand2xp5_asap7_75t_r%b.
+                                            pm_nand2xp5_asap7_75t_r%b
+                                                                 1.00 
+      267 x1.xu22.x_pm_nand2xp5_asap7_75t_r%y.
+                                            pm_nand2xp5_asap7_75t_r%y
+                                                                 1.00 
+      268 x1.xu23.x_pm_nand2xp5_asap7_75t_r%noxref_7.
+                                            pm_nand2xp5_asap7_75t_r%noxref_7
+                                                                 1.00 
+      269 x1.xu23.x_pm_nand2xp5_asap7_75t_r%noxref_8.
+                                            pm_nand2xp5_asap7_75t_r%noxref_8
+                                                                 1.00 
+      270 x1.xu23.x_pm_nand2xp5_asap7_75t_r%net16.
+                                            pm_nand2xp5_asap7_75t_r%net16
+                                                                 1.00 
+      271 x1.xu23.x_pm_nand2xp5_asap7_75t_r%a.
+                                            pm_nand2xp5_asap7_75t_r%a
+                                                                 1.00 
+      272 x1.xu23.x_pm_nand2xp5_asap7_75t_r%noxref_9.
+                                            pm_nand2xp5_asap7_75t_r%noxref_9
+                                                                 1.00 
+      273 x1.xu23.x_pm_nand2xp5_asap7_75t_r%noxref_10.
+                                            pm_nand2xp5_asap7_75t_r%noxref_10
+                                                                 1.00 
+      274 x1.xu23.x_pm_nand2xp5_asap7_75t_r%b.
+                                            pm_nand2xp5_asap7_75t_r%b
+                                                                 1.00 
+      275 x1.xu23.x_pm_nand2xp5_asap7_75t_r%y.
+                                            pm_nand2xp5_asap7_75t_r%y
+                                                                 1.00 
+      276 x1.xu24.x_pm_nand2xp5_asap7_75t_r%noxref_7.
+                                            pm_nand2xp5_asap7_75t_r%noxref_7
+                                                                 1.00 
+      277 x1.xu24.x_pm_nand2xp5_asap7_75t_r%noxref_8.
+                                            pm_nand2xp5_asap7_75t_r%noxref_8
+                                                                 1.00 
+      278 x1.xu24.x_pm_nand2xp5_asap7_75t_r%net16.
+                                            pm_nand2xp5_asap7_75t_r%net16
+                                                                 1.00 
+      279 x1.xu24.x_pm_nand2xp5_asap7_75t_r%a.
+                                            pm_nand2xp5_asap7_75t_r%a
+                                                                 1.00 
+      280 x1.xu24.x_pm_nand2xp5_asap7_75t_r%noxref_9.
+                                            pm_nand2xp5_asap7_75t_r%noxref_9
+                                                                 1.00 
+      281 x1.xu24.x_pm_nand2xp5_asap7_75t_r%noxref_10.
+                                            pm_nand2xp5_asap7_75t_r%noxref_10
+                                                                 1.00 
+      282 x1.xu24.x_pm_nand2xp5_asap7_75t_r%b.
+                                            pm_nand2xp5_asap7_75t_r%b
+                                                                 1.00 
+      283 x1.xu24.x_pm_nand2xp5_asap7_75t_r%y.
+                                            pm_nand2xp5_asap7_75t_r%y
+                                                                 1.00 
+ ******  
+ .title test adder
+
+ ****** mos   model parameters tnom=  25.000 temp=  25.000 ******
+ Model file: ../../7nm_TT.pm
+ Model line:           68
+ Model Name: nmos_rvt 
+ BSIM-MG BULK Model(Level72)
+   VERSION =    107  
+   L = 2.1e-08 
+   D =  4e-08 
+   TFIN = 6.5e-09 
+   FPITCH = 2.7e-08 
+   NF = 1 
+   NFIN =      1 
+   NGCON = 1 
+   ASEO =      0 
+   ADEO =      0 
+   PSEO =      0 
+   PDEO =      0 
+   ASEJ =      0 
+   ADEJ =      0 
+   PSEJ =      0 
+   PDEJ =      0 
+   CGSP =      0 
+   CGDP =      0 
+   CDSP =      0 
+   NRS =      0 
+   NRD =      0 
+   LRSD = 2.1e-08 
+   XL =  1e-09 
+   DTEMP =      0 
+   DELVTRAND =      0 
+   U0MULT =      1 
+   IDS0MULT =      1 
+   DEVTYPE = 1 
+   BULKMOD = 1 
+   COREMOD = 0 
+   GEOMOD = 1 
+   RDSMOD = 0 
+   ASYMMOD = 0 
+   IGCMOD = 1 
+   IGBMOD = 0 
+   GIDLMOD = 1 
+   IIMOD = 0 
+   NQSMOD = 0 
+   SHMOD = 0 
+   RGATEMOD = 0 
+   RGEOMOD = 0 
+   CGEOMOD = 0 
+   CAPMOD = 0 
+   LINT = -2e-09 
+   LL =      0 
+   LLN =      1 
+   DLC =      0 
+   DLCACC =      0 
+   DLBIN =      0 
+   LLC =      0 
+   EOT =  1e-09 
+   TOXP = 2.1e-09 
+   EOTBOX = 1.4e-07 
+   HFIN = 3.2e-08 
+   FECH =      1 
+   DELTAW =      0 
+   FECHCV =      1 
+   DELTAWCV =      0 
+   NBODY =  1e+22 
+   NSD =  2e+26 
+   PHIG =  4.372 
+   EPSROX =    3.9 
+   EPSRSUB =   11.9 
+   EASUB =   4.05 
+   NI0SUB = 1.1e+16 
+   BG0SUB =   1.17 
+   NC0SUB = 2.86e+25 
+   NGATE =      0 
+   CIT =      0 
+   CDSC =   0.01 
+   CDSCD =   0.01 
+   CDSCDR =   0.01 
+   DVT0 =   0.05 
+   DVT1 =   0.48 
+   PHIN =   0.05 
+   ETA0 =  0.062 
+   ETA0R =  0.062 
+   DSUB =   0.35 
+   K1RSCE =      0 
+   LPE0 =      0 
+   DVTSHIFT =      0 
+   PHIBE =    0.7 
+   K0 =      0 
+   K0SI =      1 
+   K1 =      0 
+   K1SAT =      0 
+   QMFACTOR =    2.5 
+   QMTCENIV =      0 
+   QMTCENCV =      0 
+   QMTCENCVA =      0 
+   AQMTCEN =      0 
+   BQMTCEN = 1.2e-08 
+   ETAQM =   0.54 
+   QM0 =  0.001 
+   PQM =   0.66 
+   QM0ACC =  0.001 
+   PQMACC =   0.66 
+   VSAT =  7e+04 
+   AVSAT =      0 
+   BVSAT =  1e-07 
+   VSAT1 =  7e+04 
+   VSAT1R =  7e+04 
+   AVSAT1 =      0 
+   BVSAT1 =  1e-07 
+   DELTAVSAT =   0.28 
+   PSAT =      2 
+   APSAT =      0 
+   BPSAT =      1 
+   KSATIV =      2 
+   VSATCV =  7e+04 
+   AVSATCV =      0 
+   BVSATCV =  1e-07 
+   MEXP =      4 
+   AMEXP =      0 
+   BMEXP =      1 
+   PTWG =     30 
+   PTWGR =     30 
+   APTWG =      0 
+   BPTWG =  1e-07 
+   AT =  0.001 
+   TMEXP =      0 
+   PTWGT =  0.004 
+   U0 = 0.0252 
+   ETAMOB =      2 
+   UP =      0 
+   LPA =      1 
+   UA =   0.55 
+   AUA =      0 
+   BUA =  1e-07 
+   UC =      0 
+   EU =    1.2 
+   AEU =      0 
+   BEU =  1e-07 
+   UD =      0 
+   AUD =      0 
+   BUD =  5e-08 
+   UCS =      1 
+   UTE =   -0.7 
+   UTL =      0 
+   EMOBT =      0 
+   UA1 = 0.001032 
+   UC1 = 5.6e-11 
+   UD1 =      0 
+   UCSTE = -0.004775 
+   RDSWMIN =      0 
+   RDSW =    200 
+   ARDSW =      0 
+   BRDSW =  1e-07 
+   RSWMIN =      0 
+   RSW =     50 
+   ARSW =      0 
+   BRSW =  1e-07 
+   RDWMIN =      0 
+   RDW =     50 
+   ARDW =      0 
+   BRDW =  1e-07 
+   RSDR =      0 
+   RSDRR =      0 
+   RDDR =      0 
+   RDDRR =      0 
+   PRSDR =      1 
+   PRDDR =      1 
+   PRWGS =      0 
+   PRWGD =      0 
+   WR =      1 
+   PRT =      0 
+   TRSDR =      0 
+   TRDDR =      0 
+   PDIBL1 =      0 
+   PDIBL1R =      0 
+   PDIBL2 =  0.002 
+   DROUT =      1 
+   PVAG =      0 
+   PCLM =   0.05 
+   APCLM =      0 
+   BPCLM =  1e-07 
+   PCLMG =      0 
+   PCLMCV =   0.05 
+   A1 =      0 
+   A2 =      0 
+   RGEXT =      0 
+   RGFIN =  0.001 
+   RSHS =      0 
+   RSHD =      0 
+   HEPI =  1e-08 
+   TSILI =  1e-08 
+   RHOC =  1e-12 
+   RHORSD =      1 
+   CRATIO =    0.5 
+   DELTAPRSD =      0 
+   SDTERM = 0 
+   LSP = 4.4e-09 
+   EPSRSP =    3.9 
+   TGATE =  3e-08 
+   TMASK =  3e-08 
+   ASILIEND =      0 
+   ARSDEND =      0 
+   PRSDEND =      0 
+   NSDE =  2e+25 
+   RGEOA =      1 
+   RGEOB =      0 
+   RGEOC =      0 
+   RGEOD =      0 
+   RGEOE =      0 
+   CGEOA =      1 
+   CGEOB =      0 
+   CGEOC =      0 
+   CGEOD =      0 
+   CGEOE =      1 
+   AIGBINV = 0.0111 
+   BIGBINV = 0.000949 
+   CIGBINV =  0.006 
+   EIGBINV =    1.1 
+   NIGBINV =      3 
+   AIGBACC = 0.0136 
+   BIGBACC = 0.00171 
+   CIGBACC =  0.075 
+   NIGBACC =      1 
+   AIGC =  0.014 
+   BIGC =  0.005 
+   CIGC =   0.25 
+   PIGCD =      1 
+   DLCIGS =  1e-09 
+   AIGS = 0.0115 
+   BIGS = 0.00332 
+   CIGS =   0.35 
+   DLCIGD =  1e-09 
+   AIGD = 0.0115 
+   BIGD = 0.00332 
+   CIGD =   0.35 
+   TOXREF = 1.2e-09 
+   NTOX =      1 
+   POXEDGE =    1.1 
+   AGISL =  1e-12 
+   BGISL =  1e+07 
+   CGISL =    0.5 
+   EGISL =   0.35 
+   PGISL =      1 
+   AGIDL =  1e-12 
+   BGIDL =  1e+07 
+   CGIDL =    0.5 
+   EGIDL =   0.35 
+   PGIDL =      1 
+   ALPHA0 =      0 
+   ALPHA1 =      0 
+   BETA0 =      0 
+   BETAII0 =      0 
+   BETAII1 =      0 
+   BETAII2 =    0.1 
+   ESATII =  1e+07 
+   LII =  5e-10 
+   SII0 =    0.5 
+   SII1 =    0.1 
+   SII2 =      0 
+   SIID =      0 
+   EOTACC =  1e-10 
+   DELVFBACC =      0 
+   CFS =      0 
+   CFD =      0 
+   COVS =      0 
+   COVD =      0 
+   CGSO = 1.6e-10 
+   CGDO = 1.6e-10 
+   CGSL =      0 
+   CGDL =      0 
+   CKAPPAS =    0.6 
+   CKAPPAD =    0.6 
+   CGBO =      0 
+   CGBN =      0 
+   CGBL =      0 
+   CKAPPAB =    0.6 
+   CSDESW =      0 
+   CJS = 0.0005 
+   CJD = 0.0005 
+   CJSWS =  5e-10 
+   CJSWD =  5e-10 
+   CJSWGS =      0 
+   CJSWGD =      0 
+   PBS =      1 
+   PBD =      1 
+   PBSWS =      1 
+   PBSWD =      1 
+   PBSWGS =      1 
+   PBSWGD =      1 
+   MJS =    0.5 
+   MJD =    0.5 
+   MJSWS =   0.33 
+   MJSWD =   0.33 
+   MJSWGS =   0.33 
+   MJSWGD =   0.33 
+   SJS =      0 
+   SJD =      0 
+   SJSWS =      0 
+   SJSWD =      0 
+   SJSWGS =      0 
+   SJSWGD =      0 
+   MJS2 =  0.125 
+   MJD2 =  0.125 
+   MJSWS2 =  0.083 
+   MJSWD2 =  0.083 
+   MJSWGS2 =  0.083 
+   MJSWGD2 =  0.083 
+   JSS = 0.0001 
+   JSD = 0.0001 
+   JSWS =      0 
+   JSWD =      0 
+   JSWGS =      0 
+   JSWGD =      0 
+   NJS =      1 
+   NJD =      1 
+   IJTHSFWD =    0.1 
+   IJTHDFWD =    0.1 
+   IJTHSREV =    0.1 
+   IJTHDREV =    0.1 
+   BVS =     10 
+   BVD =     10 
+   XJBVS =      1 
+   XJBVD =      1 
+   JTSS =      0 
+   JTSD =      0 
+   JTSSWS =      0 
+   JTSSWD =      0 
+   JTSSWGS =      0 
+   JTSSWGD =      0 
+   JTWEFF =      0 
+   NJTS =     20 
+   NJTSD =     20 
+   NJTSSW =     20 
+   NJTSSWD =     20 
+   NJTSSWG =     20 
+   NJTSSWGD =     20 
+   VTSS =     10 
+   VTSD =     10 
+   VTSSWS =     10 
+   VTSSWD =     10 
+   VTSSWGS =     10 
+   VTSSWGD =     10 
+   LINTIGEN =      0 
+   NTGEN =      1 
+   AIGEN =      0 
+   BIGEN =      0 
+   XRCRG1 =     12 
+   XRCRG2 =      1 
+   NSEG = 5 
+   EF =      1 
+   EM = 4.1e+07 
+   NOIA = 6.25e+39 
+   NOIB = 3.125e+24 
+   NOIC = 8.75e+07 
+   NTNOI =      1 
+   TNOM =     25 
+   TBGASUB = 0.000473 
+   TBGBSUB =    636 
+   KT1 =      0 
+   KT1L =      0 
+   TSS =      0 
+   IIT =   -0.5 
+   TII =      0 
+   TGIDL = -0.007 
+   IGT =    2.5 
+   TCJ =      0 
+   TCJSW =      0 
+   TCJSWG =      0 
+   TPB =      0 
+   TPBSW =      0 
+   TPBSWG =      0 
+   XTIS =      3 
+   XTID =      3 
+   XTSS =   0.02 
+   XTSD =   0.02 
+   XTSSWS =   0.02 
+   XTSSWD =   0.02 
+   XTSSWGS =   0.02 
+   XTSSWGD =   0.02 
+   TNJTS =      0 
+   TNJTSD =      0 
+   TNJTSSW =      0 
+   TNJTSSWD =      0 
+   TNJTSSWG =      0 
+   TNJTSSWGD =      0 
+   RTH0 =  0.225 
+   CTH0 = 1.243e-06 
+   WTH0 = 2.6e-07 
+   LNBODY =      0 
+   NNBODY =      0 
+   PNBODY =      0 
+   LPHIG =      0 
+   NPHIG =      0 
+   PPHIG =      0 
+   LNGATE =      0 
+   NNGATE =      0 
+   PNGATE =      0 
+   LCIT =      0 
+   NCIT =      0 
+   PCIT =      0 
+   LCDSC =      0 
+   NCDSC =      0 
+   PCDSC =      0 
+   LCDSCD =  5e-05 
+   NCDSCD =      0 
+   PCDSCD =      0 
+   LCDSCDR =  5e-05 
+   NCDSCDR =      0 
+   PCDSCDR =      0 
+   LDVT0 =      0 
+   NDVT0 =      0 
+   PDVT0 =      0 
+   LDVT1 =      0 
+   NDVT1 =      0 
+   PDVT1 =      0 
+   LPHIN =      0 
+   NPHIN =      0 
+   PPHIN =      0 
+   LETA0 =      0 
+   NETA0 =      0 
+   PETA0 =      0 
+   LETA0R =      0 
+   NETA0R =      0 
+   PETA0R =      0 
+   LDSUB =      0 
+   NDSUB =      0 
+   PDSUB =      0 
+   LK1RSCE =      0 
+   NK1RSCE =      0 
+   PK1RSCE =      0 
+   LLPE0 =      0 
+   NLPE0 =      0 
+   PLPE0 =      0 
+   LDVTSHIFT =      0 
+   NDVTSHIFT =      0 
+   PDVTSHIFT =      0 
+   LPHIBE =      0 
+   NPHIBE =      0 
+   PPHIBE =      0 
+   LK0 =      0 
+   NK0 =      0 
+   PK0 =      0 
+   LK0SI =      0 
+   NK0SI =      0 
+   PK0SI =      0 
+   LK1 =      0 
+   NK1 =      0 
+   PK1 =      0 
+   LK1SAT =      0 
+   NK1SAT =      0 
+   PK1SAT =      0 
+   LDVTB =      0 
+   NDVTB =      0 
+   PDVTB =      0 
+   LLPEB =      0 
+   NLPEB =      0 
+   PLPEB =      0 
+   LQMFACTOR =      0 
+   NQMFACTOR =      0 
+   PQMFACTOR =      0 
+   LQMTCENIV =      0 
+   NQMTCENIV =      0 
+   PQMTCENIV =      0 
+   LQMTCENCV =      0 
+   NQMTCENCV =      0 
+   PQMTCENCV =      0 
+   LQMTCENCVA =      0 
+   NQMTCENCVA =      0 
+   PQMTCENCVA =      0 
+   LVSAT =      0 
+   NVSAT =      0 
+   PVSAT =      0 
+   LVSAT1 =      0 
+   NVSAT1 =      0 
+   PVSAT1 =      0 
+   LVSAT1R =      0 
+   NVSAT1R =      0 
+   PVSAT1R =      0 
+   LPSAT =      0 
+   NPSAT =      0 
+   PPSAT =      0 
+   LDELTAVSAT =      0 
+   NDELTAVSAT =      0 
+   PDELTAVSAT =      0 
+   LKSATIV =      0 
+   NKSATIV =      0 
+   PKSATIV =      0 
+   LVSATCV =      0 
+   NVSATCV =      0 
+   PVSATCV =      0 
+   LMEXP =      0 
+   NMEXP =      0 
+   PMEXP =      0 
+   LPTWG =      0 
+   NPTWG =      0 
+   PPTWG =      0 
+   LPTWGR =      0 
+   NPTWGR =      0 
+   PPTWGR =      0 
+   LU0 =      0 
+   NU0 =      0 
+   PU0 =      0 
+   LETAMOB =      0 
+   NETAMOB =      0 
+   PETAMOB =      0 
+   LUP =      0 
+   NUP =      0 
+   PUP =      0 
+   LUA =      0 
+   NUA =      0 
+   PUA =      0 
+   LUC =      0 
+   NUC =      0 
+   PUC =      0 
+   LEU =      0 
+   NEU =      0 
+   PEU =      0 
+   LUD =      0 
+   NUD =      0 
+   PUD =      0 
+   LUCS =      0 
+   NUCS =      0 
+   PUCS =      0 
+   LPCLM =      0 
+   NPCLM =      0 
+   PPCLM =      0 
+   LPCLMG =      0 
+   NPCLMG =      0 
+   PPCLMG =      0 
+   LPCLMCV =      0 
+   NPCLMCV =      0 
+   PPCLMCV =      0 
+   LA1 =      0 
+   NA1 =      0 
+   PA1 =      0 
+   LA2 =      0 
+   NA2 =      0 
+   PA2 =      0 
+   LRDSW =    0.2 
+   NRDSW =      0 
+   PRDSW =      0 
+   LRSW =      0 
+   NRSW =      0 
+   PRSW =      0 
+   LRDW =      0 
+   NRDW =      0 
+   PRDW =      0 
+   LPRWGS =      0 
+   NPRWGS =      0 
+   PPRWGS =      0 
+   LPRWGD =      0 
+   NPRWGD =      0 
+   PPRWGD =      0 
+   LWR =      0 
+   NWR =      0 
+   PWR =      0 
+   LPDIBL1 =      0 
+   NPDIBL1 =      0 
+   PPDIBL1 =      0 
+   LPDIBL1R =      0 
+   NPDIBL1R =      0 
+   PPDIBL1R =      0 
+   LPDIBL2 =      0 
+   NPDIBL2 =      0 
+   PPDIBL2 =      0 
+   LDROUT =      0 
+   NDROUT =      0 
+   PDROUT =      0 
+   LPVAG =      0 
+   NPVAG =      0 
+   PPVAG =      0 
+   LAIGBINV =      0 
+   NAIGBINV =      0 
+   PAIGBINV =      0 
+   LBIGBINV =      0 
+   NBIGBINV =      0 
+   PBIGBINV =      0 
+   LCIGBINV =      0 
+   NCIGBINV =      0 
+   PCIGBINV =      0 
+   LEIGBINV =      0 
+   NEIGBINV =      0 
+   PEIGBINV =      0 
+   LNIGBINV =      0 
+   NNIGBINV =      0 
+   PNIGBINV =      0 
+   LAIGBACC =      0 
+   NAIGBACC =      0 
+   PAIGBACC =      0 
+   LBIGBACC =      0 
+   NBIGBACC =      0 
+   PBIGBACC =      0 
+   LCIGBACC =      0 
+   NCIGBACC =      0 
+   PCIGBACC =      0 
+   LNIGBACC =      0 
+   NNIGBACC =      0 
+   PNIGBACC =      0 
+   LAIGC =      0 
+   NAIGC =      0 
+   PAIGC =      0 
+   LBIGC =      0 
+   NBIGC =      0 
+   PBIGC =      0 
+   LCIGC =      0 
+   NCIGC =      0 
+   PCIGC =      0 
+   LPIGCD =      0 
+   NPIGCD =      0 
+   PPIGCD =      0 
+   LAIGS =      0 
+   NAIGS =      0 
+   PAIGS =      0 
+   LBIGS =      0 
+   NBIGS =      0 
+   PBIGS =      0 
+   LCIGS =      0 
+   NCIGS =      0 
+   PCIGS =      0 
+   LAIGD =      0 
+   NAIGD =      0 
+   PAIGD =      0 
+   LBIGD =      0 
+   NBIGD =      0 
+   PBIGD =      0 
+   LCIGD =      0 
+   NCIGD =      0 
+   PCIGD =      0 
+   LNTOX =      0 
+   NNTOX =      0 
+   PNTOX =      0 
+   LPOXEDGE =      0 
+   NPOXEDGE =      0 
+   PPOXEDGE =      0 
+   LAGISL =      0 
+   NAGISL =      0 
+   PAGISL =      0 
+   LBGISL =      0 
+   NBGISL =      0 
+   PBGISL =      0 
+   LCGISL =      0 
+   NCGISL =      0 
+   PCGISL =      0 
+   LEGISL =      0 
+   NEGISL =      0 
+   PEGISL =      0 
+   LPGISL =      0 
+   NPGISL =      0 
+   PPGISL =      0 
+   LAGIDL =      0 
+   NAGIDL =      0 
+   PAGIDL =      0 
+   LBGIDL =      0 
+   NBGIDL =      0 
+   PBGIDL =      0 
+   LCGIDL =      0 
+   NCGIDL =      0 
+   PCGIDL =      0 
+   LEGIDL =      0 
+   NEGIDL =      0 
+   PEGIDL =      0 
+   LPGIDL =      0 
+   NPGIDL =      0 
+   PPGIDL =      0 
+   LALPHA0 =      0 
+   NALPHA0 =      0 
+   PALPHA0 =      0 
+   LALPHA1 =      0 
+   NALPHA1 =      0 
+   PALPHA1 =      0 
+   LBETA0 =      0 
+   NBETA0 =      0 
+   PBETA0 =      0 
+   LBETAII0 =      0 
+   NBETAII0 =      0 
+   PBETAII0 =      0 
+   LBETAII1 =      0 
+   NBETAII1 =      0 
+   PBETAII1 =      0 
+   LBETAII2 =      0 
+   NBETAII2 =      0 
+   PBETAII2 =      0 
+   LESATII =      0 
+   NESATII =      0 
+   PESATII =      0 
+   LLII =      0 
+   NLII =      0 
+   PLII =      0 
+   LSII0 =      0 
+   NSII0 =      0 
+   PSII0 =      0 
+   LSII1 =      0 
+   NSII1 =      0 
+   PSII1 =      0 
+   LSII2 =      0 
+   NSII2 =      0 
+   PSII2 =      0 
+   LSIID =      0 
+   NSIID =      0 
+   PSIID =      0 
+   LCFS =      0 
+   NCFS =      0 
+   PCFS =      0 
+   LCFD =      0 
+   NCFD =      0 
+   PCFD =      0 
+   LCOVS =      0 
+   NCOVS =      0 
+   PCOVS =      0 
+   LCOVD =      0 
+   NCOVD =      0 
+   PCOVD =      0 
+   LCGSL =      0 
+   NCGSL =      0 
+   PCGSL =      0 
+   LCGDL =      0 
+   NCGDL =      0 
+   PCGDL =      0 
+   LCKAPPAS =      0 
+   NCKAPPAS =      0 
+   PCKAPPAS =      0 
+   LCKAPPAD =      0 
+   NCKAPPAD =      0 
+   PCKAPPAD =      0 
+   LCGBL =      0 
+   NCGBL =      0 
+   PCGBL =      0 
+   LCKAPPAB =      0 
+   NCKAPPAB =      0 
+   PCKAPPAB =      0 
+   LNTGEN =      0 
+   NNTGEN =      0 
+   PNTGEN =      0 
+   LAIGEN =      0 
+   NAIGEN =      0 
+   PAIGEN =      0 
+   LBIGEN =      0 
+   NBIGEN =      0 
+   PBIGEN =      0 
+   LXRCRG1 =      0 
+   NXRCRG1 =      0 
+   PXRCRG1 =      0 
+   LXRCRG2 =      0 
+   NXRCRG2 =      0 
+   PXRCRG2 =      0 
+   LINTNOI =      0 
+   LUTE =      0 
+   NUTE =      0 
+   PUTE =      0 
+   LUTL =      0 
+   NUTL =      0 
+   PUTL =      0 
+   LEMOBT =      0 
+   NEMOBT =      0 
+   PEMOBT =      0 
+   LUA1 =      0 
+   NUA1 =      0 
+   PUA1 =      0 
+   LUC1 =      0 
+   NUC1 =      0 
+   PUC1 =      0 
+   LUD1 =      0 
+   NUD1 =      0 
+   PUD1 =      0 
+   LUCSTE =      0 
+   NUCSTE =      0 
+   PUCSTE =      0 
+   LPTWGT =      0 
+   NPTWGT =      0 
+   PPTWGT =      0 
+   LAT =      0 
+   NAT =      0 
+   PAT =      0 
+   LSTTHETASAT =      0 
+   NSTTHETASAT =      0 
+   PSTTHETASAT =      0 
+   LPRT =      0 
+   NPRT =      0 
+   PPRT =      0 
+   LKT1 =      0 
+   NKT1 =      0 
+   PKT1 =      0 
+   LTSS =      0 
+   NTSS =      0 
+   PTSS =      0 
+   LIIT =      0 
+   NIIT =      0 
+   PIIT =      0 
+   LTII =      0 
+   NTII =      0 
+   PTII =      0 
+   LTGIDL =      0 
+   NTGIDL =      0 
+   PTGIDL =      0 
+   LIGT =      0 
+   NIGT =      0 
+   PIGT =      0 
+   Imin =  1e-15 
+   K01 =      0 
+   K0SI1 =      0 
+   K1SI =      1 
+   K1SI1 =      0 
+   K11 =      0 
+   K1SAT1 =      0 
+   DELTAVSATCV =   0.28 
+   PSATCV =      2 
+   APSATCV =      0 
+   BPSATCV =      1 
+   A11 =      0 
+   A21 =      0 
+   AIGBINV1 =      0 
+   AIGBACC1 =      0 
+   AIGC1 =      0 
+   AIGS1 =      0 
+   AIGD1 =      0 
+   TOXG = 1.8e-09 
+   ALPHA01 =      0 
+   ALPHA11 =      0 
+   ALPHAII0 =      0 
+   ALPHAII01 =      0 
+   ALPHAII1 =      0 
+   ALPHAII11 =      0 
+   LK01 =      0 
+   NK01 =      0 
+   PK01 =      0 
+   LK0SI1 =      0 
+   NK0SI1 =      0 
+   PK0SI1 =      0 
+   LK1SI =      0 
+   NK1SI =      0 
+   PK1SI =      0 
+   LK1SI1 =      0 
+   NK1SI1 =      0 
+   PK1SI1 =      0 
+   LK11 =      0 
+   NK11 =      0 
+   PK11 =      0 
+   LK1SAT1 =      0 
+   NK1SAT1 =      0 
+   PK1SAT1 =      0 
+   LPSATCV =      0 
+   NPSATCV =      0 
+   PPSATCV =      0 
+   LDELTAVSATCV =      0 
+   NDELTAVSATCV =      0 
+   PDELTAVSATCV =      0 
+   LA11 =      0 
+   NA11 =      0 
+   PA11 =      0 
+   LA21 =      0 
+   NA21 =      0 
+   PA21 =      0 
+   LAIGBINV1 =      0 
+   NAIGBINV1 =      0 
+   PAIGBINV1 =      0 
+   LAIGBACC1 =      0 
+   NAIGBACC1 =      0 
+   PAIGBACC1 =      0 
+   LAIGC1 =      0 
+   NAIGC1 =      0 
+   PAIGC1 =      0 
+   LAIGS1 =      0 
+   NAIGS1 =      0 
+   PAIGS1 =      0 
+   LAIGD1 =      0 
+   NAIGD1 =      0 
+   PAIGD1 =      0 
+   LALPHAII0 =      0 
+   NALPHAII0 =      0 
+   PALPHAII0 =      0 
+   LALPHAII1 =      0 
+   NALPHAII1 =      0 
+   PALPHAII1 =      0 
+   CGEO1SW = 0 
+   NBODYN1 =      0 
+   NBODYN2 =  1e+05 
+   PHIGL =      0 
+   PHIGN1 =      0 
+   PHIGN2 =  1e+05 
+   CDSCN1 =      0 
+   CDSCN2 =  1e+05 
+   CDSCDN1 =      0 
+   CDSCDN2 =  1e+05 
+   CDSCDRN1 =      0 
+   CDSCDRN2 =  1e+05 
+   DVT1SS =   0.48 
+   ETA0N1 =      0 
+   ETA0N2 =  1e+05 
+   TETA0 =      0 
+   TETA0R =      0 
+   DVTP0 =      0 
+   DVTP1 =      0 
+   VSATN1 =      0 
+   VSATN2 =  1e+05 
+   VSAT1N1 =      0 
+   VSAT1N2 =  1e+05 
+   VSAT1RN1 =      0 
+   VSAT1RN2 =  1e+05 
+   MEXPR =      4 
+   AMEXPR =      0 
+   BMEXPR =      1 
+   TMEXPR =      0 
+   U0N1 =      0 
+   U0N2 =  1e+05 
+   CHARGEWF =      0 
+   LDVT1SS =      0 
+   NDVT1SS =      0 
+   PDVT1SS =      0 
+   LMEXPR =      0 
+   NMEXPR =      0 
+   PMEXPR =      0 
+   Lmin =      0 m
+   Lmax =      1 m
+   NFINmin =      0 
+   NFINmax =      1 
+ Model file: ../../7nm_TT.pm
+ Model line:          324
+ Model Name: pmos_rvt 
+ BSIM-MG BULK Model(Level72)
+   VERSION =    107  
+   L = 2.1e-08 
+   D =  4e-08 
+   TFIN = 6.5e-09 
+   FPITCH = 2.7e-08 
+   NF = 1 
+   NFIN =      1 
+   NGCON = 1 
+   ASEO =      0 
+   ADEO =      0 
+   PSEO =      0 
+   PDEO =      0 
+   ASEJ =      0 
+   ADEJ =      0 
+   PSEJ =      0 
+   PDEJ =      0 
+   CGSP =      0 
+   CGDP =      0 
+   CDSP =      0 
+   NRS =      0 
+   NRD =      0 
+   LRSD = 2.1e-08 
+   XL =  1e-09 
+   DTEMP =      0 
+   DELVTRAND =      0 
+   U0MULT =      1 
+   IDS0MULT =      1 
+   DEVTYPE = 0 
+   BULKMOD = 1 
+   COREMOD = 0 
+   GEOMOD = 1 
+   RDSMOD = 0 
+   ASYMMOD = 0 
+   IGCMOD = 1 
+   IGBMOD = 0 
+   GIDLMOD = 1 
+   IIMOD = 0 
+   NQSMOD = 0 
+   SHMOD = 0 
+   RGATEMOD = 0 
+   RGEOMOD = 0 
+   CGEOMOD = 0 
+   CAPMOD = 0 
+   LINT = -2.5e-09 
+   LL =      0 
+   LLN =      1 
+   DLC =      0 
+   DLCACC =      0 
+   DLBIN =      0 
+   LLC =      0 
+   EOT =  1e-09 
+   TOXP = 2.1e-09 
+   EOTBOX = 1.4e-07 
+   HFIN = 3.2e-08 
+   FECH =      1 
+   DELTAW =      0 
+   FECHCV =      1 
+   DELTAWCV =      0 
+   NBODY =  1e+22 
+   NSD =  2e+26 
+   PHIG =  4.811 
+   EPSROX =    3.9 
+   EPSRSUB =   11.9 
+   EASUB =   4.05 
+   NI0SUB = 1.1e+16 
+   BG0SUB =   1.17 
+   NC0SUB = 2.86e+25 
+   NGATE =      0 
+   CIT =      0 
+   CDSC = 0.003469 
+   CDSCD = 0.001486 
+   CDSCDR = 0.001486 
+   DVT0 =   0.05 
+   DVT1 =    0.4 
+   PHIN =   0.05 
+   ETA0 =   0.09 
+   ETA0R =   0.09 
+   DSUB =   0.24 
+   K1RSCE =      0 
+   LPE0 =      0 
+   DVTSHIFT =      0 
+   PHIBE =    0.7 
+   K0 =      0 
+   K0SI =      1 
+   K1 =      0 
+   K1SAT =      0 
+   QMFACTOR =      0 
+   QMTCENIV =      0 
+   QMTCENCV =      0 
+   QMTCENCVA =      0 
+   AQMTCEN =      0 
+   BQMTCEN = 1.2e-08 
+   ETAQM =   0.54 
+   QM0 = 2.183e-12 
+   PQM =   0.66 
+   QM0ACC =  0.001 
+   PQMACC =   0.66 
+   VSAT =  6e+04 
+   AVSAT =      0 
+   BVSAT =  1e-07 
+   VSAT1 =  6e+04 
+   VSAT1R =  6e+04 
+   AVSAT1 =      0 
+   BVSAT1 =  1e-07 
+   DELTAVSAT =   0.22 
+   PSAT =      2 
+   APSAT =      0 
+   BPSAT =      1 
+   KSATIV =  1.592 
+   VSATCV =  6e+04 
+   AVSATCV =      0 
+   BVSATCV =  1e-07 
+   MEXP =  2.491 
+   AMEXP =      0 
+   BMEXP =      1 
+   PTWG =     25 
+   PTWGR =     25 
+   APTWG =      0 
+   BPTWG =  1e-07 
+   AT =  0.001 
+   TMEXP =      0 
+   PTWGT =  0.004 
+   U0 = 0.0209 
+   ETAMOB =      4 
+   UP =      0 
+   LPA =      1 
+   UA =  1.133 
+   AUA =      0 
+   BUA =  1e-07 
+   UC =      0 
+   EU =   0.05 
+   AEU =      0 
+   BEU =  1e-07 
+   UD = 0.0105 
+   AUD =      0 
+   BUD =  5e-08 
+   UCS = 0.2672 
+   UTE =   -1.2 
+   UTL =      0 
+   EMOBT =      0 
+   UA1 = 0.001032 
+   UC1 = 5.6e-11 
+   UD1 =      0 
+   UCSTE = -0.004775 
+   RDSWMIN =      0 
+   RDSW =    200 
+   ARDSW =      0 
+   BRDSW =  1e-07 
+   RSWMIN =      0 
+   RSW =     50 
+   ARSW =      0 
+   BRSW =  1e-07 
+   RDWMIN =      0 
+   RDW =     50 
+   ARDW =      0 
+   BRDW =  1e-07 
+   RSDR =      0 
+   RSDRR =      0 
+   RDDR =      0 
+   RDDRR =      0 
+   PRSDR =      1 
+   PRDDR =      1 
+   PRWGS =      0 
+   PRWGD =      0 
+   WR =      1 
+   PRT =      0 
+   TRSDR =      0 
+   TRDDR =      0 
+   PDIBL1 =    800 
+   PDIBL1R =    800 
+   PDIBL2 = 0.005704 
+   DROUT =   4.97 
+   PVAG =    200 
+   PCLM =   0.01 
+   APCLM =      0 
+   BPCLM =  1e-07 
+   PCLMG =      1 
+   PCLMCV =   0.01 
+   A1 =      0 
+   A2 =      0 
+   RGEXT =      0 
+   RGFIN =  0.001 
+   RSHS =      0 
+   RSHD =      0 
+   HEPI =  1e-08 
+   TSILI =  1e-08 
+   RHOC =  1e-12 
+   RHORSD =      1 
+   CRATIO =    0.5 
+   DELTAPRSD =      0 
+   SDTERM = 0 
+   LSP = 4.4e-09 
+   EPSRSP =    3.9 
+   TGATE =  3e-08 
+   TMASK =  3e-08 
+   ASILIEND =      0 
+   ARSDEND =      0 
+   PRSDEND =      0 
+   NSDE =  2e+25 
+   RGEOA =      1 
+   RGEOB =      0 
+   RGEOC =      0 
+   RGEOD =      0 
+   RGEOE =      0 
+   CGEOA =      1 
+   CGEOB =      0 
+   CGEOC =      0 
+   CGEOD =      0 
+   CGEOE =      1 
+   AIGBINV = 0.0111 
+   BIGBINV = 0.000949 
+   CIGBINV =  0.006 
+   EIGBINV =    1.1 
+   NIGBINV =      3 
+   AIGBACC = 0.0136 
+   BIGBACC = 0.00171 
+   CIGBACC =  0.075 
+   NIGBACC =      1 
+   AIGC =  0.007 
+   BIGC = 0.0015 
+   CIGC =      1 
+   PIGCD =      1 
+   DLCIGS =  5e-09 
+   AIGS =  0.006 
+   BIGS = 0.001944 
+   CIGS =      1 
+   DLCIGD =  5e-09 
+   AIGD =  0.006 
+   BIGD = 0.001944 
+   CIGD =      1 
+   TOXREF = 1.2e-09 
+   NTOX =      1 
+   POXEDGE =  1.152 
+   AGISL =  2e-12 
+   BGISL = 1.5e+08 
+   CGISL =    0.5 
+   EGISL =  1.142 
+   PGISL =      1 
+   AGIDL =  2e-12 
+   BGIDL = 1.5e+08 
+   CGIDL =    0.5 
+   EGIDL =  1.142 
+   PGIDL =      1 
+   ALPHA0 =      0 
+   ALPHA1 =      0 
+   BETA0 =      0 
+   BETAII0 =      0 
+   BETAII1 =      0 
+   BETAII2 =    0.1 
+   ESATII =  1e+07 
+   LII =  5e-10 
+   SII0 =    0.5 
+   SII1 =    0.1 
+   SII2 =      0 
+   SIID =      0 
+   EOTACC =  3e-10 
+   DELVFBACC =      0 
+   CFS =      0 
+   CFD =      0 
+   COVS =      0 
+   COVD =      0 
+   CGSO = 1.6e-10 
+   CGDO = 1.6e-10 
+   CGSL =      0 
+   CGDL =      0 
+   CKAPPAS =    0.6 
+   CKAPPAD =    0.6 
+   CGBO =      0 
+   CGBN =      0 
+   CGBL =      0 
+   CKAPPAB =    0.6 
+   CSDESW =      0 
+   CJS = 0.0005 
+   CJD = 0.0005 
+   CJSWS =  5e-10 
+   CJSWD =  5e-10 
+   CJSWGS =      0 
+   CJSWGD =      0 
+   PBS =      1 
+   PBD =      1 
+   PBSWS =      1 
+   PBSWD =      1 
+   PBSWGS =      1 
+   PBSWGD =      1 
+   MJS =    0.5 
+   MJD =    0.5 
+   MJSWS =   0.33 
+   MJSWD =   0.33 
+   MJSWGS =   0.33 
+   MJSWGD =   0.33 
+   SJS =      0 
+   SJD =      0 
+   SJSWS =      0 
+   SJSWD =      0 
+   SJSWGS =      0 
+   SJSWGD =      0 
+   MJS2 =  0.125 
+   MJD2 =  0.125 
+   MJSWS2 =  0.083 
+   MJSWD2 =  0.083 
+   MJSWGS2 =  0.083 
+   MJSWGD2 =  0.083 
+   JSS = 0.0001 
+   JSD = 0.0001 
+   JSWS =      0 
+   JSWD =      0 
+   JSWGS =      0 
+   JSWGD =      0 
+   NJS =      1 
+   NJD =      1 
+   IJTHSFWD =    0.1 
+   IJTHDFWD =    0.1 
+   IJTHSREV =    0.1 
+   IJTHDREV =    0.1 
+   BVS =     10 
+   BVD =     10 
+   XJBVS =      1 
+   XJBVD =      1 
+   JTSS =      0 
+   JTSD =      0 
+   JTSSWS =      0 
+   JTSSWD =      0 
+   JTSSWGS =      0 
+   JTSSWGD =      0 
+   JTWEFF =      0 
+   NJTS =     20 
+   NJTSD =     20 
+   NJTSSW =     20 
+   NJTSSWD =     20 
+   NJTSSWG =     20 
+   NJTSSWGD =     20 
+   VTSS =     10 
+   VTSD =     10 
+   VTSSWS =     10 
+   VTSSWD =     10 
+   VTSSWGS =     10 
+   VTSSWGD =     10 
+   LINTIGEN =      0 
+   NTGEN =      1 
+   AIGEN =      0 
+   BIGEN =      0 
+   XRCRG1 =     12 
+   XRCRG2 =      1 
+   NSEG = 5 
+   EF =      1 
+   EM = 4.1e+07 
+   NOIA = 6.25e+39 
+   NOIB = 3.125e+24 
+   NOIC = 8.75e+07 
+   NTNOI =      1 
+   TNOM =     25 
+   TBGASUB = 0.000473 
+   TBGBSUB =    636 
+   KT1 =      0 
+   KT1L =      0 
+   TSS =      0 
+   IIT =   -0.5 
+   TII =      0 
+   TGIDL = -0.007 
+   IGT =    2.5 
+   TCJ =      0 
+   TCJSW =      0 
+   TCJSWG =      0 
+   TPB =      0 
+   TPBSW =      0 
+   TPBSWG =      0 
+   XTIS =      3 
+   XTID =      3 
+   XTSS =   0.02 
+   XTSD =   0.02 
+   XTSSWS =   0.02 
+   XTSSWD =   0.02 
+   XTSSWGS =   0.02 
+   XTSSWGD =   0.02 
+   TNJTS =      0 
+   TNJTSD =      0 
+   TNJTSSW =      0 
+   TNJTSSWD =      0 
+   TNJTSSWG =      0 
+   TNJTSSWGD =      0 
+   RTH0 =   0.15 
+   CTH0 = 1.243e-06 
+   WTH0 = 2.6e-07 
+   LNBODY =      0 
+   NNBODY =      0 
+   PNBODY =      0 
+   LPHIG =      0 
+   NPHIG =      0 
+   PPHIG =      0 
+   LNGATE =      0 
+   NNGATE =      0 
+   PNGATE =      0 
+   LCIT =      0 
+   NCIT =      0 
+   PCIT =      0 
+   LCDSC =      0 
+   NCDSC =      0 
+   PCDSC =      0 
+   LCDSCD =      0 
+   NCDSCD =      0 
+   PCDSCD =      0 
+   LCDSCDR =      0 
+   NCDSCDR =      0 
+   PCDSCDR =      0 
+   LDVT0 =      0 
+   NDVT0 =      0 
+   PDVT0 =      0 
+   LDVT1 =      0 
+   NDVT1 =      0 
+   PDVT1 =      0 
+   LPHIN =      0 
+   NPHIN =      0 
+   PPHIN =      0 
+   LETA0 =      0 
+   NETA0 =      0 
+   PETA0 =      0 
+   LETA0R =      0 
+   NETA0R =      0 
+   PETA0R =      0 
+   LDSUB =      0 
+   NDSUB =      0 
+   PDSUB =      0 
+   LK1RSCE =      0 
+   NK1RSCE =      0 
+   PK1RSCE =      0 
+   LLPE0 =      0 
+   NLPE0 =      0 
+   PLPE0 =      0 
+   LDVTSHIFT =      0 
+   NDVTSHIFT =      0 
+   PDVTSHIFT =      0 
+   LPHIBE =      0 
+   NPHIBE =      0 
+   PPHIBE =      0 
+   LK0 =      0 
+   NK0 =      0 
+   PK0 =      0 
+   LK0SI =      0 
+   NK0SI =      0 
+   PK0SI =      0 
+   LK1 =      0 
+   NK1 =      0 
+   PK1 =      0 
+   LK1SAT =      0 
+   NK1SAT =      0 
+   PK1SAT =      0 
+   LDVTB =      0 
+   NDVTB =      0 
+   PDVTB =      0 
+   LLPEB =      0 
+   NLPEB =      0 
+   PLPEB =      0 
+   LQMFACTOR =      0 
+   NQMFACTOR =      0 
+   PQMFACTOR =      0 
+   LQMTCENIV =      0 
+   NQMTCENIV =      0 
+   PQMTCENIV =      0 
+   LQMTCENCV =      0 
+   NQMTCENCV =      0 
+   PQMTCENCV =      0 
+   LQMTCENCVA =      0 
+   NQMTCENCVA =      0 
+   PQMTCENCVA =      0 
+   LVSAT =   1441 
+   NVSAT =      0 
+   PVSAT =      0 
+   LVSAT1 =   1441 
+   NVSAT1 =      0 
+   PVSAT1 =      0 
+   LVSAT1R =   1441 
+   NVSAT1R =      0 
+   PVSAT1R =      0 
+   LPSAT =      0 
+   NPSAT =      0 
+   PPSAT =      0 
+   LDELTAVSAT =      0 
+   NDELTAVSAT =      0 
+   PDELTAVSAT =      0 
+   LKSATIV =      0 
+   NKSATIV =      0 
+   PKSATIV =      0 
+   LVSATCV =      0 
+   NVSATCV =      0 
+   PVSATCV =      0 
+   LMEXP =      0 
+   NMEXP =      0 
+   PMEXP =      0 
+   LPTWG =      0 
+   NPTWG =      0 
+   PPTWG =      0 
+   LPTWGR =      0 
+   NPTWGR =      0 
+   PPTWGR =      0 
+   LU0 =      0 
+   NU0 =      0 
+   PU0 =      0 
+   LETAMOB =      0 
+   NETAMOB =      0 
+   PETAMOB =      0 
+   LUP =      0 
+   NUP =      0 
+   PUP =      0 
+   LUA =      0 
+   NUA =      0 
+   PUA =      0 
+   LUC =      0 
+   NUC =      0 
+   PUC =      0 
+   LEU =      0 
+   NEU =      0 
+   PEU =      0 
+   LUD =      0 
+   NUD =      0 
+   PUD =      0 
+   LUCS =      0 
+   NUCS =      0 
+   PUCS =      0 
+   LPCLM =      0 
+   NPCLM =      0 
+   PPCLM =      0 
+   LPCLMG =      0 
+   NPCLMG =      0 
+   PPCLMG =      0 
+   LPCLMCV =      0 
+   NPCLMCV =      0 
+   PPCLMCV =      0 
+   LA1 =      0 
+   NA1 =      0 
+   PA1 =      0 
+   LA2 =      0 
+   NA2 =      0 
+   PA2 =      0 
+   LRDSW =    1.3 
+   NRDSW =      0 
+   PRDSW =      0 
+   LRSW =      0 
+   NRSW =      0 
+   PRSW =      0 
+   LRDW =      0 
+   NRDW =      0 
+   PRDW =      0 
+   LPRWGS =      0 
+   NPRWGS =      0 
+   PPRWGS =      0 
+   LPRWGD =      0 
+   NPRWGD =      0 
+   PPRWGD =      0 
+   LWR =      0 
+   NWR =      0 
+   PWR =      0 
+   LPDIBL1 =      0 
+   NPDIBL1 =      0 
+   PPDIBL1 =      0 
+   LPDIBL1R =      0 
+   NPDIBL1R =      0 
+   PPDIBL1R =      0 
+   LPDIBL2 =      0 
+   NPDIBL2 =      0 
+   PPDIBL2 =      0 
+   LDROUT =      0 
+   NDROUT =      0 
+   PDROUT =      0 
+   LPVAG =      0 
+   NPVAG =      0 
+   PPVAG =      0 
+   LAIGBINV =      0 
+   NAIGBINV =      0 
+   PAIGBINV =      0 
+   LBIGBINV =      0 
+   NBIGBINV =      0 
+   PBIGBINV =      0 
+   LCIGBINV =      0 
+   NCIGBINV =      0 
+   PCIGBINV =      0 
+   LEIGBINV =      0 
+   NEIGBINV =      0 
+   PEIGBINV =      0 
+   LNIGBINV =      0 
+   NNIGBINV =      0 
+   PNIGBINV =      0 
+   LAIGBACC =      0 
+   NAIGBACC =      0 
+   PAIGBACC =      0 
+   LBIGBACC =      0 
+   NBIGBACC =      0 
+   PBIGBACC =      0 
+   LCIGBACC =      0 
+   NCIGBACC =      0 
+   PCIGBACC =      0 
+   LNIGBACC =      0 
+   NNIGBACC =      0 
+   PNIGBACC =      0 
+   LAIGC =      0 
+   NAIGC =      0 
+   PAIGC =      0 
+   LBIGC =      0 
+   NBIGC =      0 
+   PBIGC =      0 
+   LCIGC =      0 
+   NCIGC =      0 
+   PCIGC =      0 
+   LPIGCD =      0 
+   NPIGCD =      0 
+   PPIGCD =      0 
+   LAIGS =      0 
+   NAIGS =      0 
+   PAIGS =      0 
+   LBIGS =      0 
+   NBIGS =      0 
+   PBIGS =      0 
+   LCIGS =      0 
+   NCIGS =      0 
+   PCIGS =      0 
+   LAIGD =      0 
+   NAIGD =      0 
+   PAIGD =      0 
+   LBIGD =      0 
+   NBIGD =      0 
+   PBIGD =      0 
+   LCIGD =      0 
+   NCIGD =      0 
+   PCIGD =      0 
+   LNTOX =      0 
+   NNTOX =      0 
+   PNTOX =      0 
+   LPOXEDGE =      0 
+   NPOXEDGE =      0 
+   PPOXEDGE =      0 
+   LAGISL =      0 
+   NAGISL =      0 
+   PAGISL =      0 
+   LBGISL =      0 
+   NBGISL =      0 
+   PBGISL =      0 
+   LCGISL =      0 
+   NCGISL =      0 
+   PCGISL =      0 
+   LEGISL =      0 
+   NEGISL =      0 
+   PEGISL =      0 
+   LPGISL =      0 
+   NPGISL =      0 
+   PPGISL =      0 
+   LAGIDL =      0 
+   NAGIDL =      0 
+   PAGIDL =      0 
+   LBGIDL =      0 
+   NBGIDL =      0 
+   PBGIDL =      0 
+   LCGIDL =      0 
+   NCGIDL =      0 
+   PCGIDL =      0 
+   LEGIDL =      0 
+   NEGIDL =      0 
+   PEGIDL =      0 
+   LPGIDL =      0 
+   NPGIDL =      0 
+   PPGIDL =      0 
+   LALPHA0 =      0 
+   NALPHA0 =      0 
+   PALPHA0 =      0 
+   LALPHA1 =      0 
+   NALPHA1 =      0 
+   PALPHA1 =      0 
+   LBETA0 =      0 
+   NBETA0 =      0 
+   PBETA0 =      0 
+   LBETAII0 =      0 
+   NBETAII0 =      0 
+   PBETAII0 =      0 
+   LBETAII1 =      0 
+   NBETAII1 =      0 
+   PBETAII1 =      0 
+   LBETAII2 =      0 
+   NBETAII2 =      0 
+   PBETAII2 =      0 
+   LESATII =      0 
+   NESATII =      0 
+   PESATII =      0 
+   LLII =      0 
+   NLII =      0 
+   PLII =      0 
+   LSII0 =      0 
+   NSII0 =      0 
+   PSII0 =      0 
+   LSII1 =      0 
+   NSII1 =      0 
+   PSII1 =      0 
+   LSII2 =      0 
+   NSII2 =      0 
+   PSII2 =      0 
+   LSIID =      0 
+   NSIID =      0 
+   PSIID =      0 
+   LCFS =      0 
+   NCFS =      0 
+   PCFS =      0 
+   LCFD =      0 
+   NCFD =      0 
+   PCFD =      0 
+   LCOVS =      0 
+   NCOVS =      0 
+   PCOVS =      0 
+   LCOVD =      0 
+   NCOVD =      0 
+   PCOVD =      0 
+   LCGSL =      0 
+   NCGSL =      0 
+   PCGSL =      0 
+   LCGDL =      0 
+   NCGDL =      0 
+   PCGDL =      0 
+   LCKAPPAS =      0 
+   NCKAPPAS =      0 
+   PCKAPPAS =      0 
+   LCKAPPAD =      0 
+   NCKAPPAD =      0 
+   PCKAPPAD =      0 
+   LCGBL =      0 
+   NCGBL =      0 
+   PCGBL =      0 
+   LCKAPPAB =      0 
+   NCKAPPAB =      0 
+   PCKAPPAB =      0 
+   LNTGEN =      0 
+   NNTGEN =      0 
+   PNTGEN =      0 
+   LAIGEN =      0 
+   NAIGEN =      0 
+   PAIGEN =      0 
+   LBIGEN =      0 
+   NBIGEN =      0 
+   PBIGEN =      0 
+   LXRCRG1 =      0 
+   NXRCRG1 =      0 
+   PXRCRG1 =      0 
+   LXRCRG2 =      0 
+   NXRCRG2 =      0 
+   PXRCRG2 =      0 
+   LINTNOI =      0 
+   LUTE =      0 
+   NUTE =      0 
+   PUTE =      0 
+   LUTL =      0 
+   NUTL =      0 
+   PUTL =      0 
+   LEMOBT =      0 
+   NEMOBT =      0 
+   PEMOBT =      0 
+   LUA1 =      0 
+   NUA1 =      0 
+   PUA1 =      0 
+   LUC1 =      0 
+   NUC1 =      0 
+   PUC1 =      0 
+   LUD1 =      0 
+   NUD1 =      0 
+   PUD1 =      0 
+   LUCSTE =      0 
+   NUCSTE =      0 
+   PUCSTE =      0 
+   LPTWGT =      0 
+   NPTWGT =      0 
+   PPTWGT =      0 
+   LAT =      0 
+   NAT =      0 
+   PAT =      0 
+   LSTTHETASAT =      0 
+   NSTTHETASAT =      0 
+   PSTTHETASAT =      0 
+   LPRT =      0 
+   NPRT =      0 
+   PPRT =      0 
+   LKT1 =      0 
+   NKT1 =      0 
+   PKT1 =      0 
+   LTSS =      0 
+   NTSS =      0 
+   PTSS =      0 
+   LIIT =      0 
+   NIIT =      0 
+   PIIT =      0 
+   LTII =      0 
+   NTII =      0 
+   PTII =      0 
+   LTGIDL =      0 
+   NTGIDL =      0 
+   PTGIDL =      0 
+   LIGT =      0 
+   NIGT =      0 
+   PIGT =      0 
+   Imin =  1e-15 
+   K01 =      0 
+   K0SI1 =      0 
+   K1SI =      1 
+   K1SI1 =      0 
+   K11 =      0 
+   K1SAT1 =      0 
+   DELTAVSATCV =   0.22 
+   PSATCV =      2 
+   APSATCV =      0 
+   BPSATCV =      1 
+   A11 =      0 
+   A21 =      0 
+   AIGBINV1 =      0 
+   AIGBACC1 =      0 
+   AIGC1 =      0 
+   AIGS1 =      0 
+   AIGD1 =      0 
+   TOXG = 1.9e-09 
+   ALPHA01 =      0 
+   ALPHA11 =      0 
+   ALPHAII0 =      0 
+   ALPHAII01 =      0 
+   ALPHAII1 =      0 
+   ALPHAII11 =      0 
+   LK01 =      0 
+   NK01 =      0 
+   PK01 =      0 
+   LK0SI1 =      0 
+   NK0SI1 =      0 
+   PK0SI1 =      0 
+   LK1SI =      0 
+   NK1SI =      0 
+   PK1SI =      0 
+   LK1SI1 =      0 
+   NK1SI1 =      0 
+   PK1SI1 =      0 
+   LK11 =      0 
+   NK11 =      0 
+   PK11 =      0 
+   LK1SAT1 =      0 
+   NK1SAT1 =      0 
+   PK1SAT1 =      0 
+   LPSATCV =      0 
+   NPSATCV =      0 
+   PPSATCV =      0 
+   LDELTAVSATCV =      0 
+   NDELTAVSATCV =      0 
+   PDELTAVSATCV =      0 
+   LA11 =      0 
+   NA11 =      0 
+   PA11 =      0 
+   LA21 =      0 
+   NA21 =      0 
+   PA21 =      0 
+   LAIGBINV1 =      0 
+   NAIGBINV1 =      0 
+   PAIGBINV1 =      0 
+   LAIGBACC1 =      0 
+   NAIGBACC1 =      0 
+   PAIGBACC1 =      0 
+   LAIGC1 =      0 
+   NAIGC1 =      0 
+   PAIGC1 =      0 
+   LAIGS1 =      0 
+   NAIGS1 =      0 
+   PAIGS1 =      0 
+   LAIGD1 =      0 
+   NAIGD1 =      0 
+   PAIGD1 =      0 
+   LALPHAII0 =      0 
+   NALPHAII0 =      0 
+   PALPHAII0 =      0 
+   LALPHAII1 =      0 
+   NALPHAII1 =      0 
+   PALPHAII1 =      0 
+   CGEO1SW = 0 
+   NBODYN1 =      0 
+   NBODYN2 =  1e+05 
+   PHIGL =      0 
+   PHIGN1 =      0 
+   PHIGN2 =  1e+05 
+   CDSCN1 =      0 
+   CDSCN2 =  1e+05 
+   CDSCDN1 =      0 
+   CDSCDN2 =  1e+05 
+   CDSCDRN1 =      0 
+   CDSCDRN2 =  1e+05 
+   DVT1SS =    0.4 
+   ETA0N1 =      0 
+   ETA0N2 =  1e+05 
+   TETA0 =      0 
+   TETA0R =      0 
+   DVTP0 =      0 
+   DVTP1 =      0 
+   VSATN1 =      0 
+   VSATN2 =  1e+05 
+   VSAT1N1 =      0 
+   VSAT1N2 =  1e+05 
+   VSAT1RN1 =      0 
+   VSAT1RN2 =  1e+05 
+   MEXPR =  2.491 
+   AMEXPR =      0 
+   BMEXPR =      1 
+   TMEXPR =      0 
+   U0N1 =      0 
+   U0N2 =  1e+05 
+   CHARGEWF =      0 
+   LDVT1SS =      0 
+   NDVT1SS =      0 
+   PDVT1SS =      0 
+   LMEXPR =      0 
+   NMEXPR =      0 
+   PMEXPR =      0 
+   Lmin =      0 m
+   Lmax =      1 m
+   NFINmin =      0 
+   NFINmax =      1 
+             
+ Summary of Linear Res Distribution Info
+ ---------------------------------------
+ |Range          |Total     |Percent(%)|
+ |---------------+----------+----------|
+ |0e+00  ~  1e-05|17        |0.9214    |
+ |1e-02  ~  1e-01|137       |7.4255    |
+ |1e-01  ~  1e+00|256       |13.8753   |
+ |1e+00  ~  1e+03|1435      |77.7778   |
+ ---------------------------------------
+              
+             
+ Summary of Linear Cap Distribution Info
+ ---------------------------------------
+ |Range          |Total     |Percent(%)|
+ |---------------+----------+----------|
+ |1e-20  ~  1e-19|11        |0.4806    |
+ |1e-19  ~  1e-18|458       |20.0087   |
+ |1e-18  ~  1e-17|1363      |59.5457   |
+ |1e-17  ~  1e-16|457       |19.9651   |
+ ---------------------------------------
+              
+             
+ Summary of Detailed RC Type Statistics
+ -------------------------
+ |Element Type|Number    |
+ |------------+----------|
+ |Constant Res|1845      |
+ |            |          |
+ |Constant Cap|2289      |
+ -------------------------
+              
+  
+             
+ Warning:'No DC path nodes' occurs 131 times
+ No DC path from the following nodes,connected with gdcpath:
+ -----------------------------------
+ |Node           |Subckt           |
+ |---------------+-----------------|
+ |x2.n_noxref_5_1|invx1_asap7_75t_r|
+ |x2.n_noxref_6_1|invx1_asap7_75t_r|
+ |x2.n_noxref_7_1|invx1_asap7_75t_r|
+ |x2.n_noxref_8_1|invx1_asap7_75t_r|
+ |x3.n_noxref_5_1|invx1_asap7_75t_r|
+ |x3.n_noxref_6_1|invx1_asap7_75t_r|
+ |x3.n_noxref_7_1|invx1_asap7_75t_r|
+ |x3.n_noxref_8_1|invx1_asap7_75t_r|
+ |x4.n_noxref_5_1|invx1_asap7_75t_r|
+ |x4.n_noxref_6_1|invx1_asap7_75t_r|
+ -----------------------------------
+              
+      
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+  Opening plot unit= 15
+ file=147.pa0
+
+ ******  
+ .title test adder
+
+ ****** operating point information tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is voltage   simulation time is     0.     
+      node    =voltage        node    =voltage        node    =voltage
+
+ +  0:a0      = 700.0000m   0:a1      =   0.        0:a2      =   0.     
+ +  0:a3      = 700.0000m   0:b0      = 700.0000m   0:b1      = 700.0000m
+ +  0:b2      =   0.        0:b3      =   0.        0:out0    = 795.3236n
+ +  0:out1    = 837.3157n   0:out2    = 699.9992m   0:out3    = 699.9992m
+ +  0:out4    = 644.0769n   0:vdd     = 700.0000m   0:vss     =   0.     
+ +  0:y1      = 699.9998m   0:y2      = 700.0000m   0:y3      = 700.0000m
+ +  0:y4      = 699.9998m   0:y5      = 699.9998m   1:a0      = 699.9992m
+ +  1:n10     = 699.9999m   1:n11     = 366.0695n   1:n12     = 699.9997m
+ +  1:n13     = 140.6737n   1:n14     = 699.9997m   1:n15     = 543.6917n
+ +  1:n16     = 699.9997m   1:n17     = 699.9998m   1:n18     = 135.1616n
+ +  1:n19     = 699.9997m   1:n20     = 699.9997m   1:n4      = 699.9997m
+ +  1:n5      = 358.6894n   1:n6      = 699.9992m   1:n7      = 699.9998m
+ +  1:n8      = 135.1611n   1:n9      = 699.9997m   2:n_a_1   =  25.5556p
+ +  2:n_a_5   =   0.        2:n_a_6   =   0.        2:n_a_7   =   0.     
+ +  2:n_a_9   =   0.        2:n_mm0_d = 699.9998m   2:n_mm0_g =  26.5207p
+ +  2:n_mm1_d = 699.9998m   2:n_noxref=   0.        2:n_noxref=   0.     
+ +  2:n_noxref=   0.        2:n_noxref=   0.        2:n_y_1   = 699.9998m
+ +  2:n_y_10  = 699.9998m   2:n_y_11  = 699.9998m   2:n_y_2   = 699.9998m
+ +  2:n_y_7   = 699.9998m   2:n_y_8   = 699.9998m   2:n_y_9   = 699.9998m
+ +  3:n_a_1   =  36.2665p   3:n_a_5   =   0.        3:n_a_6   =   0.     
+ +  3:n_a_7   =   0.        3:n_a_9   =   0.        3:n_mm0_d = 700.0000m
+ +  3:n_mm0_g =  37.6362p   3:n_mm1_d = 700.0000m   3:n_noxref=   0.     
+ +  3:n_noxref=   0.        3:n_noxref=   0.        3:n_noxref=   0.     
+ +  3:n_y_1   = 700.0000m   3:n_y_10  = 700.0000m   3:n_y_11  = 700.0000m
+ +  3:n_y_2   = 700.0000m   3:n_y_7   = 700.0000m   3:n_y_8   = 700.0000m
+ +  3:n_y_9   = 700.0000m   4:n_a_1   =  36.2665p   4:n_a_5   =   0.     
+ +  4:n_a_6   =   0.        4:n_a_7   =   0.        4:n_a_9   =   0.     
+ +  4:n_mm0_d = 700.0000m   4:n_mm0_g =  37.6362p   4:n_mm1_d = 700.0000m
+ +  4:n_noxref=   0.        4:n_noxref=   0.        4:n_noxref=   0.     
+ +  4:n_noxref=   0.        4:n_y_1   = 700.0000m   4:n_y_10  = 700.0000m
+ +  4:n_y_11  = 700.0000m   4:n_y_2   = 700.0000m   4:n_y_7   = 700.0000m
+ +  4:n_y_8   = 700.0000m   4:n_y_9   = 700.0000m   5:n_a_1   =  25.5556p
+ +  5:n_a_5   =   0.        5:n_a_6   =   0.        5:n_a_7   =   0.     
+ +  5:n_a_9   =   0.        5:n_mm0_d = 699.9998m   5:n_mm0_g =  26.5207p
+ +  5:n_mm1_d = 699.9998m   5:n_noxref=   0.        5:n_noxref=   0.     
+ +  5:n_noxref=   0.        5:n_noxref=   0.        5:n_y_1   = 699.9998m
+ +  5:n_y_10  = 699.9998m   5:n_y_11  = 699.9998m   5:n_y_2   = 699.9998m
+ +  5:n_y_7   = 699.9998m   5:n_y_8   = 699.9998m   5:n_y_9   = 699.9998m
+ +  6:n_a_1   =  25.5556p   6:n_a_5   =   0.        6:n_a_6   =   0.     
+ +  6:n_a_7   =   0.        6:n_a_9   =   0.        6:n_mm0_d = 699.9998m
+ +  6:n_mm0_g =  26.5207p   6:n_mm1_d = 699.9998m   6:n_noxref=   0.     
+ +  6:n_noxref=   0.        6:n_noxref=   0.        6:n_noxref=   0.     
+ +  6:n_y_1   = 699.9998m   6:n_y_10  = 699.9998m   6:n_y_11  = 699.9998m
+ +  6:n_y_2   = 699.9998m   6:n_y_7   = 699.9998m   6:n_y_8   = 699.9998m
+ +  6:n_y_9   = 699.9998m   7:n_a_1   = 700.0000m   7:n_a_10  = 700.0000m
+ +  7:n_a_12  = 700.0000m   7:n_a_13  = 700.0000m   7:n_a_16  = 700.0000m
+ +  7:n_a_17  = 700.0000m   7:n_a_18  = 700.0000m   7:n_a_2   = 700.0000m
+ +  7:n_a_7   = 700.0000m   7:n_a_9   = 700.0000m   7:n_b_1   = 700.0000m
+ +  7:n_b_5   = 700.0000m   7:n_b_6   = 700.0000m   7:n_b_7   = 700.0000m
+ +  7:n_mm0_g = 700.0000m   7:n_mm0_s =  30.7217n   7:n_mm10_d= 392.0148n
+ +  7:n_mm10_g= 700.0000m   7:n_mm10_s= 779.7768n   7:n_mm11_g= 700.0000m
+ +  7:n_mm11_s= 391.9288n   7:n_mm1_g = 700.0000m   7:n_mm1_s =  30.7217n
+ +  7:n_mm2_d = 669.1792m   7:n_mm2_s =  32.3431n   7:n_mm3_s = 669.1792m
+ +  7:n_mm4_s =  44.2678m   7:n_mm5_s =  44.2678m   7:n_mm6_d =  44.2678m
+ +  7:n_mm6_s = 802.1268n   7:n_mm9_g =  31.4699n   7:n_mm9_s = 791.4053n
+ +  7:n_net019=  44.2678m   7:n_net019=  44.2678m   7:n_net019=  44.2678m
+ +  7:n_net019=  44.2678m   7:n_net019=  44.2678m   7:n_net036=  31.4699n
+ +  7:n_net036=  30.7222n   7:n_net036=  32.3425n   7:n_net036=  31.3060n
+ +  7:n_net036=  31.4083n   7:n_net036=  31.5786n   7:n_net036=  31.4695n
+ +  7:n_net036=  31.4696n   7:n_net036=  31.4689n   7:n_net036=  31.4695n
+ +  7:n_net036=  30.7249n   7:n_net036=  32.3394n   7:n_net047= 391.9718n
+ +  7:n_net048= 669.1792m   7:n_noxref=   0.        7:n_noxref=   0.     
+ +  7:n_noxref=   0.        7:n_noxref=   0.        7:n_noxref=   0.     
+ +  7:n_noxref=   0.        7:n_noxref=   0.        7:n_noxref=   0.     
+ +  7:n_y_1   = 779.8143n   7:n_y_10  = 779.8143n   7:n_y_11  = 791.4053n
+ +  7:n_y_12  = 802.1229n   7:n_y_13  = 783.7444n   7:n_y_14  = 792.8645n
+ +  7:n_y_15  = 798.9794n   7:n_y_2   = 791.4053n   7:n_y_3   = 802.1032n
+ +  8:n_a_1   = 700.0000m   8:n_a_6   = 700.0000m   8:n_a_9   = 700.0000m
+ +  8:n_b_1   = 700.0000m   8:n_b_4   = 700.0000m   8:n_b_5   = 700.0000m
+ +  8:n_b_6   = 700.0000m   8:n_mm0_d = 372.3431n   8:n_mm1_d = 372.3431n
+ +  8:n_mm2_d = 362.9446n   8:n_mm2_g = 700.0000m   8:n_mm2_s = 183.5758n
+ +  8:n_mm3_d = 183.5357n   8:n_mm3_g = 700.0000m   8:n_net16_= 183.5557n
+ +  8:n_noxref=   0.        8:n_noxref=   0.        8:n_noxref=   0.     
+ +  8:n_noxref=   0.        8:n_y_1   = 372.3289n   8:n_y_10  = 364.7684n
+ +  8:n_y_11  = 365.4391n   8:n_y_2   = 362.9618n   8:n_y_7   = 362.9474n
+ +  8:n_y_8   = 372.3410n   8:n_y_9   = 369.5233n   9:n_a_1   = 700.0000m
+ +  9:n_a_11  = 700.0000m   9:n_a_12  = 700.0000m   9:n_a_13  = 700.0000m
+ +  9:n_a_14  = 700.0000m   9:n_a_15  = 700.0000m   9:n_a_16  = 700.0000m
+ +  9:n_a_17  = 700.0000m   9:n_a_2   = 700.0000m   9:n_a_3   = 700.0000m
+ +  9:n_b_1   =  37.5703p   9:n_b_11  =  67.1717p   9:n_b_12  =  98.6207p
+ +  9:n_b_13  =  17.5600p   9:n_b_14  =  18.0296p   9:n_b_15  =  84.9474p
+ +  9:n_b_2   =  87.4146p   9:n_b_3   = 108.7421p   9:n_ci_1  = 366.1072n
+ +  9:n_ci_10 = 366.0963n   9:n_ci_11 = 366.0871n   9:n_ci_12 = 366.0871n
+ +  9:n_ci_13 = 366.0871n   9:n_ci_14 = 366.1203n   9:n_ci_15 = 366.1201n
+ +  9:n_ci_16 = 366.0695n   9:n_ci_2  = 366.0964n   9:n_ci_3  = 366.1320n
+ +  9:n_con_1 = 699.9992m   9:n_con_10= 699.9992m   9:n_con_11= 699.9992m
+ +  9:n_con_12= 699.9992m   9:n_con_13= 699.9992m   9:n_con_14= 699.9992m
+ +  9:n_con_15= 699.9992m   9:n_con_16= 699.9992m   9:n_con_17= 699.9992m
+ +  9:n_con_18= 699.9992m   9:n_con_19= 699.9992m   9:n_con_20= 699.9992m
+ +  9:n_con_21= 699.9992m   9:n_con_3 = 699.9992m   9:n_con_4 = 699.9992m
+ +  9:n_mm0_d = 699.9996m   9:n_mm10_s= 110.7944n   9:n_mm11_s= 115.9277n
+ +  9:n_mm12_d= 699.9999m   9:n_mm13_d= 699.9999m   9:n_mm14_d= 699.9999m
+ +  9:n_mm14_g= 366.1356n   9:n_mm15_d= 845.6055n   9:n_mm15_g= 699.9992m
+ +  9:n_mm15_s= 699.9999m   9:n_mm16_d= 417.6513n   9:n_mm16_s= 817.4388n
+ +  9:n_mm17_g= 700.0000m   9:n_mm17_s= 403.9522n   9:n_mm18_g= 112.3001p
+ +  9:n_mm18_s= 403.9966n   9:n_mm19_s= 417.6070n   9:n_mm1_d = 699.9992m
+ +  9:n_mm1_g = 366.1133n   9:n_mm1_s = 699.9996m   9:n_mm20_d= 699.9998m
+ +  9:n_mm20_g= 102.1606p   9:n_mm21_d=  30.7618m   9:n_mm21_g= 700.0000m
+ +  9:n_mm21_s= 699.9998m   9:n_mm22_d= 845.6049n   9:n_mm22_g= 366.0965n
+ +  9:n_mm22_s=  30.7618m   9:n_mm23_d= 986.7981u   9:n_mm24_d= 986.7981u
+ +  9:n_mm24_s= 986.7981u   9:n_mm25_d= 817.4830n   9:n_mm25_s= 986.7981u
+ +  9:n_mm2_d = 699.9996m   9:n_mm2_g =  88.8066p   9:n_mm5_d = 699.9992m
+ +  9:n_mm5_g =  43.6956p   9:n_mm5_s = 699.9992m   9:n_mm6_d = 699.9992m
+ +  9:n_mm6_g = 700.0000m   9:n_mm7_d = 115.9397n   9:n_mm7_s = 699.9992m
+ +  9:n_mm8_d = 110.8184n   9:n_mm8_s = 699.9992m   9:n_mm9_g = 700.0000m
+ +  9:n_mm9_s = 110.7956n   9:n_net027= 699.9999m   9:n_net027= 699.9999m
+ +  9:n_net027= 699.9999m   9:n_net027= 699.9999m   9:n_net027= 699.9999m
+ +  9:n_net067= 417.6070n   9:n_net067= 403.9966n   9:n_net067= 417.6448n
+ +  9:n_net067= 403.9587n   9:n_net067= 408.7569n   9:n_net079= 986.7981u
+ +  9:n_net080= 986.7981u   9:n_net081=  30.7618m   9:n_net082= 699.9998m
+ +  9:n_net25_= 110.8062n   9:n_net25_= 115.9277n   9:n_net25_= 110.8062n
+ +  9:n_net25_= 115.9379n   9:n_net25_= 111.9140n   9:n_net27_= 699.9996m
+ +  9:n_net27_= 699.9996m   9:n_net27_= 699.9996m   9:n_net27_= 699.9996m
+ +  9:n_net27_= 699.9996m   9:n_net36_= 110.8064n   9:n_net37_= 699.9992m
+ +  9:n_noxref=   0.        9:n_noxref=   0.        9:n_noxref=   0.     
+ +  9:n_noxref=   0.        9:n_sn_1  = 817.4827n   9:n_sn_10 = 822.5513n
+ +  9:n_sn_11 = 838.3792n   9:n_sn_12 = 842.7398n   9:n_sn_15 = 821.5143n
+ +  9:n_sn_16 = 841.9836n   9:n_sn_2  = 845.5912n   9:n_sn_7  = 817.4829n
+ +  9:n_sn_8  = 845.6029n   9:n_sn_9  = 829.6268n  10:n_a_1   =   6.7585p
+ + 10:n_a_10  =  49.2558p  10:n_a_11  =  73.1011p  10:n_a_14  =  45.4648p
+ + 10:n_a_15  =  68.8451p  10:n_a_2   =  95.8306p  10:n_a_7   =   7.1814p
+ + 10:n_a_8   =  18.6049p  10:n_b_1   =  46.9708p  10:n_b_5   =   0.     
+ + 10:n_mm0_d = 699.9999m  10:n_mm10_d= 699.9992m  10:n_mm10_s= 699.9996m
+ + 10:n_mm11_d= 699.9996m  10:n_mm1_d = 699.9999m  10:n_mm2_d = 699.9999m
+ + 10:n_mm2_g =  48.1516p  10:n_mm2_s =  28.2463m  10:n_mm3_d =  28.2463m
+ + 10:n_mm3_g =   8.5164p  10:n_mm4_d = 653.9696m  10:n_mm4_g = 100.0259p
+ + 10:n_mm5_d = 653.9696m  10:n_mm5_g = 329.0654p  10:n_mm6_d = 699.9992m
+ + 10:n_mm6_g = 699.9999m  10:n_mm6_s = 653.9696m  10:n_mm9_d = 699.9992m
+ + 10:n_net015= 653.9696m  10:n_net015= 653.9696m  10:n_net015= 653.9696m
+ + 10:n_net015= 653.9696m  10:n_net015= 653.9696m  10:n_net041= 699.9996m
+ + 10:n_net29_= 699.9999m  10:n_net29_= 699.9999m  10:n_net29_= 699.9999m
+ + 10:n_net29_= 699.9999m  10:n_net29_= 699.9999m  10:n_net29_= 699.9999m
+ + 10:n_net29_= 699.9999m  10:n_net29_= 699.9999m  10:n_net29_= 699.9999m
+ + 10:n_net29_= 699.9999m  10:n_net29_= 699.9999m  10:n_net43_=  28.2463m
+ + 10:n_noxref=   0.       10:n_noxref=   0.       10:n_noxref=   0.     
+ + 10:n_noxref=   0.       10:n_noxref=   0.       10:n_noxref=   0.     
+ + 10:n_noxref=   0.       10:n_noxref=   0.       10:n_y_1   = 699.9992m
+ + 10:n_y_10  = 699.9992m  10:n_y_11  = 699.9992m  10:n_y_12  = 699.9992m
+ + 10:n_y_13  = 699.9992m  10:n_y_14  = 699.9992m  10:n_y_15  = 699.9992m
+ + 10:n_y_2   = 699.9992m  10:n_y_3   = 699.9992m  11:n_a_1   = 700.0000m
+ + 11:n_a_6   = 700.0000m  11:n_a_9   = 700.0000m  11:n_b_1   =  16.9247p
+ + 11:n_b_4   =   2.8741p  11:n_b_5   =   2.8741p  11:n_b_6   =   0.     
+ + 11:n_mm0_d = 699.9997m  11:n_mm1_d = 699.9997m  11:n_mm2_d = 699.9997m
+ + 11:n_mm2_g =  19.9552p  11:n_mm2_s = 110.8185n  11:n_mm3_d = 110.7945n
+ + 11:n_mm3_g = 700.0000m  11:n_net16_= 110.8065n  11:n_noxref=   0.     
+ + 11:n_noxref=   0.       11:n_noxref=   0.       11:n_noxref=   0.     
+ + 11:n_y_1   = 699.9997m  11:n_y_10  = 699.9997m  11:n_y_11  = 699.9997m
+ + 11:n_y_2   = 699.9997m  11:n_y_7   = 699.9997m  11:n_y_8   = 699.9997m
+ + 11:n_y_9   = 699.9997m  12:n_a_1   = 366.0917n  12:n_a_6   = 366.0695n
+ + 12:n_a_9   = 366.0695n  12:n_b_1   = 699.9997m  12:n_b_4   = 699.9997m
+ + 12:n_b_5   = 699.9997m  12:n_b_6   = 699.9997m  12:n_mm0_d = 699.9997m
+ + 12:n_mm1_d = 699.9997m  12:n_mm2_d = 699.9997m  12:n_mm2_g = 699.9997m
+ + 12:n_mm2_s = 667.5888m  12:n_mm3_d = 667.5888m  12:n_mm3_g = 366.0931n
+ + 12:n_net16_= 667.5888m  12:n_noxref=   0.       12:n_noxref=   0.     
+ + 12:n_noxref=   0.       12:n_noxref=   0.       12:n_y_1   = 699.9997m
+ + 12:n_y_10  = 699.9997m  12:n_y_11  = 699.9997m  12:n_y_2   = 699.9997m
+ + 12:n_y_7   = 699.9997m  12:n_y_8   = 699.9997m  12:n_y_9   = 699.9997m
+ + 13:n_a     =   0.       13:n_a_1   =  10.1214p  13:n_a_5   =   0.     
+ + 13:n_a_6   =   0.       13:n_b_1   = 700.0000m  13:n_b_5   = 700.0000m
+ + 13:n_b_6   = 700.0000m  13:n_b_7   = 700.0000m  13:n_mm0@2_= 699.9998m
+ + 13:n_mm0_s = 699.9998m  13:n_mm1_g = 700.0000m  13:n_mm1_s = 200.6022n
+ + 13:n_mm2_g =  13.6794p  13:n_mm2_s = 200.6241n  13:n_mm3_s = 699.9998m
+ + 13:n_mm4_d = 699.9998m  13:n_mm4_s = 208.8545n  13:n_mm5@2_= 204.3864n
+ + 13:n_mm5@2_= 699.9998m  13:n_mm5_g = 204.3781n  13:n_mm5_s = 699.9998m
+ + 13:n_net15_= 699.9998m  13:n_net7_1= 204.3778n  13:n_net7_1= 200.6054n
+ + 13:n_net7_1= 208.8419n  13:n_net7_1= 205.9157n  13:n_net7_1= 202.6867n
+ + 13:n_net7_1= 203.9339n  13:n_net7_1= 204.7008n  13:n_net7_1= 204.3278n
+ + 13:n_net7_1= 202.9127n  13:n_net7_1= 204.3223n  13:n_net7_2= 205.6955n
+ + 13:n_net7_3= 208.8419n  13:n_net7_4= 200.6241n  13:n_noxref=   0.     
+ + 13:n_noxref=   0.       13:n_noxref=   0.       13:n_noxref=   0.     
+ + 13:n_y_1   = 699.9998m  13:n_y_10  = 699.9998m  13:n_y_13  = 699.9998m
+ + 13:n_y_14  = 699.9998m  13:n_y_15  = 699.9998m  13:n_y_2   = 699.9998m
+ + 13:n_y_7   = 699.9998m  13:n_y_8   = 699.9998m  13:n_y_9   = 699.9998m
+ + 14:n_a_1   = 699.9997m  14:n_a_6   = 699.9997m  14:n_a_9   = 699.9997m
+ + 14:n_b_1   = 699.9998m  14:n_b_4   = 699.9998m  14:n_b_5   = 699.9998m
+ + 14:n_b_6   = 699.9998m  14:n_mm0_d = 364.9630n  14:n_mm1_d = 364.9630n
+ + 14:n_mm2_d = 355.6289n  14:n_mm2_g = 699.9998m  14:n_mm2_s = 179.9175n
+ + 14:n_mm3_d = 179.8783n  14:n_mm3_g = 699.9997m  14:n_net16_= 179.8979n
+ + 14:n_noxref=   0.       14:n_noxref=   0.       14:n_noxref=   0.     
+ + 14:n_noxref=   0.       14:n_y_1   = 364.9488n  14:n_y_10  = 357.4151n
+ + 14:n_y_11  = 358.0720n  14:n_y_2   = 355.6458n  14:n_y_7   = 355.6317n
+ + 14:n_y_8   = 364.9609n  14:n_y_9   = 362.1431n  15:n_a_1   = 699.9992m
+ + 15:n_a_10  = 699.9992m  15:n_a_12  = 699.9992m  15:n_a_13  = 699.9992m
+ + 15:n_a_16  = 699.9992m  15:n_a_17  = 699.9992m  15:n_a_18  = 699.9992m
+ + 15:n_a_2   = 699.9992m  15:n_a_7   = 699.9992m  15:n_a_9   = 699.9992m
+ + 15:n_b_1   = 358.7164n  15:n_b_5   = 358.6894n  15:n_b_6   = 358.6894n
+ + 15:n_b_7   = 358.6894n  15:n_mm0_g = 699.9992m  15:n_mm0_s = 189.9792n
+ + 15:n_mm10_d= 110.8200n  15:n_mm10_g= 359.0211n  15:n_mm10_s= 699.9992m
+ + 15:n_mm11_g= 699.9992m  15:n_mm11_s= 110.7960n  15:n_mm1_g = 358.7170n
+ + 15:n_mm1_s = 189.9999n  15:n_mm2_d =  30.7622m  15:n_mm2_s = 195.2710n
+ + 15:n_mm3_s =  30.7622m  15:n_mm4_s = 699.9996m  15:n_mm5_s = 699.9996m
+ + 15:n_mm6_d = 699.9996m  15:n_mm6_s = 699.9992m  15:n_mm9_g = 192.5223n
+ + 15:n_mm9_s = 699.9992m  15:n_net019= 699.9996m  15:n_net019= 699.9996m
+ + 15:n_net019= 699.9996m  15:n_net019= 699.9996m  15:n_net019= 699.9996m
+ + 15:n_net036= 192.5161n  15:n_net036= 189.9822n  15:n_net036= 195.2690n
+ + 15:n_net036= 191.9061n  15:n_net036= 192.2418n  15:n_net036= 192.7956n
+ + 15:n_net036= 192.4857n  15:n_net036= 192.4962n  15:n_net036= 192.4405n
+ + 15:n_net036= 192.4870n  15:n_net036= 189.9999n  15:n_net036= 195.2590n
+ + 15:n_net047= 110.8080n  15:n_net048=  30.7622m  15:n_noxref=   0.     
+ + 15:n_noxref=   0.       15:n_noxref=   0.       15:n_noxref=   0.     
+ + 15:n_noxref=   0.       15:n_noxref=   0.       15:n_noxref=   0.     
+ + 15:n_noxref=   0.       15:n_y_1   = 699.9992m  15:n_y_10  = 699.9992m
+ + 15:n_y_11  = 699.9992m  15:n_y_12  = 699.9992m  15:n_y_13  = 699.9992m
+ + 15:n_y_14  = 699.9992m  15:n_y_15  = 699.9992m  15:n_y_2   = 699.9992m
+ + 15:n_y_3   = 699.9992m  16:n_a_1   = 699.9998m  16:n_a_5   = 699.9998m
+ + 16:n_a_6   = 699.9998m  16:n_a_7   = 699.9998m  16:n_a_9   = 699.9998m
+ + 16:n_mm0_d = 132.2987n  16:n_mm0_g = 699.9998m  16:n_mm1_d = 138.6433n
+ + 16:n_noxref=   0.       16:n_noxref=   0.       16:n_noxref=   0.     
+ + 16:n_noxref=   0.       16:n_y_1   = 132.3114n  16:n_y_10  = 133.6383n
+ + 16:n_y_11  = 136.9702n  16:n_y_2   = 138.6308n  16:n_y_7   = 132.3008n
+ + 16:n_y_8   = 138.6412n  16:n_y_9   = 134.6023n  17:n_a_1   =  11.4557p
+ + 17:n_a_6   =   0.       17:n_a_9   =   0.       17:n_b_1   =  16.9379p
+ + 17:n_b_4   =   2.8764p  17:n_b_5   =   2.8764p  17:n_b_6   =   0.     
+ + 17:n_mm0_d = 699.9999m  17:n_mm1_d = 699.9999m  17:n_mm2_d = 699.9999m
+ + 17:n_mm2_g =  19.9708p  17:n_mm2_s =  28.2463m  17:n_mm3_d =  28.2463m
+ + 17:n_mm3_g =  12.1495p  17:n_net16_=  28.2463m  17:n_noxref=   0.     
+ + 17:n_noxref=   0.       17:n_noxref=   0.       17:n_noxref=   0.     
+ + 17:n_y_1   = 699.9999m  17:n_y_10  = 699.9999m  17:n_y_11  = 699.9999m
+ + 17:n_y_2   = 699.9999m  17:n_y_7   = 699.9999m  17:n_y_8   = 699.9999m
+ + 17:n_y_9   = 699.9999m  18:n_a_1   = 135.1833n  18:n_a_6   = 135.1611n
+ + 18:n_a_9   = 135.1611n  18:n_b_1   = 699.9999m  18:n_b_4   = 699.9999m
+ + 18:n_b_5   = 699.9999m  18:n_b_6   = 699.9999m  18:n_mm0_d = 699.9997m
+ + 18:n_mm1_d = 699.9997m  18:n_mm2_d = 699.9997m  18:n_mm2_g = 699.9999m
+ + 18:n_mm2_s = 667.5891m  18:n_mm3_d = 667.5891m  18:n_mm3_g = 135.1847n
+ + 18:n_net16_= 667.5891m  18:n_noxref=   0.       18:n_noxref=   0.     
+ + 18:n_noxref=   0.       18:n_noxref=   0.       18:n_y_1   = 699.9997m
+ + 18:n_y_10  = 699.9997m  18:n_y_11  = 699.9997m  18:n_y_2   = 699.9997m
+ + 18:n_y_7   = 699.9997m  18:n_y_8   = 699.9997m  18:n_y_9   = 699.9997m
+ + 19:n_a     =   0.       19:n_a_1   =  14.9900p  19:n_a_5   =   0.     
+ + 19:n_a_6   =   0.       19:n_b_1   =  23.1904p  19:n_b_5   =   0.     
+ + 19:n_b_6   =   2.0236p  19:n_b_7   =   0.       19:n_mm0@2_= 148.8553n
+ + 19:n_mm0_s = 148.8553n  19:n_mm1_g =  23.9180p  19:n_mm1_s = 699.9994m
+ + 19:n_mm2_g =  20.2596p  19:n_mm2_s = 699.9994m  19:n_mm3_s = 699.9997m
+ + 19:n_mm4_d = 699.9997m  19:n_mm4_s = 699.9994m  19:n_mm5@2_= 699.9994m
+ + 19:n_mm5@2_= 131.6569n  19:n_mm5_g = 699.9994m  19:n_mm5_s = 131.6569n
+ + 19:n_net15_= 699.9997m  19:n_net7_1= 699.9994m  19:n_net7_1= 699.9994m
+ + 19:n_net7_1= 699.9994m  19:n_net7_1= 699.9994m  19:n_net7_1= 699.9994m
+ + 19:n_net7_1= 699.9994m  19:n_net7_1= 699.9994m  19:n_net7_1= 699.9994m
+ + 19:n_net7_1= 699.9994m  19:n_net7_1= 699.9994m  19:n_net7_2= 699.9994m
+ + 19:n_net7_3= 699.9994m  19:n_net7_4= 699.9994m  19:n_noxref=   0.     
+ + 19:n_noxref=   0.       19:n_noxref=   0.       19:n_noxref=   0.     
+ + 19:n_y_1   = 131.6712n  19:n_y_10  = 146.2135n  19:n_y_13  = 138.0682n
+ + 19:n_y_14  = 135.2312n  19:n_y_15  = 145.2988n  19:n_y_2   = 148.8411n
+ + 19:n_y_7   = 131.6590n  19:n_y_8   = 148.8532n  19:n_y_9   = 134.8839n
+ + 20:n_a_1   = 366.0836n  20:n_a_4   = 366.0695n  20:n_b_1   = 699.9999m
+ + 20:n_b_4   = 699.9999m  20:n_c_1   = 699.9997m  20:n_c_4   = 699.9997m
+ + 20:n_mm0_d = 699.9997m  20:n_mm0_g = 366.0861n  20:n_mm0_s = 225.8069n
+ + 20:n_mm1_d = 225.7829n  20:n_mm1_g = 699.9999m  20:n_mm1_s = 114.9874n
+ + 20:n_mm2_d = 114.9625n  20:n_mm2_g = 699.9997m  20:n_mm3_d = 699.9997m
+ + 20:n_mm4_d = 699.9997m  20:n_mm5_d = 699.9997m  20:n_net21_= 114.9749n
+ + 20:n_net22_= 225.7949n  20:n_noxref=   0.       20:n_noxref=   0.     
+ + 20:n_noxref=   0.       20:n_noxref=   0.       20:n_y_1   = 699.9997m
+ + 20:n_y_10  = 699.9997m  20:n_y_11  = 699.9997m  20:n_y_12  = 699.9997m
+ + 20:n_y_13  = 699.9997m  20:n_y_14  = 699.9997m  20:n_y_3   = 699.9997m
+ + 21:n_a_1   = 699.9997m  21:n_a_4   = 699.9997m  21:n_b_1   = 140.6868n
+ + 21:n_b_4   = 140.6737n  21:n_c_1   = 699.9997m  21:n_c_4   = 699.9997m
+ + 21:n_mm0_d = 699.9997m  21:n_mm0_g = 699.9997m  21:n_mm0_s = 667.5890m
+ + 21:n_mm1_d = 667.5890m  21:n_mm1_g = 140.6892n  21:n_mm1_s = 107.5871n
+ + 21:n_mm2_d = 107.5639n  21:n_mm2_g = 699.9997m  21:n_mm3_d = 699.9997m
+ + 21:n_mm4_d = 699.9997m  21:n_mm5_d = 699.9997m  21:n_net21_= 107.5755n
+ + 21:n_net22_= 667.5890m  21:n_noxref=   0.       21:n_noxref=   0.     
+ + 21:n_noxref=   0.       21:n_noxref=   0.       21:n_y_1   = 699.9997m
+ + 21:n_y_10  = 699.9997m  21:n_y_11  = 699.9997m  21:n_y_12  = 699.9997m
+ + 21:n_y_13  = 699.9997m  21:n_y_14  = 699.9997m  21:n_y_3   = 699.9997m
+ + 22:n_a_1   =  13.1149p  22:n_a_10  =  30.9068p  22:n_a_11  =  45.8692p
+ + 22:n_a_14  =  28.5281p  22:n_a_15  =  43.1986p  22:n_a_2   =  60.1314p
+ + 22:n_a_7   =   4.5062p  22:n_a_8   =  11.6741p  22:n_b_1   = 700.0000m
+ + 22:n_b_5   = 700.0000m  22:n_mm0_d = 699.9997m  22:n_mm10_d= 550.1986n
+ + 22:n_mm10_s= 699.9998m  22:n_mm11_d= 699.9998m  22:n_mm1_d = 699.9997m
+ + 22:n_mm2_d = 699.9997m  22:n_mm2_g = 700.0000m  22:n_mm2_s = 667.5892m
+ + 22:n_mm3_d = 667.5892m  22:n_mm3_g =  16.5259p  22:n_mm4_d = 274.7203n
+ + 22:n_mm4_g =  62.7638p  22:n_mm5_d = 265.8270n  22:n_mm5_g = 700.0000m
+ + 22:n_mm6_d = 536.4102n  22:n_mm6_g = 699.9997m  22:n_mm6_s = 274.7494n
+ + 22:n_mm9_d = 547.6377n  22:n_net015= 265.8526n  22:n_net015= 274.7203n
+ + 22:n_net015= 265.8526n  22:n_net015= 274.7203n  22:n_net015= 268.5402n
+ + 22:n_net041= 699.9998m  22:n_net29_= 699.9997m  22:n_net29_= 699.9997m
+ + 22:n_net29_= 699.9997m  22:n_net29_= 699.9997m  22:n_net29_= 699.9997m
+ + 22:n_net29_= 699.9997m  22:n_net29_= 699.9997m  22:n_net29_= 699.9997m
+ + 22:n_net29_= 699.9997m  22:n_net29_= 699.9997m  22:n_net29_= 699.9997m
+ + 22:n_net43_= 667.5892m  22:n_noxref=   0.       22:n_noxref=   0.     
+ + 22:n_noxref=   0.       22:n_noxref=   0.       22:n_noxref=   0.     
+ + 22:n_noxref=   0.       22:n_noxref=   0.       22:n_noxref=   0.     
+ + 22:n_y_1   = 550.1860n  22:n_y_10  = 536.4144n  22:n_y_11  = 550.1860n
+ + 22:n_y_12  = 547.6356n  22:n_y_13  = 546.3113n  22:n_y_14  = 540.1906n
+ + 22:n_y_15  = 539.0806n  22:n_y_2   = 536.4355n  22:n_y_3   = 547.6251n
+ + 23:n_a_1   = 699.9997m  23:n_a_10  = 699.9997m  23:n_a_12  = 699.9997m
+ + 23:n_a_13  = 699.9997m  23:n_a_16  = 699.9997m  23:n_a_17  = 699.9997m
+ + 23:n_a_18  = 699.9997m  23:n_a_2   = 699.9997m  23:n_a_7   = 699.9997m
+ + 23:n_a_9   = 699.9997m  23:n_b_1   = 543.7188n  23:n_b_5   = 543.6917n
+ + 23:n_b_6   = 543.6917n  23:n_b_7   = 543.6917n  23:n_mm0_g = 699.9997m
+ + 23:n_mm0_s = 189.9759n  23:n_mm10_d= 110.8207n  23:n_mm10_g= 544.0235n
+ + 23:n_mm10_s= 699.9992m  23:n_mm11_g= 699.9997m  23:n_mm11_s= 110.7967n
+ + 23:n_mm1_g = 543.7193n  23:n_mm1_s = 189.9966n  23:n_mm2_d =  30.7620m
+ + 23:n_mm2_s = 195.2676n  23:n_mm3_s =  30.7620m  23:n_mm4_s = 699.9996m
+ + 23:n_mm5_s = 699.9996m  23:n_mm6_d = 699.9996m  23:n_mm6_s = 699.9992m
+ + 23:n_mm9_g = 192.5190n  23:n_mm9_s = 699.9992m  23:n_net019= 699.9996m
+ + 23:n_net019= 699.9996m  23:n_net019= 699.9996m  23:n_net019= 699.9996m
+ + 23:n_net019= 699.9996m  23:n_net036= 192.5128n  23:n_net036= 189.9789n
+ + 23:n_net036= 195.2656n  23:n_net036= 191.9028n  23:n_net036= 192.2385n
+ + 23:n_net036= 192.7923n  23:n_net036= 192.4823n  23:n_net036= 192.4929n
+ + 23:n_net036= 192.4372n  23:n_net036= 192.4837n  23:n_net036= 189.9966n
+ + 23:n_net036= 195.2556n  23:n_net047= 110.8087n  23:n_net048=  30.7620m
+ + 23:n_noxref=   0.       23:n_noxref=   0.       23:n_noxref=   0.     
+ + 23:n_noxref=   0.       23:n_noxref=   0.       23:n_noxref=   0.     
+ + 23:n_noxref=   0.       23:n_noxref=   0.       23:n_y_1   = 699.9992m
+ + 23:n_y_10  = 699.9992m  23:n_y_11  = 699.9992m  23:n_y_12  = 699.9992m
+ + 23:n_y_13  = 699.9992m  23:n_y_14  = 699.9992m  23:n_y_15  = 699.9992m
+ + 23:n_y_2   = 699.9992m  23:n_y_3   = 699.9992m  24:n_a_1   = 699.9997m
+ + 24:n_a_5   = 699.9997m  24:n_a_6   = 699.9997m  24:n_a_7   = 699.9997m
+ + 24:n_a_9   = 699.9997m  24:n_mm0_d = 132.2992n  24:n_mm0_g = 699.9997m
+ + 24:n_mm1_d = 138.6438n  24:n_noxref=   0.       24:n_noxref=   0.     
+ + 24:n_noxref=   0.       24:n_noxref=   0.       24:n_y_1   = 132.3119n
+ + 24:n_y_10  = 133.6388n  24:n_y_11  = 136.9707n  24:n_y_2   = 138.6313n
+ + 24:n_y_7   = 132.3013n  24:n_y_8   = 138.6418n  24:n_y_9   = 134.6028n
+ + 25:n_a     =   0.       25:n_a_1   = 700.0000m  25:n_a_5   = 700.0000m
+ + 25:n_a_6   = 700.0000m  25:n_b_1   = 197.7977f  25:n_b_5   =   0.     
+ + 25:n_b_6   =  17.2595f  25:n_b_7   =   0.       25:n_mm0@2_= 699.9998m
+ + 25:n_mm0_s = 699.9998m  25:n_mm1_g = 204.0036f  25:n_mm1_s = 192.5597n
+ + 25:n_mm2_g = 700.0000m  25:n_mm2_s = 192.5387n  25:n_mm3_s =  30.7614m
+ + 25:n_mm4_d =  30.7614m  25:n_mm4_s = 200.4509n  25:n_mm5@2_= 196.1718n
+ + 25:n_mm5@2_= 699.9998m  25:n_mm5_g = 196.1636n  25:n_mm5_s = 699.9998m
+ + 25:n_net15_=  30.7614m  25:n_net7_1= 196.1632n  25:n_net7_1= 192.5597n
+ + 25:n_net7_1= 200.4389n  25:n_net7_1= 197.6347n  25:n_net7_1= 194.5386n
+ + 25:n_net7_1= 195.7351n  25:n_net7_1= 196.4704n  25:n_net7_1= 196.1132n
+ + 25:n_net7_1= 194.7554n  25:n_net7_1= 196.1078n  25:n_net7_2= 197.4237n
+ + 25:n_net7_3= 200.4389n  25:n_net7_4= 192.5597n  25:n_noxref=   0.     
+ + 25:n_noxref=   0.       25:n_noxref=   0.       25:n_noxref=   0.     
+ + 25:n_y_1   = 699.9998m  25:n_y_10  = 699.9998m  25:n_y_13  = 699.9998m
+ + 25:n_y_14  = 699.9998m  25:n_y_15  = 699.9998m  25:n_y_2   = 699.9998m
+ + 25:n_y_7   = 699.9998m  25:n_y_8   = 699.9998m  25:n_y_9   = 699.9998m
+ + 26:n_a_1   = 135.1838n  26:n_a_6   = 135.1616n  26:n_a_9   = 135.1616n
+ + 26:n_b_1   = 699.9998m  26:n_b_4   = 699.9998m  26:n_b_5   = 699.9998m
+ + 26:n_b_6   = 699.9998m  26:n_mm0_d = 699.9997m  26:n_mm1_d = 699.9997m
+ + 26:n_mm2_d = 699.9997m  26:n_mm2_g = 699.9998m  26:n_mm2_s = 667.5890m
+ + 26:n_mm3_d = 667.5890m  26:n_mm3_g = 135.1852n  26:n_net16_= 667.5890m
+ + 26:n_noxref=   0.       26:n_noxref=   0.       26:n_noxref=   0.     
+ + 26:n_noxref=   0.       26:n_y_1   = 699.9997m  26:n_y_10  = 699.9997m
+ + 26:n_y_11  = 699.9997m  26:n_y_2   = 699.9997m  26:n_y_7   = 699.9997m
+ + 26:n_y_8   = 699.9997m  26:n_y_9   = 699.9997m  27:n_a_1   =  22.2297p
+ + 27:n_a_6   =   0.       27:n_a_9   =   0.       27:n_b_1   = 700.0000m
+ + 27:n_b_4   = 700.0000m  27:n_b_5   = 700.0000m  27:n_b_6   = 700.0000m
+ + 27:n_mm0_d = 699.9997m  27:n_mm1_d = 699.9997m  27:n_mm2_d = 699.9997m
+ + 27:n_mm2_g = 700.0000m  27:n_mm2_s = 667.5892m  27:n_mm3_d = 667.5892m
+ + 27:n_mm3_g =  23.5759p  27:n_net16_= 667.5892m  27:n_noxref=   0.     
+ + 27:n_noxref=   0.       27:n_noxref=   0.       27:n_noxref=   0.     
+ + 27:n_y_1   = 699.9997m  27:n_y_10  = 699.9997m  27:n_y_11  = 699.9997m
+ + 27:n_y_2   = 699.9997m  27:n_y_7   = 699.9997m  27:n_y_8   = 699.9997m
+ + 27:n_y_9   = 699.9997m  28:n_a_1   = 699.9997m  28:n_a_6   = 699.9997m
+ + 28:n_a_9   = 699.9997m  28:n_b_1   = 699.9997m  28:n_b_4   = 699.9997m
+ + 28:n_b_5   = 699.9997m  28:n_b_6   = 699.9997m  28:n_mm0_d = 650.3506n
+ + 28:n_mm1_d = 650.3506n  28:n_mm2_d = 638.5235n  28:n_mm2_g = 699.9997m
+ + 28:n_mm2_s = 321.3804n  28:n_mm3_d = 321.3099n  28:n_mm3_g = 699.9997m
+ + 28:n_net16_= 321.3452n  28:n_noxref=   0.       28:n_noxref=   0.     
+ + 28:n_noxref=   0.       28:n_noxref=   0.       28:n_y_1   = 650.3363n
+ + 28:n_y_10  = 641.7646n  28:n_y_11  = 642.9566n  28:n_y_2   = 638.5542n
+ + 28:n_y_7   = 638.5286n  28:n_y_8   = 650.3485n  28:n_y_9   = 647.5307n
+ + 33:14      = 699.9998m  33:15      = 699.9998m  33:16      = 699.9998m
+ + 33:18      = 699.9998m  33:19      = 699.9998m  33:20      = 699.9998m
+ + 33:22      = 699.9998m  33:23      = 699.9998m  34:4       =   0.     
+ + 34:8       =   0.       34:11      =  26.0332p  34:12      =  25.2377p
+ + 34:14      =  20.9887p  34:17      = 891.0681f  34:18      =   3.5643p
+ + 39:14      = 700.0000m  39:15      = 700.0000m  39:16      = 700.0000m
+ + 39:18      = 700.0000m  39:19      = 700.0000m  39:20      = 700.0000m
+ + 39:22      = 700.0000m  39:23      = 700.0000m  40:4       =   0.     
+ + 40:8       =   0.       40:11      =  36.9444p  40:12      =  35.8154p
+ + 40:14      =  29.7855p  40:17      =   1.2645p  40:18      =   5.0581p
+ + 45:14      = 700.0000m  45:15      = 700.0000m  45:16      = 700.0000m
+ + 45:18      = 700.0000m  45:19      = 700.0000m  45:20      = 700.0000m
+ + 45:22      = 700.0000m  45:23      = 700.0000m  46:4       =   0.     
+ + 46:8       =   0.       46:11      =  36.9444p  46:12      =  35.8154p
+ + 46:14      =  29.7855p  46:17      =   1.2645p  46:18      =   5.0581p
+ + 51:14      = 699.9998m  51:15      = 699.9998m  51:16      = 699.9998m
+ + 51:18      = 699.9998m  51:19      = 699.9998m  51:20      = 699.9998m
+ + 51:22      = 699.9998m  51:23      = 699.9998m  52:4       =   0.     
+ + 52:8       =   0.       52:11      =  26.0332p  52:12      =  25.2377p
+ + 52:14      =  20.9887p  52:17      = 891.0681f  52:18      =   3.5643p
+ + 57:14      = 699.9998m  57:15      = 699.9998m  57:16      = 699.9998m
+ + 57:18      = 699.9998m  57:19      = 699.9998m  57:20      = 699.9998m
+ + 57:22      = 699.9998m  57:23      = 699.9998m  58:4       =   0.     
+ + 58:8       =   0.       58:11      =  26.0332p  58:12      =  25.2377p
+ + 58:14      =  20.9887p  58:17      = 891.0681f  58:18      =   3.5643p
+ + 65:16      = 792.3477n  65:17      = 779.7830n  65:20      = 783.7444n
+ + 65:21      = 787.3620n  65:22      = 790.7669n  65:23      = 791.4053n
+ + 65:24      = 792.0437n  65:26      = 797.4647n  65:27      = 798.5947n
+ + 65:30      = 799.6318n  65:31      = 799.2304n  70:10      =  44.2678m
+ + 70:12      =  44.2678m  70:13      =  44.2678m  70:14      =  44.2678m
+ + 70:15      =  44.2678m  70:17      =  44.2678m  71:9       = 700.0000m
+ + 71:10      = 700.0000m  71:11      = 700.0000m  71:12      = 700.0000m
+ + 71:13      = 700.0000m  71:14      = 700.0000m  71:15      = 700.0000m
+ + 71:16      = 700.0000m  71:17      = 700.0000m  71:19      = 700.0000m
+ + 71:22      = 700.0000m  71:23      = 700.0000m  71:24      = 700.0000m
+ + 72:8       = 700.0000m  72:11      = 700.0000m  72:14      = 700.0000m
+ + 72:15      = 700.0000m  72:20      = 700.0000m  72:21      = 700.0000m
+ + 72:23      = 700.0000m  72:30      = 700.0000m  72:31      = 700.0000m
+ + 72:32      = 700.0000m  72:33      = 700.0000m  72:34      = 700.0000m
+ + 72:35      = 700.0000m  72:36      = 700.0000m  72:37      = 700.0000m
+ + 72:39      = 700.0000m  72:41      = 700.0000m  72:42      = 700.0000m
+ + 73:17      =  31.3571n  73:21      =  31.4696n  73:23      =  31.4695n
+ + 73:24      =  31.4694n  73:25      =  31.4694n  73:26      =  31.4692n
+ + 73:27      =  31.4690n  73:28      =  31.4689n  73:29      =  31.7891n
+ + 73:30      =  31.9505n  73:32      =  31.1140n  73:33      =  31.2006n
+ + 73:40      =  30.7222n  77:4       = 700.0000m  77:5       = 700.0000m
+ + 77:7       = 700.0000m  77:8       = 700.0000m  77:11      = 700.0000m
+ + 77:12      = 700.0000m  77:14      = 700.0000m  77:18      = 700.0000m
+ + 77:19      = 700.0000m  77:20      = 700.0000m  77:21      = 700.0000m
+ + 80:10      = 700.0000m  80:11      = 700.0000m  80:13      = 700.0000m
+ + 81:12      = 365.2016n  81:13      = 369.1032n  81:17      = 365.8304n
+ + 81:18      = 366.0423n  81:20      = 367.1919n  81:21      = 368.4935n
+ + 81:22      = 368.8729n  81:23      = 370.5771n  81:24      = 370.1872n
+ + 81:29      = 372.3410n  84:11      = 699.9999m  84:16      = 699.9999m
+ + 84:17      = 699.9999m  84:18      = 699.9999m  84:19      = 699.9999m
+ + 84:20      = 699.9999m  84:21      = 699.9999m  84:22      = 699.9999m
+ + 84:23      = 699.9999m  84:26      = 699.9999m  85:10      = 699.9996m
+ + 85:12      = 699.9996m  85:13      = 699.9996m  85:14      = 699.9996m
+ + 85:15      = 699.9996m  85:16      = 699.9996m  85:17      = 699.9996m
+ + 85:18      = 699.9996m  85:19      = 699.9996m  85:20      = 699.9996m
+ + 85:21      = 699.9996m  85:25      = 699.9996m  86:10      = 110.7974n
+ + 86:12      = 111.9140n  86:13      = 112.0340n  86:14      = 112.1206n
+ + 86:15      = 112.3006n  86:16      = 112.6471n  86:17      = 113.7868n
+ + 86:18      = 114.8199n  86:22      = 115.9277n  87:11      = 403.9966n
+ + 87:14      = 408.0916n  87:16      = 409.4221n  87:17      = 410.1858n
+ + 87:18      = 410.8018n  87:19      = 411.3684n  87:20      = 412.0829n
+ + 87:21      = 413.1177n  87:22      = 412.7481n  87:23      = 413.5119n
+ + 87:27      = 417.6070n  96:13      = 828.9754n  96:14      = 837.6849n
+ + 96:18      = 817.4453n  96:22      = 822.1419n  96:23      = 823.2061n
+ + 96:24      = 824.5159n  96:25      = 825.8257n  96:26      = 826.5776n
+ + 96:27      = 827.8874n  96:28      = 830.2817n  96:29      = 830.8153n
+ + 96:30      = 831.5672n  96:31      = 832.0038n  96:32      = 832.4404n
+ + 96:33      = 833.8714n  96:34      = 835.3025n  96:35      = 835.8361n
+ + 96:36      = 836.2727n  96:37      = 836.7093n  96:38      = 837.1095n
+ + 96:40      = 837.4782n  96:41      = 839.4937n  96:42      = 840.5308n
+ + 96:43      = 841.3667n  96:44      = 841.7846n  96:45      = 842.3219n
+ + 96:47      = 843.0184n  96:49      = 845.6034n  97:25      = 699.9992m
+ + 97:27      = 699.9992m  97:28      = 699.9992m  97:31      = 699.9992m
+ + 97:32      = 699.9992m  97:34      = 699.9992m  97:36      = 699.9992m
+ + 97:37      = 699.9992m  97:38      = 699.9992m  97:39      = 699.9992m
+ + 97:40      = 699.9992m  97:41      = 699.9992m  97:42      = 699.9992m
+ + 97:48      = 699.9992m  97:49      = 699.9992m  97:50      = 699.9992m
+ + 97:51      = 699.9992m  97:52      = 699.9992m  97:53      = 699.9992m
+ + 97:55      = 699.9992m  97:59      = 699.9992m  97:60      = 699.9992m
+ + 97:61      = 699.9992m  97:62      = 699.9992m  97:66      = 699.9992m
+ + 98:21      = 366.0898n  98:24      = 366.0828n  98:25      = 366.0962n
+ + 98:26      = 366.1018n  98:27      = 366.1077n  98:28      = 366.1100n
+ + 98:31      = 366.0963n  98:33      = 366.1219n  99:20      =  98.6207p
+ + 99:22      =  88.4183p  99:24      =  80.1367p  99:25      =  28.3158p
+ + 99:26      =  42.3824p  99:27      =  60.5898p  99:30      =  10.4129p
+ + 99:32      =  62.7873p  99:34      =  17.5600p  99:35      =  20.1459p
+ + 99:37      =  17.5668p  99:38      =  87.4146p  99:39      =  88.7104p
+ + 99:41      =  89.5499p  99:43      =  94.0235p  99:44      =  98.4970p
+ + 99:46      = 100.6323p 100:22      = 700.0000m 100:23      = 700.0000m
+ +100:24      = 700.0000m 100:25      = 700.0000m 100:26      = 700.0000m
+ +100:27      = 700.0000m 100:29      = 700.0000m 100:31      = 700.0000m
+ +100:32      = 700.0000m 100:34      = 700.0000m 100:35      = 700.0000m
+ +100:36      = 700.0000m 100:38      = 700.0000m 100:39      = 700.0000m
+ +100:40      = 700.0000m 100:41      = 700.0000m 100:42      = 700.0000m
+ +100:44      = 700.0000m 100:46      = 700.0000m 100:47      = 700.0000m
+ +100:48      = 700.0000m 100:49      = 700.0000m 100:50      = 700.0000m
+ +107:16      = 699.9992m 107:19      = 699.9992m 107:20      = 699.9992m
+ +107:21      = 699.9992m 107:23      = 699.9992m 107:24      = 699.9992m
+ +107:25      = 699.9992m 107:27      = 699.9992m 107:28      = 699.9992m
+ +107:32      = 699.9992m 112:10      = 653.9696m 112:12      = 653.9696m
+ +112:13      = 653.9696m 112:14      = 653.9696m 112:16      = 653.9696m
+ +113:7       =  45.1309p 113:8       =  47.3183p 113:9       =  47.5451p
+ +113:10      =  50.2721p 113:11      =  78.4055p 113:12      = 125.9412p
+ +113:13      = 207.4309p 113:14      = 287.9506p 113:15      = 316.0839p
+ +113:17      = 324.8690p 113:19      =   0.      114:9       =  43.4207p
+ +114:12      =  17.8425p 114:13      =  41.2997p 114:21      =  15.0421p
+ +114:22      =  22.0986p 114:23      =  26.9508p 114:24      =  30.4445p
+ +114:25      =  33.9382p 114:26      =  38.3052p 114:29      =  60.6101p
+ +114:30      =  77.4682p 114:31      =  79.7002p 115:14      = 699.9999m
+ +115:18      = 699.9999m 115:21      = 699.9999m 115:22      = 699.9999m
+ +115:23      = 699.9999m 115:24      = 699.9999m 115:25      = 699.9999m
+ +115:26      = 699.9999m 115:27      = 699.9999m 115:28      = 699.9999m
+ +115:29      = 699.9999m 115:30      = 699.9999m 115:31      = 699.9999m
+ +115:35      = 699.9999m 115:37      = 699.9999m 115:38      = 699.9999m
+ +115:40      = 699.9999m 119:4       = 700.0000m 119:5       = 700.0000m
+ +119:7       = 700.0000m 119:8       = 700.0000m 119:11      = 700.0000m
+ +119:12      = 700.0000m 119:14      = 700.0000m 119:18      = 700.0000m
+ +119:19      = 700.0000m 119:20      = 700.0000m 119:21      = 700.0000m
+ +122:10      =   2.8741p 122:11      = 718.5350f 122:13      =   0.     
+ +123:12      = 699.9997m 123:13      = 699.9997m 123:17      = 699.9997m
+ +123:18      = 699.9997m 123:20      = 699.9997m 123:21      = 699.9997m
+ +123:22      = 699.9997m 123:23      = 699.9997m 123:24      = 699.9997m
+ +123:29      = 699.9997m 127:4       = 366.0695n 127:5       = 366.0695n
+ +127:7       = 366.0695n 127:8       = 366.0695n 127:11      = 366.0924n
+ +127:12      = 366.0910n 127:14      = 366.0826n 127:18      = 366.0695n
+ +127:19      = 366.0695n 127:20      = 366.0695n 127:21      = 366.0695n
+ +130:10      = 699.9997m 130:11      = 699.9997m 130:13      = 699.9997m
+ +131:12      = 699.9997m 131:13      = 699.9997m 131:17      = 699.9997m
+ +131:18      = 699.9997m 131:20      = 699.9997m 131:21      = 699.9997m
+ +131:22      = 699.9997m 131:23      = 699.9997m 131:24      = 699.9997m
+ +131:29      = 699.9997m 136:4       = 700.0000m 136:8       = 700.0000m
+ +136:10      = 700.0000m 136:11      = 700.0000m 136:12      = 700.0000m
+ +136:14      = 700.0000m 136:15      = 700.0000m 136:16      = 700.0000m
+ +136:19      = 700.0000m 136:20      = 700.0000m 136:21      = 700.0000m
+ +138:11      = 699.9998m 138:12      = 699.9998m 138:16      = 699.9998m
+ +138:17      = 699.9998m 138:19      = 699.9998m 138:22      = 699.9998m
+ +138:24      = 699.9998m 138:25      = 699.9998m 138:26      = 699.9998m
+ +138:27      = 699.9998m 138:29      = 699.9998m 138:30      = 699.9998m
+ +138:31      = 699.9998m 138:32      = 699.9998m 138:33      = 699.9998m
+ +138:35      = 699.9998m 139:9       =   0.      139:10      =   0.     
+ +140:22      = 204.3781n 140:23      = 204.3769n 140:24      = 204.3708n
+ +140:25      = 204.3772n 140:26      = 204.3801n 140:28      = 204.3838n
+ +140:30      = 204.3322n 140:31      = 204.3359n 140:35      = 203.5688n
+ +140:36      = 203.3821n 140:37      = 203.0900n 140:38      = 205.0564n
+ +140:39      = 205.2382n 140:40      = 205.5228n 140:41      = 201.9727n
+ +140:42      = 202.2729n 140:45      = 206.3979n 140:46      = 206.7931n
+ +140:47      = 207.0302n 140:49      = 207.5282n 140:50      = 207.2752n
+ +140:52      = 200.6241n 140:55      = 208.8524n 144:4       = 699.9997m
+ +144:5       = 699.9997m 144:7       = 699.9997m 144:8       = 699.9997m
+ +144:11      = 699.9997m 144:12      = 699.9997m 144:14      = 699.9997m
+ +144:18      = 699.9997m 144:19      = 699.9997m 144:20      = 699.9997m
+ +144:21      = 699.9997m 147:10      = 699.9998m 147:11      = 699.9998m
+ +147:13      = 699.9998m 148:12      = 357.8393n 148:13      = 361.7231n
+ +148:17      = 358.4552n 148:18      = 358.6628n 148:20      = 359.8118n
+ +148:21      = 361.1133n 148:22      = 361.4928n 148:23      = 363.1970n
+ +148:24      = 362.8071n 148:29      = 364.9609n 155:16      = 699.9992m
+ +155:17      = 699.9992m 155:20      = 699.9992m 155:21      = 699.9992m
+ +155:22      = 699.9992m 155:23      = 699.9992m 155:24      = 699.9992m
+ +155:26      = 699.9992m 155:27      = 699.9992m 155:30      = 699.9992m
+ +155:31      = 699.9992m 160:10      = 699.9996m 160:12      = 699.9996m
+ +160:13      = 699.9996m 160:14      = 699.9996m 160:15      = 699.9996m
+ +160:17      = 699.9996m 161:9       = 358.7156n 161:10      = 358.7175n
+ +161:11      = 358.7167n 161:12      = 358.7200n 161:13      = 358.7504n
+ +161:14      = 358.8017n 161:15      = 358.8897n 161:16      = 358.9767n
+ +161:17      = 359.0071n 161:19      = 359.0166n 161:22      = 358.6894n
+ +161:23      = 358.6894n 161:24      = 358.6894n 162:8       = 699.9992m
+ +162:11      = 699.9992m 162:14      = 699.9992m 162:15      = 699.9992m
+ +162:20      = 699.9992m 162:21      = 699.9992m 162:23      = 699.9992m
+ +162:30      = 699.9992m 162:31      = 699.9992m 162:32      = 699.9992m
+ +162:33      = 699.9992m 162:34      = 699.9992m 162:35      = 699.9992m
+ +162:36      = 699.9992m 162:37      = 699.9992m 162:39      = 699.9992m
+ +162:41      = 699.9992m 162:42      = 699.9992m 163:17      = 192.0739n
+ +163:21      = 192.4987n 163:23      = 192.4915n 163:24      = 192.4819n
+ +163:25      = 192.4772n 163:26      = 192.4663n 163:27      = 192.4521n
+ +163:28      = 192.4441n 163:29      = 193.4773n 163:30      = 193.9999n
+ +163:32      = 191.2763n 163:33      = 191.5605n 163:40      = 189.9999n
+ +168:14      = 133.6383n 168:15      = 133.8538n 168:16      = 133.9886n
+ +168:18      = 135.2559n 168:19      = 135.4852n 168:20      = 136.2677n
+ +168:22      = 137.3170n 168:23      = 137.1036n 169:4       = 699.9998m
+ +169:8       = 699.9998m 169:11      = 699.9998m 169:12      = 699.9998m
+ +169:14      = 699.9998m 169:17      = 699.9998m 169:18      = 699.9998m
+ +173:4       =   0.      173:5       =   0.      173:7       =   0.     
+ +173:8       =   0.      173:11      =  11.8058p 173:12      =  11.0707p
+ +173:14      =   6.7585p 173:18      =   0.      173:19      =   0.     
+ +173:20      =   0.      173:21      =   0.      176:10      =   2.8764p
+ +176:11      = 719.0950f 176:13      =   0.      177:12      = 699.9999m
+ +177:13      = 699.9999m 177:17      = 699.9999m 177:18      = 699.9999m
+ +177:20      = 699.9999m 177:21      = 699.9999m 177:22      = 699.9999m
+ +177:23      = 699.9999m 177:24      = 699.9999m 177:29      = 699.9999m
+ +181:4       = 135.1611n 181:5       = 135.1611n 181:7       = 135.1611n
+ +181:8       = 135.1611n 181:11      = 135.1840n 181:12      = 135.1826n
+ +181:14      = 135.1742n 181:18      = 135.1611n 181:19      = 135.1611n
+ +181:20      = 135.1611n 181:21      = 135.1611n 184:10      = 699.9999m
+ +184:11      = 699.9999m 184:13      = 699.9999m 185:12      = 699.9997m
+ +185:13      = 699.9997m 185:17      = 699.9997m 185:18      = 699.9997m
+ +185:20      = 699.9997m 185:21      = 699.9997m 185:22      = 699.9997m
+ +185:23      = 699.9997m 185:24      = 699.9997m 185:29      = 699.9997m
+ +190:4       =   0.      190:8       =   0.      190:10      =  23.5397p
+ +190:11      =  23.0038p 190:12      =  19.9897p 190:14      =   3.3763p
+ +190:15      = 400.2088f 190:16      =   4.9997p 190:19      =   0.     
+ +190:20      =   0.      190:21      =   0.      192:11      = 135.3242n
+ +192:12      = 144.2103n 192:16      = 137.3555n 192:17      = 143.1850n
+ +192:19      = 131.6590n 192:22      = 134.3120n 192:24      = 136.3251n
+ +192:25      = 139.3551n 192:26      = 140.2765n 192:27      = 140.6102n
+ +192:29      = 141.2586n 192:30      = 142.4759n 192:31      = 145.2063n
+ +192:32      = 146.2135n 192:33      = 145.6443n 192:35      = 148.8532n
+ +193:9       =   0.      193:10      =   0.      194:22      = 699.9994m
+ +194:23      = 699.9994m 194:24      = 699.9994m 194:25      = 699.9994m
+ +194:26      = 699.9994m 194:28      = 699.9994m 194:30      = 699.9994m
+ +194:31      = 699.9994m 194:35      = 699.9994m 194:36      = 699.9994m
+ +194:37      = 699.9994m 194:38      = 699.9994m 194:39      = 699.9994m
+ +194:40      = 699.9994m 194:41      = 699.9994m 194:42      = 699.9994m
+ +194:45      = 699.9994m 194:46      = 699.9994m 194:47      = 699.9994m
+ +194:49      = 699.9994m 194:50      = 699.9994m 194:52      = 699.9994m
+ +194:55      = 699.9994m 202:15      = 699.9997m 202:16      = 699.9997m
+ +202:17      = 699.9997m 202:19      = 699.9997m 202:21      = 699.9997m
+ +202:22      = 699.9997m 202:24      = 699.9997m 202:25      = 699.9997m
+ +202:26      = 699.9997m 202:27      = 699.9997m 202:28      = 699.9997m
+ +202:29      = 699.9997m 202:30      = 699.9997m 202:31      = 699.9997m
+ +202:32      = 699.9997m 202:33      = 699.9997m 202:35      = 699.9997m
+ +202:38      = 699.9997m 212:15      = 699.9997m 212:16      = 699.9997m
+ +212:17      = 699.9997m 212:19      = 699.9997m 212:21      = 699.9997m
+ +212:22      = 699.9997m 212:24      = 699.9997m 212:25      = 699.9997m
+ +212:26      = 699.9997m 212:27      = 699.9997m 212:28      = 699.9997m
+ +212:29      = 699.9997m 212:30      = 699.9997m 212:31      = 699.9997m
+ +212:32      = 699.9997m 212:33      = 699.9997m 212:35      = 699.9997m
+ +212:38      = 699.9997m 221:16      = 545.6813n 221:19      = 539.5102n
+ +221:20      = 539.7788n 221:21      = 541.4001n 221:23      = 545.3358n
+ +221:24      = 545.8845n 221:25      = 546.5247n 221:27      = 548.8723n
+ +221:28      = 547.6629n 221:32      = 550.1965n 226:10      = 265.8312n
+ +226:12      = 270.1410n 226:13      = 271.5962n 226:14      = 272.0328n
+ +226:16      = 274.7452n 227:7       = 700.0000m 227:8       = 700.0000m
+ +227:9       = 700.0000m 227:10      = 700.0000m 227:11      = 700.0000m
+ +227:12      = 700.0000m 227:13      = 700.0000m 227:14      = 700.0000m
+ +227:15      = 700.0000m 227:17      = 700.0000m 227:19      = 700.0000m
+ +228:9       =  27.2455p 228:12      =  11.1957p 228:13      =  25.9146p
+ +228:21      =   9.4386p 228:22      =  13.8663p 228:23      =  16.9110p
+ +228:24      =  19.1032p 228:25      =  21.2954p 228:26      =  24.0356p
+ +228:29      =  38.0314p 228:30      =  48.6094p 228:31      =  50.0100p
+ +229:14      = 699.9997m 229:18      = 699.9997m 229:21      = 699.9997m
+ +229:22      = 699.9997m 229:23      = 699.9997m 229:24      = 699.9997m
+ +229:25      = 699.9997m 229:26      = 699.9997m 229:27      = 699.9997m
+ +229:28      = 699.9997m 229:29      = 699.9997m 229:30      = 699.9997m
+ +229:31      = 699.9997m 229:35      = 699.9997m 229:37      = 699.9997m
+ +229:38      = 699.9997m 229:40      = 699.9997m 236:16      = 699.9992m
+ +236:17      = 699.9992m 236:20      = 699.9992m 236:21      = 699.9992m
+ +236:22      = 699.9992m 236:23      = 699.9992m 236:24      = 699.9992m
+ +236:26      = 699.9992m 236:27      = 699.9992m 236:30      = 699.9992m
+ +236:31      = 699.9992m 241:10      = 699.9996m 241:12      = 699.9996m
+ +241:13      = 699.9996m 241:14      = 699.9996m 241:15      = 699.9996m
+ +241:17      = 699.9996m 242:9       = 543.7179n 242:10      = 543.7198n
+ +242:11      = 543.7190n 242:12      = 543.7223n 242:13      = 543.7527n
+ +242:14      = 543.8040n 242:15      = 543.8921n 242:16      = 543.9790n
+ +242:17      = 544.0094n 242:19      = 544.0189n 242:22      = 543.6917n
+ +242:23      = 543.6917n 242:24      = 543.6917n 243:8       = 699.9997m
+ +243:11      = 699.9997m 243:14      = 699.9997m 243:15      = 699.9997m
+ +243:20      = 699.9997m 243:21      = 699.9997m 243:23      = 699.9997m
+ +243:30      = 699.9997m 243:31      = 699.9997m 243:32      = 699.9997m
+ +243:33      = 699.9997m 243:34      = 699.9997m 243:35      = 699.9997m
+ +243:36      = 699.9997m 243:37      = 699.9997m 243:39      = 699.9997m
+ +243:41      = 699.9997m 243:42      = 699.9997m 244:17      = 192.0706n
+ +244:21      = 192.4954n 244:23      = 192.4882n 244:24      = 192.4786n
+ +244:25      = 192.4739n 244:26      = 192.4630n 244:27      = 192.4488n
+ +244:28      = 192.4408n 244:29      = 193.4740n 244:30      = 193.9966n
+ +244:32      = 191.2731n 244:33      = 191.5572n 244:40      = 189.9966n
+ +249:14      = 133.6388n 249:15      = 133.8543n 249:16      = 133.9890n
+ +249:18      = 135.2564n 249:19      = 135.4857n 249:20      = 136.2682n
+ +249:22      = 137.3175n 249:23      = 137.1041n 250:4       = 699.9997m
+ +250:8       = 699.9997m 250:11      = 699.9997m 250:12      = 699.9997m
+ +250:14      = 699.9997m 250:17      = 699.9997m 250:18      = 699.9997m
+ +255:4       =   0.      255:8       =   0.      255:10      = 200.7771f
+ +255:11      = 196.2058f 255:12      = 170.4981f 255:14      =  28.7977f
+ +255:15      =   3.4135f 255:16      =  42.6437f 255:19      =   0.     
+ +255:20      =   0.      255:21      =   0.      257:11      = 699.9998m
+ +257:12      = 699.9998m 257:16      = 699.9998m 257:17      = 699.9998m
+ +257:19      = 699.9998m 257:22      = 699.9998m 257:24      = 699.9998m
+ +257:25      = 699.9998m 257:26      = 699.9998m 257:27      = 699.9998m
+ +257:29      = 699.9998m 257:30      = 699.9998m 257:31      = 699.9998m
+ +257:32      = 699.9998m 257:33      = 699.9998m 257:35      = 699.9998m
+ +258:9       = 700.0000m 258:10      = 700.0000m 259:22      = 196.1635n
+ +259:23      = 196.1623n 259:24      = 196.1562n 259:25      = 196.1626n
+ +259:26      = 196.1655n 259:28      = 196.1692n 259:30      = 196.1176n
+ +259:31      = 196.1214n 259:35      = 195.3848n 259:36      = 195.2058n
+ +259:37      = 194.9255n 259:38      = 196.8113n 259:39      = 196.9855n
+ +259:40      = 197.2582n 259:41      = 193.8536n 259:42      = 194.1416n
+ +259:45      = 198.0968n 259:46      = 198.4755n 259:47      = 198.7027n
+ +259:49      = 199.1799n 259:50      = 198.9375n 259:52      = 192.5418n
+ +259:55      = 200.4489n 263:4       = 135.1616n 263:5       = 135.1616n
+ +263:7       = 135.1616n 263:8       = 135.1616n 263:11      = 135.1845n
+ +263:12      = 135.1831n 263:14      = 135.1747n 263:18      = 135.1616n
+ +263:19      = 135.1616n 263:20      = 135.1616n 263:21      = 135.1616n
+ +266:10      = 699.9998m 266:11      = 699.9998m 266:13      = 699.9998m
+ +267:12      = 699.9997m 267:13      = 699.9997m 267:17      = 699.9997m
+ +267:18      = 699.9997m 267:20      = 699.9997m 267:21      = 699.9997m
+ +267:22      = 699.9997m 267:23      = 699.9997m 267:24      = 699.9997m
+ +267:29      = 699.9997m 271:4       =   0.      271:5       =   0.     
+ +271:7       =   0.      271:8       =   0.      271:11      =  22.9091p
+ +271:12      =  21.4826p 271:14      =  13.1149p 271:18      =   0.     
+ +271:19      =   0.      271:20      =   0.      271:21      =   0.     
+ +274:10      = 700.0000m 274:11      = 700.0000m 274:13      = 700.0000m
+ +275:12      = 699.9997m 275:13      = 699.9997m 275:17      = 699.9997m
+ +275:18      = 699.9997m 275:20      = 699.9997m 275:21      = 699.9997m
+ +275:22      = 699.9997m 275:23      = 699.9997m 275:24      = 699.9997m
+ +275:29      = 699.9997m 279:4       = 699.9997m 279:5       = 699.9997m
+ +279:7       = 699.9997m 279:8       = 699.9997m 279:11      = 699.9997m
+ +279:12      = 699.9997m 279:14      = 699.9997m 279:18      = 699.9997m
+ +279:19      = 699.9997m 279:20      = 699.9997m 279:21      = 699.9997m
+ +282:10      = 699.9997m 282:11      = 699.9997m 282:13      = 699.9997m
+ +283:12      = 642.5345n 283:13      = 647.1107n 283:17      = 643.6520n
+ +283:18      = 644.0286n 283:20      = 645.1993n 283:21      = 646.5009n
+ +283:22      = 646.8803n 283:23      = 648.5846n 283:24      = 648.1947n
+ +283:29      = 650.3485n
+
+
+          ***** job concluded
+ ******  
+ .title test adder
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: AMD EPYC 7763 64-Core Processor
+ cpu MHz	: 1500.000
+  
+ OS:
+ Linux version 3.10.0-1160.88.1.el7.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) ) #1 SMP Tue Mar 7 15:41:52 UTC 2023
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :   256
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =    2018 # elements   =    4304
+  # resistors   =    1845 # capacitors =    2289 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       2
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =     160 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       8 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.06           1          22
+  transient          0.05         201         152          56 rev=         1
+  readin             0.19
+  errchk             0.02
+  setup              0.10
+  output             0.00
+
+
+           peak memory used        425.94 megabytes
+           total cpu time            0.43 seconds
+           total elapsed time        0.58 seconds
+           job started at     23:46:20 11/23/2023
+           job ended   at     23:46:21 11/23/2023
+
+>info:         ***** hspice job concluded
+           job total runtime         0.58 seconds
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.15(s)

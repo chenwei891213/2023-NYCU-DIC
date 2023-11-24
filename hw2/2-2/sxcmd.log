@@ -1,0 +1,45 @@
+### Custom WaveView ADV log file, revision T-2022.06 (build May 21, ) ###
+### created at 00:23:17 on Fri Nov 24 2023 (Linux AMD64) ###
+### Host Name: ee23   User ID: dic098   PID: 254804   ###
+wv_start_log
+# (0) running in waveview only mode
+# (0) SW_SX_PERL_LIB defined
+# (0) SW_SX_TCL_LIB defined
+# (0) HOME defined
+wv_move_window {Custom WaveView} {} 164 187
+wv_select_window {Custom WaveView} 
+wv_move_window {Custom WaveView} {} 625 31
+wv_press_tool_button {Custom WaveView} {} {OpenWaveform0} 
+wv_select_dialog {FileDialog} 
+wv_move_window {FileDialog} {} 401 263
+wv_move_scrollbar {FileDialog} {} {FileList.HScrollBar} {209}
+wv_select_list_item {FileDialog} {} {FileList} {adder_test.tr0} 11
+wv_dclick_list_item {FileDialog} {} {FileList} {adder_test.tr0} 11
+wv_select_tree_item {Custom WaveView} {} {hierview} {D0:adder_test.tr0(0)} {0} {+sep=@}
+wv_select_tree_item {Custom WaveView} {} {hierview} {D0:adder_test.tr0(0)} {0} {+sep=@}
+wv_expand_tree_item {Custom WaveView} {} {hierview} {D0:adder_test.tr0(0)} {+sep=@}
+wv_select_tree_item {Custom WaveView} {} {hierview} {D0:adder_test.tr0(0)} {0} {+sep=@}
+wv_select_tree_item {Custom WaveView} {} {hierview} {D0:adder_test.tr0(0)@toplevel(0)} {0} {+sep=@}
+wv_expand_tree_item {Custom WaveView} {} {hierview} {D0:adder_test.tr0(0)@toplevel(0)} {+sep=@}
+wv_select_tree_item {Custom WaveView} {} {hierview} {D0:adder_test.tr0(0)@toplevel(0)} {0} {+sep=@}
+wv_move_window {Custom WaveView} {} 136 31
+wv_select_list_item {Custom WaveView} {} {sigview} {v(cout)} 3
+wv_dclick_list_item {Custom WaveView} {} {sigview} {v(cout)} 3
+wv_select_list_item {Custom WaveView} {} {sigview} {v(cout_bar)} 4
+wv_dclick_list_item {Custom WaveView} {} {sigview} {v(cout_bar)} 4
+wv_select_list_item {Custom WaveView} {} {sigview} {v(coutcmos)} 5
+wv_select_list_item {Custom WaveView} {} {sigview} {v(coutcmos)} 5
+wv_dclick_list_item {Custom WaveView} {} {sigview} {v(coutcmos)} 5
+wv_select_waveview 1 {waveview 1}
+wv_select_wv_item WV1.PANEL1:1.LEGEND
+wv_select_panel WV1.PANEL1:1.LEGEND
+wv_select_waveview 1 {waveview 1}
+wv_waveview_context_menu WV1.PANEL1:1.LEGEND
+wv_select_waveview 1 {waveview 1}
+wv_select_menu_item {Custom WaveView} {waveview 1:1} {PanelPopMenu.Cut} 
+wv_press_button {Confirmation} {} {Ok} 
+wv_select_list_item {Custom WaveView} {} {sigview} {v(coutcpl)} 6
+wv_dclick_list_item {Custom WaveView} {} {sigview} {v(coutcpl)} 6
+wv_select_list_item {Custom WaveView} {} {sigview} {v(coutdcvs)} 7
+wv_dclick_list_item {Custom WaveView} {} {sigview} {v(coutdcvs)} 7
+wv_select_window {Custom WaveView} 

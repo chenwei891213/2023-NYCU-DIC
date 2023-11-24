@@ -1,0 +1,45 @@
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Adder_4bit
+Version: T-2022.03
+Date   : Tue Oct 24 03:01:09 2023
+****************************************
+
+Operating Conditions: PVT_0P7V_25C   Library: asap7sc7p5t_INVBUF_RVT_TT_08302018
+Wire Load Model Mode: top
+
+  Startpoint: B[0] (input port)
+  Endpoint: Output[4] (output port)
+  Path Group: default
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 r
+  B[0] (in)                                0.00       0.00 r
+  U4/Y (NAND2xp5_ASAP7_75t_R)             17.78      17.78 f
+  U16/Y (NAND3xp33_ASAP7_75t_R)           15.20      32.98 r
+  U17/Y (NAND3xp33_ASAP7_75t_R)           22.36      55.34 f
+  U20/Y (INVx1_ASAP7_75t_R)               12.23      67.57 r
+  U22/Y (NAND2xp5_ASAP7_75t_R)             8.95      76.53 f
+  U24/Y (NAND2xp5_ASAP7_75t_R)             6.63      83.16 r
+  Output[4] (out)                          0.00      83.16 r
+  data arrival time                                  83.16
+
+  max_delay                               90.00      90.00
+  output external delay                    0.00      90.00
+  data required time                                 90.00
+  -----------------------------------------------------------
+  data required time                                 90.00
+  data arrival time                                 -83.16
+  -----------------------------------------------------------
+  slack (MET)                                         6.84
+
+
+1

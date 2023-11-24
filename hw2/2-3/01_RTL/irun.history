@@ -1,0 +1,1 @@
+s1(24Oct2023:01:38:35):  irun TESTBED_Adder_4bit.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 

@@ -1,0 +1,8 @@
+RADIX 1111 1111 
+VNAME a3 a2 a1 a0 b3 b2 b1 b0
+IO    iiii iiii 
+tunit 1ns
+
+vih 0.7
+vil 0.0
+

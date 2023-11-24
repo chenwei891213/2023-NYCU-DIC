@@ -1,0 +1,23 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-XLMODE
+./INCA_libs/irun.lnx8664.15.20.nc
+-RUNMODE
+../01_RTL/TESTBED_Adder_4bit.v
+-DEFINE
+GATE
+-VFILE
+/RAID2/COURSE/dic/dic098/ASAP7_PDKandLIB_v1p6/ASAP7_PDKandLIB_v1p6/lib_release_191006/asap7_7p5t_library/rev25/Verilog/asap7sc7p5t_SIMPLE_RVT_TT_08302018.v
+/RAID2/COURSE/dic/dic098/ASAP7_PDKandLIB_v1p6/ASAP7_PDKandLIB_v1p6/lib_release_191006/asap7_7p5t_library/rev25/Verilog/asap7sc7p5t_SEQ_RVT_TT_08302018.v
+/RAID2/COURSE/dic/dic098/ASAP7_PDKandLIB_v1p6/ASAP7_PDKandLIB_v1p6/lib_release_191006/asap7_7p5t_library/rev25/Verilog/asap7sc7p5t_INVBUF_RVT_TT_08302018.v
+-CDSLIB
+./INCA_libs/irun.lnx8664.15.20.nc/cdsrun.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.15.20.nc/hdlrun.var
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./INCA_libs/irun.lnx8664.15.20.nc/xllibs
+-ALLOWUNBOUND

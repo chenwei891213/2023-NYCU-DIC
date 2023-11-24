@@ -1,0 +1,397 @@
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on Oct 24, 2023 at 03:06:18 CST
+irun
+	../01_RTL/TESTBED_Adder_4bit.v
+	-define GATE
+	-debug
+	-v /RAID2/COURSE/dic/dic098/ASAP7_PDKandLIB_v1p6/ASAP7_PDKandLIB_v1p6/lib_release_191006/asap7_7p5t_library/rev25/Verilog/asap7sc7p5t_SIMPLE_RVT_TT_08302018.v
+	/RAID2/COURSE/dic/dic098/ASAP7_PDKandLIB_v1p6/ASAP7_PDKandLIB_v1p6/lib_release_191006/asap7_7p5t_library/rev25/Verilog/asap7sc7p5t_SEQ_RVT_TT_08302018.v
+	/RAID2/COURSE/dic/dic098/ASAP7_PDKandLIB_v1p6/ASAP7_PDKandLIB_v1p6/lib_release_191006/asap7_7p5t_library/rev25/Verilog/asap7sc7p5t_INVBUF_RVT_TT_08302018.v
+	-nontcglitch
+	-loadpli1 debpli:novas_pli_boot
+file: ../01_RTL/TESTBED_Adder_4bit.v
+	module worklib.PATTERN_Adder_4bit:v
+		errors: 0, warnings: 0
+	module worklib.Adder_4bit:v
+		errors: 0, warnings: 0
+	module worklib.TESTBED:v
+		errors: 0, warnings: 0
+file: /RAID2/COURSE/dic/dic098/ASAP7_PDKandLIB_v1p6/ASAP7_PDKandLIB_v1p6/lib_release_191006/asap7_7p5t_library/rev25/Verilog/asap7sc7p5t_SEQ_RVT_TT_08302018.v
+	module worklib.ASYNC_DFFHx1_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.DFFHQNx1_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.DFFHQNx2_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.DFFHQNx3_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.DFFHQx4_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.DFFLQNx1_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.DFFLQNx2_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.DFFLQNx3_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.DFFLQx4_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.DHLx1_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.DHLx2_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.DHLx3_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.DLLx1_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.DLLx2_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.DLLx3_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.ICGx1_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.ICGx2_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.ICGx3_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.SDFHx1_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.SDFHx2_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.SDFHx3_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.SDFHx4_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.SDFLx1_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.SDFLx2_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.SDFLx3_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.SDFLx4_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_latch:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff_err:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff_r_err:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff_r:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff_s_err:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff_s:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff_sr_err:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff_sr_0:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff_sr_1:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_latch_r:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_latch_s:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_latch_sr_0:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_latch_sr_1:v
+		errors: 0, warnings: 0
+file: /RAID2/COURSE/dic/dic098/ASAP7_PDKandLIB_v1p6/ASAP7_PDKandLIB_v1p6/lib_release_191006/asap7_7p5t_library/rev25/Verilog/asap7sc7p5t_INVBUF_RVT_TT_08302018.v
+	module worklib.BUFx10_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.BUFx12_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.BUFx12f_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.BUFx16f_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.BUFx24_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.BUFx2_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.BUFx3_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.BUFx4_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.BUFx4f_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.BUFx5_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.BUFx6f_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.BUFx8_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.HB1xp67_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.HB2xp67_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.HB3xp67_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.HB4xp67_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.INVx11_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.INVx13_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.INVx1_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.INVx2_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.INVx3_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.INVx4_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.INVx5_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.INVx6_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.INVx8_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.INVxp33_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module worklib.INVxp67_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+file: /RAID2/COURSE/dic/dic098/ASAP7_PDKandLIB_v1p6/ASAP7_PDKandLIB_v1p6/lib_release_191006/asap7_7p5t_library/rev25/Verilog/asap7sc7p5t_SIMPLE_RVT_TT_08302018.v
+	module asap7sc7p5t_SIMPLE_RVT_TT_08302018.FAx1_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module asap7sc7p5t_SIMPLE_RVT_TT_08302018.NAND2xp5_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module asap7sc7p5t_SIMPLE_RVT_TT_08302018.NAND3xp33_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module asap7sc7p5t_SIMPLE_RVT_TT_08302018.OR2x2_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module asap7sc7p5t_SIMPLE_RVT_TT_08302018.XNOR2xp5_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+	module asap7sc7p5t_SIMPLE_RVT_TT_08302018.XOR2xp5_ASAP7_75t_R:v
+		errors: 0, warnings: 0
+		Caching library 'asap7sc7p5t_SIMPLE_RVT_TT_08302018' ....... Done
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+  FAx1_ASAP7_75t_R U5 ( .A(B[1]), .B(A[1]), .CI(n11), .SN(Output[1]) );
+                    |
+ncelab: *W,CUVWSP (../02_SYN/Netlist/Adder_4bit_SYN.v,17|20): 1 output port was not connected:
+ncelab: (/RAID2/COURSE/dic/dic098/ASAP7_PDKandLIB_v1p6/ASAP7_PDKandLIB_v1p6/lib_release_191006/asap7_7p5t_library/rev25/Verilog/asap7sc7p5t_SIMPLE_RVT_TT_08302018.v,199): CON
+
+	Top level design units:
+		TESTBED
+		ASYNC_DFFHx1_ASAP7_75t_R
+		DFFHQNx1_ASAP7_75t_R
+		DFFHQNx2_ASAP7_75t_R
+		DFFHQNx3_ASAP7_75t_R
+		DFFHQx4_ASAP7_75t_R
+		DFFLQNx1_ASAP7_75t_R
+		DFFLQNx2_ASAP7_75t_R
+		DFFLQNx3_ASAP7_75t_R
+		DFFLQx4_ASAP7_75t_R
+		DHLx1_ASAP7_75t_R
+		DHLx2_ASAP7_75t_R
+		DHLx3_ASAP7_75t_R
+		DLLx1_ASAP7_75t_R
+		DLLx2_ASAP7_75t_R
+		DLLx3_ASAP7_75t_R
+		ICGx1_ASAP7_75t_R
+		ICGx2_ASAP7_75t_R
+		ICGx3_ASAP7_75t_R
+		SDFHx1_ASAP7_75t_R
+		SDFHx2_ASAP7_75t_R
+		SDFHx3_ASAP7_75t_R
+		SDFHx4_ASAP7_75t_R
+		SDFLx1_ASAP7_75t_R
+		SDFLx2_ASAP7_75t_R
+		SDFLx3_ASAP7_75t_R
+		SDFLx4_ASAP7_75t_R
+		BUFx10_ASAP7_75t_R
+		BUFx12_ASAP7_75t_R
+		BUFx12f_ASAP7_75t_R
+		BUFx16f_ASAP7_75t_R
+		BUFx24_ASAP7_75t_R
+		BUFx2_ASAP7_75t_R
+		BUFx3_ASAP7_75t_R
+		BUFx4_ASAP7_75t_R
+		BUFx4f_ASAP7_75t_R
+		BUFx5_ASAP7_75t_R
+		BUFx6f_ASAP7_75t_R
+		BUFx8_ASAP7_75t_R
+		HB1xp67_ASAP7_75t_R
+		HB2xp67_ASAP7_75t_R
+		HB3xp67_ASAP7_75t_R
+		HB4xp67_ASAP7_75t_R
+		INVx11_ASAP7_75t_R
+		INVx13_ASAP7_75t_R
+		INVx2_ASAP7_75t_R
+		INVx3_ASAP7_75t_R
+		INVx4_ASAP7_75t_R
+		INVx5_ASAP7_75t_R
+		INVx6_ASAP7_75t_R
+		INVx8_ASAP7_75t_R
+		INVxp33_ASAP7_75t_R
+		INVxp67_ASAP7_75t_R
+ncelab: *W,CUSFNF: The SDF file "../02_SYN/Netlist/Adder_4bit.sdf" not found..
+    $sdf_annotate("../02_SYN/Netlist/Adder_4bit.sdf",u_Adder_4bit);
+                |
+ncelab: *W,CUSSTI (../01_RTL/TESTBED_Adder_4bit.v,29|16): This SDF System Task will be Ignored..
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		asap7sc7p5t_SIMPLE_RVT_TT_08302018.FAx1_ASAP7_75t_R:v <0x1f68b9a5>
+			streams:   0, words:     0
+		asap7sc7p5t_SIMPLE_RVT_TT_08302018.XNOR2xp5_ASAP7_75t_R:v <0x79e94d8c>
+			streams:   0, words:     0
+		asap7sc7p5t_SIMPLE_RVT_TT_08302018.XOR2xp5_ASAP7_75t_R:v <0x58ed7492>
+			streams:   0, words:     0
+		worklib.ASYNC_DFFHx1_ASAP7_75t_R:v <0x3cf0bec8>
+			streams:   0, words:     0
+		worklib.DFFHQNx1_ASAP7_75t_R:v <0x05124835>
+			streams:   0, words:     0
+		worklib.DFFHQNx2_ASAP7_75t_R:v <0x300ef0ac>
+			streams:   0, words:     0
+		worklib.DFFHQNx3_ASAP7_75t_R:v <0x24332a76>
+			streams:   0, words:     0
+		worklib.DFFHQx4_ASAP7_75t_R:v <0x70360698>
+			streams:   0, words:     0
+		worklib.DFFLQNx1_ASAP7_75t_R:v <0x4e39bf19>
+			streams:   0, words:     0
+		worklib.DFFLQNx2_ASAP7_75t_R:v <0x32200c3d>
+			streams:   0, words:     0
+		worklib.DFFLQNx3_ASAP7_75t_R:v <0x2f079f1e>
+			streams:   0, words:     0
+		worklib.DFFLQx4_ASAP7_75t_R:v <0x073b9ed3>
+			streams:   0, words:     0
+		worklib.DHLx1_ASAP7_75t_R:v <0x3b1a4a68>
+			streams:   0, words:     0
+		worklib.DHLx2_ASAP7_75t_R:v <0x315b2737>
+			streams:   0, words:     0
+		worklib.DHLx3_ASAP7_75t_R:v <0x30524eaf>
+			streams:   0, words:     0
+		worklib.DLLx1_ASAP7_75t_R:v <0x7ff87bef>
+			streams:   0, words:     0
+		worklib.DLLx2_ASAP7_75t_R:v <0x5074236d>
+			streams:   0, words:     0
+		worklib.DLLx3_ASAP7_75t_R:v <0x6c8286a2>
+			streams:   0, words:     0
+		worklib.ICGx1_ASAP7_75t_R:v <0x0c3a1c0b>
+			streams:   0, words:     0
+		worklib.ICGx2_ASAP7_75t_R:v <0x0a96e8b7>
+			streams:   0, words:     0
+		worklib.ICGx3_ASAP7_75t_R:v <0x29b6643f>
+			streams:   0, words:     0
+		worklib.PATTERN_Adder_4bit:v <0x5320dee1>
+			streams:   4, words: 34121
+		worklib.SDFHx1_ASAP7_75t_R:v <0x433d43e4>
+			streams:   0, words:     0
+		worklib.SDFHx2_ASAP7_75t_R:v <0x5fde854d>
+			streams:   0, words:     0
+		worklib.SDFHx3_ASAP7_75t_R:v <0x0df2aa9b>
+			streams:   0, words:     0
+		worklib.SDFHx4_ASAP7_75t_R:v <0x5ea56f7a>
+			streams:   0, words:     0
+		worklib.SDFLx1_ASAP7_75t_R:v <0x60e4c285>
+			streams:   0, words:     0
+		worklib.SDFLx2_ASAP7_75t_R:v <0x0efc72e6>
+			streams:   0, words:     0
+		worklib.SDFLx3_ASAP7_75t_R:v <0x3ba98d49>
+			streams:   0, words:     0
+		worklib.SDFLx4_ASAP7_75t_R:v <0x00e6c396>
+			streams:   0, words:     0
+		worklib.TESTBED:v <0x0ce97115>
+			streams:   1, words:   712
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                   Instances  Unique
+		Modules:                  77      62
+		UDPs:                     43      14
+		Primitives:              373       4
+		Timing outputs:           75      20
+		Registers:                31      45
+		Scalar wires:            200       -
+		Expanded wires:            8       2
+		Initial blocks:            2       2
+		Timing checks:           513       -
+		Delayed tcheck signals:   73      73
+		Simulation timescale:    1ps
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'Adder_4bit_SYN.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8OOOOOOO8@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@O               .o8@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8:.                   .o@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@o                         :O@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                           .o8@@@@@@@
+@@@@@@@@@@@@@@@@@@888888@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@88888888OOO88@@@@@@@@@@                             :@@@@@@@
+@@@@@@@@@@@@8o:.          .o8@@@@@@@@@@@@@@@@@@@88Oo:.                      .:ooo                              o@@@@@@
+@@@@@@@@@@8                  .8@@@@@@@@@@@@8O:.           ..::::::ooo:.                                        .8@@@@@
+@@@@@@@O.                      8@@@@@8O:.        .:O88@@@@@@@@@@@@@@@@@@@@@@@88Oo.                             :8@@@@@
+@@@@@@o                        :8@@8.      .:o8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@OO:                         o@@@@@@
+@@@@@8                          :o.     .O8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@88@@8o.                      8@@@@@@
+@@@@:                               o8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8:          :OO.                  o@@@@@8@
+@@@o.                             :O@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.              OO:              :8@@@@@@@@
+@@8.                           O8@@@@@@@@@@O:.    .oO@@@@@@@@@@@@@@@@@@@@@@@.                o88          O@@@@@@@@@@@
+@@O.                         :O@@@@@@@@@@:           o@@@@@@@@@@@@@@@@@@@@@@.                 .88o.     oO@@@@@@@@@@@@
+@@O.                       :8@@@@@@@@@@8:            .O@@@@@@@@@@@@@@@@@@@@@o                  .@@8O:   o8@@@@@8@@@@@@
+@@@:                      8@@@@@@@@@@O.               :8@@@@@@@@@@@@@@@@@@@@8o                  O@@@@.    8@@@@@@@@@8@
+@@@@o                    :@@@@@@@@@@o                 :8@@@@@@@@@@@@@@@@@@@@@@o                 O@@@@O:   .O@@@@@@@@@@
+@@@@@@.                .O@@@@@@@@@@8                  O@@@@@@@@@@@@@@@@@@@@@@@@@O             .O@@@@@@@@o   :@@@@@@@@@
+@@@@@@@O:.           .O@@@@@@@@@@@@o                 .8@@@@@@@@@@@@888O8@@@@@@@@@o.         .o8@@@@@@@@@@o   o8@@@@@@@
+@@@@@@@@@@8.         o@@@@@@@@@@@@@:                 o@@@@@@@O:.         :O@@@@@@@@Oo.   .:8@@@@@@@@@@@@@8     @@@@@@@
+@@@@@@@@@@@@@@@@:    8@@@@@@@@@@@@@8               :8@@@@8:              .O@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@     @@@@@@
+@@@@@@@@@@@@@@@@    :@@@@@@@@@@@@@@@O.             8@@@@@8:              o@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8@@@    @@@@@@
+@@@@@@@@@@@@@@@O   :@@@@@@@@@@@@@@@@@@@8O:....:O8@@@@@@@@@@@o          O@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8@@@@    @@@@@
+@@@@@@@@@@@@@@8:  :O@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Oo.    .o8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    @@@@
+@@@@@@@@@@@@@8:   o@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8  :@@@@@@@@@@@@@@@@@@@@@@@8Ooo[0;40;31m:::::[0;40;37moOO8@@8OOo   o@@@
+@@@@@@@@@@@@@O   O@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8. .8@@8o:O@@@@@@@@@@@@@8O[0;40;31m:::::::::::::::[0;40;37mO@@@O   :@@@
+@@@@@@@@@@@@@O   O@@@@@@@@@@@@@@@@@@88888@@@@@@@@@@@@@@@@@@O:oO8@8.  .:    o@@@@@@@@@@@@O[0;40;31m::::::::::::::::::[0;40;37mo8@O   :8@@
+@@@@@@@@@@@@@O   O@@@@@@@@@@@@@[1;40;31mO[0;40;31m:::::::::::::[0;40;37mo8@@@@@@@@@@@@8.              :@@@@@@@@@@8o[0;40;31m::::::::::::::::::::[0;40;37mo8@:   .@@
+@@@@@@@@@@@@O.  .8@@@@@@@@@@8Oo[0;40;31m.:::::::::::::::[0;40;37moO@@@@@@@@@@8:              .@@@@@@@@@@O[0;40;31m::::::::::::::::::::::[0;40;37mo8O    @@
+@@@@@@@@@@@@o   O@@@@@@@@@@8o[0;40;31m::::::::::::::::::::[0;40;37mo8@@@@@@@@@O              .@@@@@@@@@@O[0;40;31m::::::::::::::::::::::[0;40;37mo8O    @@
+@@@@@@@@@@@@O.  :8@@@@@@@@o[0;40;31m::::::::::::::::::::::::[0;40;37m8@@@@@@@@@              :@@@@@@@@@@8o[0;40;31m:::::::::::::::::::::[0;40;37mO@o    @@
+@@@@@@@@@@@@8:  :8@@@@@@@8[0;40;31m:::::::::::::::::::::::::[0;40;37m8@@@@@@@@@              O@@@@@@@@@@@O[0;40;31m::::::::::::::::::::[0;40;37mo8@:   :@@
+@@@@@@@@@@@@@O   O@@@@@@8O[0;40;31m:::::::::::::::::::::::::[0;40;37mo8@@@@@@@@O           .8@@@@@@@@@@@@@8o[0;40;31m::::::::::::::::[0;40;37mo8@@@   .O@@
+@@@@@@@@@@@@@O   O8@@@@@8O[0;40;31m:::::::::::::::::::::::::[0;40;37mo8@@@@@@@@@8:       .O@@@@@@@@@@@@@@@@@O[0;40;31m::::::::::::::[0;40;37mo@@@@8   .8@@
+@@@@@@@@@@@@@O   O@@@@@@@O[0;40;31m::::::::::::::::::::::::.[0;40;37mO8@@@@8OOooo:.     :@@@@@@@@@@@@@@@@@@@@8OOo[0;40;31m::::::[0;40;37mooO8@@@@@o   :@@@
+@@@@@@@@@@@@@8.  o8@@@@@@@[0;40;31m:::::::::::::::::::::::::[0;40;37m8@8O.                  .:O8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8o   o@@@@
+@@@@@@@@@@@@@8:  .O@@@@@@@O[0;40;31m:::::::::::::::::::::::[0;40;37mo@O.    .:oOOOo::.           .:OO8@@@@@@@@@@@@@@@@@@@@@@@@O.  :8@@@@
+@@@@@@@@@@@@@@8.  :8@@@@@@@8o[0;40;31m:::::::::::::::::::[0;40;37mO8@O    8@@@@@@@@@@@@@@@@@8O..         :oO8@@@@@@@@@@@@@@@8o.  .8@@@@@
+@@@@@@@@@@@@@@@O   :8@@@@@@@@8O[0;40;31m:::::::::::::::[0;40;37mO8@@@:   .@@@@@@@@@@@@@@@@@@@@@@88Oo:.       .:O8@@@@@@@@@@@.    O@@@@@@
+@@@@@@@@@@@@@@@8    O@@@@@@@@@@8Oo[0;40;31m::::::::[0;40;37mooO8@@@@@O.   O@@@@@@@@@@@@@@@@@@@@@@@@@@@@8:.      .o@@@@@@@@@o    O@@@@@@@
+@@@@@@@@@@@@@@@@o    8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8:    :O8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@o.    :O@@@8o.  .o@@@@@@@@@
+@@@@@@@@@@@@@@@@@:    :8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8:      ...:oO8@@@@@@@@@@@@@@@@@@@@@@@@@O:   .O8.    .O@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@O:    :@@@@@@@@@@@@@@@@@@@@@@@@@@@O.   [0;40;33m...[0;40;37m          O@@@@@@@@@@@@@@@@@@@@@@@O       .O8@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@:    :O@@@@@@@@@@@@@@@@@@@@@@@@@O   [0;40;33m:O888Ooo:..[0;40;37m    :8@@@@@@@@@@@@@@@@@@@@O:     :O@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@8o     .O8@@@@@@@@@@@@@@@@@@@@@O:  [0;40;33m.o8888888888O.[0;40;37m  .O@@@@@@@@@@@OO888@8O:.    :O@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@O        o8@@@@@@@@@@@@@@@@@@@o   [0;40;33m:88888888888o[0;40;37m   o8@@@@@@@:              o8@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@:          .:88@@@@@@@@@@@@@8:   [0;40;33mo8888O88888O.[0;40;37m  .8@@@@@@@O    [1;40;33m..[0;40;37m     .::O@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@O.                  .:o          [0;40;33m8888[0;40;37m@@@@[0;40;33m888o.[0;40;37m  o8@@@@@8o   [0;40;33mo88o.[0;40;37m   @@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@o        .OOo:.                 [0;40;33mO88[0;40;37m@@@@@[0;40;33m888o.[0;40;37m  :8@@@@@o   [0;40;33m:O88.[0;40;37m   .@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@8o         :@@@@@O:             [0;40;33m.O8[0;40;37m@@@@[0;40;33m8888O:[0;40;37m   .O88O:   [0;40;33m.O88O[0;40;37m    O@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@:                             [0;40;33m.o8[0;40;37m@@@@[0;40;33m[0;40;33m888888O:[0;40;37m         [0;40;33m.888O:[0;40;37m   o8@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@8o                            [0;40;33m.O[0;40;37m@@@@[0;40;33m888888888Oo:...ooO8888:   [0;40;37m:8@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8o                         [0;40;33mo8[0;40;37m@@@@[0;40;33m888888888888888888888O.[0;40;37m  :8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@o.                      [0;40;33m.8[0;40;37m@@@@[0;40;33m888888888888888888888O:[0;40;37m   o@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@O:.                 [0;40;33m.o8[0;40;37m@@@@@[0;40;33m88888888888888888888Oo[0;40;37m   :8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8OOo::::::.   [0;40;33mo888[0;40;37m@@@@@[0;40;33m88888888888888888888o.[0;40;37m   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8:   [0;40;33mo888[0;40;37m@@@@@[0;40;33m88888888888888888888.[0;40;37m   .@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8:   [0;40;33mo888[0;40;37m@@@@@[0;40;33m88888888888888888888O[0;40;37m   .O@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@O.   [0;40;33mO8888[0;40;37m@@@[0;40;33m88888888888888888888O.[0;40;37m   O@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@o    [0;40;33m8888888888888888888888888888o[0;40;37m   o8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.    [0;40;33m. ..:oOO8888888888888888888o.[0;40;37m  .8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@O.           [0;40;33m..:oO8888888888888O.[0;40;37m  .O@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8OO.             [0;40;33m.oOO88O.[0;40;37m   O@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@88:..          [0;40;33m...[0;40;37m    8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@88Ooo:.          @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8OoOO@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+----------------------------------------------------------------------------------------------------------------------
+                                                  Congratulations!                						            
+----------------------------------------------------------------------------------------------------------------------
+Simulation complete via $finish(1) at time 51200 PS + 0
+../01_RTL/PATTERN_Adder_4bit.v:139 $finish;	
+ncsim> exit
+TOOL:	irun(64)	15.20-s084: Exiting on Oct 24, 2023 at 03:06:20 CST  (total: 00:00:02)
