@@ -1,0 +1,11 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+TESTBED_example.v
+-define
+RTL
+-debug
+-notimingchecks
+-loadpli1
+debpli:novas_pli_boot

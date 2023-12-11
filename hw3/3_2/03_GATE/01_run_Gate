@@ -1,0 +1,1 @@
+irun  ../00_TESTBED/TESTBED.v -define GATE -debug -v asap7sc7p5t_SIMPLE_RVT_TT_08302018.v  asap7sc7p5t_SEQ_RVT_TT_08302018.v  asap7sc7p5t_INVBUF_RVT_TT_08302018.v -nontcglitch -loadpli1 debpli:novas_pli_boot

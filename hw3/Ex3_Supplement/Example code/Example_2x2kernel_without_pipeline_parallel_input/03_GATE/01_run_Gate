@@ -1,0 +1,2 @@
+irun  TESTBED_Convolution.v -define GATE -debug -v /home/??/asap7sc7p5t_SIMPLE_RVT_TT_08302018.v  /home/??/asap7sc7p5t_SEQ_RVT_TT_08302018.v  /home/??/asap7sc7p5t_INVBUF_RVT_TT_08302018.v -nontcglitch -loadpli1 debpli:novas_pli_boot
+--> ?? is the path of corresbonding file, you need to modify the path
