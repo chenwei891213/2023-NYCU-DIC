@@ -1,0 +1,6 @@
+$DATA1 SOURCE='HSPICE' VERSION='Q-2020.03-SP2-2 linux64' PARAM_COUNT=0
+.TITLE '.title measure edp'
+ delay3           power            energy           temper          
+ alter#          
+ -1.600e-06        2.205e-07        1.120e-05         25.0000       
+1               

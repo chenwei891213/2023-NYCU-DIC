@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : Comparator
+Version: T-2022.03
+Date   : Wed Dec  6 03:20:59 2023
+****************************************
+
+Library(s) Used:
+
+    asap7sc7p5t_SIMPLE_RVT_TT_08302018 (File: /RAID2/COURSE/dic/dic098/ASAP7_PDKandLIB_v1p6/ASAP7_PDKandLIB_v1p6/lib_release_191006/asap7_7p5t_library/rev25/LIB/NLDM/asap7sc7p5t_SIMPLE_RVT_TT_08302018.db)
+
+Number of ports:                          129
+Number of nets:                           210
+Number of cells:                           82
+Number of combinational cells:             82
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                          0
+Number of references:                       6
+
+Combinational area:                161.663038
+Buf/Inv area:                        0.000000
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                   161.663038
+Total area:                 undefined
+1

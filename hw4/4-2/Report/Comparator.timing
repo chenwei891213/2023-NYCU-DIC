@@ -1,0 +1,43 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Comparator
+Version: T-2022.03
+Date   : Wed Dec  6 03:20:59 2023
+****************************************
+
+Operating Conditions: PVT_0P7V_25C   Library: asap7sc7p5t_INVBUF_RVT_TT_08302018
+Wire Load Model Mode: top
+
+  Startpoint: B[47] (input port)
+  Endpoint: Out (output port)
+  Path Group: default
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 r
+  B[47] (in)                               0.00       0.00 r
+  U79/Y (XNOR2xp5_ASAP7_75t_R)            14.28      14.28 r
+  U87/Y (NAND4xp25_ASAP7_75t_R)           18.47      32.74 f
+  U74/Y (NOR5xp2_ASAP7_75t_R)             26.10      58.84 r
+  U83/Y (NAND4xp25_ASAP7_75t_R)           21.97      80.81 f
+  U10/Y (NOR5xp2_ASAP7_75t_R)             17.38      98.19 r
+  Out (out)                                0.00      98.19 r
+  data arrival time                                  98.19
+
+  max_delay                              280.00     280.00
+  output external delay                    0.00     280.00
+  data required time                                280.00
+  -----------------------------------------------------------
+  data required time                                280.00
+  data arrival time                                 -98.19
+  -----------------------------------------------------------
+  slack (MET)                                       181.81
+
+
+1

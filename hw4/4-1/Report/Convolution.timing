@@ -1,0 +1,76 @@
+Error: Unit conflict found: Constraint time unit is 'ns'; main library time unit is 'ps'. (IFS-001)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Convolution
+Version: T-2022.03
+Date   : Mon Dec  4 22:19:59 2023
+****************************************
+
+Operating Conditions: PVT_0P7V_25C   Library: asap7sc7p5t_INVBUF_RVT_TT_08302018
+Wire Load Model Mode: top
+
+  Startpoint: INW_3[2] (input port)
+  Endpoint: Output[8] (output port)
+  Path Group: default
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  INW_3[2] (in)                                           0.00       0.00 f
+  mult_19_4/b[2] (Convolution_DW_mult_uns_0)              0.00       0.00 f
+  mult_19_4/U116/Y (NAND2xp33_ASAP7_75t_R)               20.81      20.81 r
+  mult_19_4/U114/Y (NOR2xp33_ASAP7_75t_R)                30.77      51.58 f
+  mult_19_4/U39/SN (FAx1_ASAP7_75t_R)                    61.57     113.15 f
+  mult_19_4/U95/Y (XNOR2xp5_ASAP7_75t_R)                 28.23     141.37 r
+  mult_19_4/U92/Y (NAND2xp33_ASAP7_75t_R)                12.63     154.01 f
+  mult_19_4/U91/Y (NAND2xp33_ASAP7_75t_R)                25.12     179.12 r
+  mult_19_4/U87/Y (NAND2xp33_ASAP7_75t_R)                14.50     193.62 f
+  mult_19_4/U86/Y (NAND2xp33_ASAP7_75t_R)                25.11     218.74 r
+  mult_19_4/U82/Y (NAND2xp33_ASAP7_75t_R)                14.50     233.23 f
+  mult_19_4/U81/Y (NAND2xp33_ASAP7_75t_R)                25.11     258.34 r
+  mult_19_4/U78/Y (XOR2xp5_ASAP7_75t_R)                  39.48     297.82 r
+  mult_19_4/product[6] (Convolution_DW_mult_uns_0)        0.00     297.82 r
+  add_1_root_add_0_root_add_19_3/B[6] (Convolution_DW01_add_2)
+                                                          0.00     297.82 r
+  add_1_root_add_0_root_add_19_3/U1_6/SN (FAx1_ASAP7_75t_R)
+                                                         40.86     338.68 r
+  add_1_root_add_0_root_add_19_3/U11/Y (INVx1_ASAP7_75t_R)
+                                                         17.87     356.55 f
+  add_1_root_add_0_root_add_19_3/SUM[6] (Convolution_DW01_add_2)
+                                                          0.00     356.55 f
+  add_0_root_add_0_root_add_19_3/B[6] (Convolution_DW01_add_0)
+                                                          0.00     356.55 f
+  add_0_root_add_0_root_add_19_3/U1_6/CON (FAx1_ASAP7_75t_R)
+                                                         22.90     379.45 r
+  add_0_root_add_0_root_add_19_3/U4/Y (INVx1_ASAP7_75t_R)
+                                                         15.27     394.72 f
+  add_0_root_add_0_root_add_19_3/U1_7/CON (FAx1_ASAP7_75t_R)
+                                                         20.30     415.02 r
+  add_0_root_add_0_root_add_19_3/U3/Y (INVx1_ASAP7_75t_R)
+                                                         15.27     430.29 f
+  add_0_root_add_0_root_add_19_3/U1_8/SN (FAx1_ASAP7_75t_R)
+                                                         37.50     467.79 f
+  add_0_root_add_0_root_add_19_3/U11/Y (INVx1_ASAP7_75t_R)
+                                                          8.03     475.82 r
+  add_0_root_add_0_root_add_19_3/SUM[8] (Convolution_DW01_add_0)
+                                                          0.00     475.82 r
+  Output[8] (out)                                         0.00     475.82 r
+  data arrival time                                                475.82
+
+  max_delay                                             500.00     500.00
+  output external delay                                   0.00     500.00
+  data required time                                               500.00
+  --------------------------------------------------------------------------
+  data required time                                               500.00
+  data arrival time                                               -475.82
+  --------------------------------------------------------------------------
+  slack (MET)                                                       24.18
+
+
+1

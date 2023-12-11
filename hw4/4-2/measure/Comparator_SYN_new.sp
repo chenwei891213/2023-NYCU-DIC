@@ -1,0 +1,282 @@
+.SUBCKT Comparator VSS VDD  A[63] A[62] A[61] A[60] A[59] A[58] A[57] A[56] A[55] A[54] A[53] A[52] A[51] A[50] A[49] A[48] A[47] A[46] A[45] A[44] A[43] A[42] A[41] A[40] A[39] A[38] A[37] A[36] A[35] A[34] A[33] A[32] A[31] A[30] A[29] A[28] A[27] A[26] A[25] A[24] A[23] A[22] A[21] A[20] A[19] A[18] A[17] A[16] A[15] A[14] A[13] A[12] A[11] A[10] A[9] A[8] A[7] A[6] A[5] A[4] A[3] A[2] A[1] A[0] B[63] B[62] B[61] B[60] B[59] B[58] B[57] B[56] B[55] B[54] B[53] B[52] B[51] B[50] B[49] B[48] B[47] B[46] B[45] B[44] B[43] B[42] B[41] B[40] B[39] B[38] B[37] B[36] B[35] B[34] B[33] B[32] B[31] B[30] B[29] B[28] B[27] B[26] B[25] B[24] B[23] B[22] B[21] B[20] B[19] B[18] B[17] B[16] B[15] B[14] B[13] B[12] B[11] B[10] B[9] B[8] B[7] B[6] B[5] B[4] B[3] B[2] B[1] B[0] Out
+XU10 VSS VDD  n1 n2 n3 n4 n5 OUT_BUF NOR5
+X_BUF1 VSS VDD OUT_buf OUT BUFX3_ASAP7_75T_R
+XU11 VSS VDD n6 n7 n8 n9 n10 n5_buf NAND5XP2_ASAP7_75T_R
+XU12 VSS VDD B[4] A[4] n14_buf XOR2X2_ASAP7_75T_R
+XU13 VSS VDD B[5] A[5] n13_buf XOR2X2_ASAP7_75T_R
+XU14 VSS VDD B[6] A[6] n12_buf XOR2X2_ASAP7_75T_R
+XU15 VSS VDD B[7] A[7] n11_buf XOR2X2_ASAP7_75T_R
+XU16 VSS VDD B[3] A[3] n9_buf XNOR2xp5_ASAP7_75t_R
+XU17 VSS VDD B[2] A[2] n8_buf XNOR2xp5_ASAP7_75t_R
+XU18 VSS VDD B[1] A[1] n7_buf XNOR2xp5_ASAP7_75t_R
+XU19 VSS VDD B[0] A[0] n6_buf XNOR2xp5_ASAP7_75t_R
+XU20 VSS VDD n15 n16 n17 n18 n19 n4_buf NAND5XP2_ASAP7_75T_R
+XU21 VSS VDD B[14] A[14] n23_buf XOR2X2_ASAP7_75T_R
+XU22 VSS VDD B[15] A[15] n22_buf XOR2X2_ASAP7_75T_R
+XU23 VSS VDD B[8] A[8] n21_buf XOR2X2_ASAP7_75T_R
+XU24 VSS VDD B[9] A[9] n20_buf XOR2X2_ASAP7_75T_R
+XU25 VSS VDD B[13] A[13] n18_buf XNOR2xp5_ASAP7_75t_R
+XU26 VSS VDD B[12] A[12] n17_buf XNOR2xp5_ASAP7_75t_R
+XU27 VSS VDD B[11] A[11] n16_buf XNOR2xp5_ASAP7_75t_R
+XU28 VSS VDD B[10] A[10] n15_buf XNOR2xp5_ASAP7_75t_R
+XU29 VSS VDD n24 n25 n26 n27 n28 n3_buf NAND5XP2_ASAP7_75T_R
+XU30 VSS VDD B[20] A[20] n32_buf XOR2X2_ASAP7_75T_R
+XU31 VSS VDD B[21] A[21] n31_buf XOR2X2_ASAP7_75T_R
+XU32 VSS VDD B[22] A[22] n30_buf XOR2X2_ASAP7_75T_R
+XU33 VSS VDD B[23] A[23] n29_buf XOR2X2_ASAP7_75T_R
+XU34 VSS VDD B[19] A[19] n27_buf XNOR2xp5_ASAP7_75t_R
+XU35 VSS VDD B[18] A[18] n26_buf XNOR2xp5_ASAP7_75t_R
+XU36 VSS VDD B[17] A[17] n25_buf XNOR2xp5_ASAP7_75t_R
+XU37 VSS VDD B[16] A[16] n24_buf XNOR2xp5_ASAP7_75t_R
+XU38 VSS VDD n33 n34 n35 n36 n37 n2_buf NAND5XP2_ASAP7_75T_R
+XU39 VSS VDD B[36] A[36] n41_buf XOR2X2_ASAP7_75T_R
+XU40 VSS VDD B[37] A[37] n40_buf XOR2X2_ASAP7_75T_R
+XU41 VSS VDD B[38] A[38] n39_buf XOR2X2_ASAP7_75T_R
+XU42 VSS VDD B[39] A[39] n38_buf XOR2X2_ASAP7_75T_R
+XU43 VSS VDD B[35] A[35] n36_buf XNOR2xp5_ASAP7_75t_R
+XU44 VSS VDD B[34] A[34] n35_buf XNOR2xp5_ASAP7_75t_R
+XU45 VSS VDD B[33] A[33] n34_buf XNOR2xp5_ASAP7_75t_R
+XU46 VSS VDD B[32] A[32] n33_buf XNOR2xp5_ASAP7_75t_R
+XU47 VSS VDD n46 n47 n48 n49 n50 n45_buf NOR5
+XU48 VSS VDD B[24] A[24] n50_buf XOR2X2_ASAP7_75T_R
+XU49 VSS VDD B[25] A[25] n49_buf XOR2X2_ASAP7_75T_R
+XU50 VSS VDD B[26] A[26] n48_buf XOR2X2_ASAP7_75T_R
+XU51 VSS VDD B[27] A[27] n47_buf XOR2X2_ASAP7_75T_R
+XU52 VSS VDD B[31] A[31] n54_buf XNOR2xp5_ASAP7_75t_R
+XU53 VSS VDD B[30] A[30] n53_buf XNOR2xp5_ASAP7_75t_R
+XU54 VSS VDD B[29] A[29] n52_buf XNOR2xp5_ASAP7_75t_R
+XU55 VSS VDD B[28] A[28] n51_buf XNOR2xp5_ASAP7_75t_R
+XU56 VSS VDD n55 n56 n57 n58 n59 n44_buf NOR5
+XU57 VSS VDD B[56] A[56] n59_buf XOR2X2_ASAP7_75T_R
+XU58 VSS VDD B[57] A[57] n58_buf XOR2X2_ASAP7_75T_R
+XU59 VSS VDD B[58] A[58] n57_buf XOR2X2_ASAP7_75T_R
+XU60 VSS VDD B[59] A[59] n56_buf XOR2X2_ASAP7_75T_R
+XU61 VSS VDD B[63] A[63] n63_buf XNOR2xp5_ASAP7_75t_R
+XU62 VSS VDD B[62] A[62] n62_buf XNOR2xp5_ASAP7_75t_R
+XU63 VSS VDD B[61] A[61] n61_buf XNOR2xp5_ASAP7_75t_R
+XU64 VSS VDD B[60] A[60] n60_buf XNOR2xp5_ASAP7_75t_R
+XU65 VSS VDD n64 n65 n66 n67 n68 n43_buf NOR5
+XU66 VSS VDD B[48] A[48] n68_buf XOR2X2_ASAP7_75T_R
+XU67 VSS VDD B[49] A[49] n67_buf XOR2X2_ASAP7_75T_R
+XU68 VSS VDD B[50] A[50] n66_buf XOR2X2_ASAP7_75T_R
+XU69 VSS VDD B[51] A[51] n65_buf XOR2X2_ASAP7_75T_R
+XU70 VSS VDD B[55] A[55] n72_buf XNOR2xp5_ASAP7_75t_R
+XU71 VSS VDD B[54] A[54] n71_buf XNOR2xp5_ASAP7_75t_R
+XU72 VSS VDD B[53] A[53] n70_buf XNOR2xp5_ASAP7_75t_R
+XU73 VSS VDD B[52] A[52] n69_buf XNOR2xp5_ASAP7_75t_R
+XU74 VSS VDD n73 n74 n75 n76 n77 n42_buf NOR5
+XU75 VSS VDD B[40] A[40] n77_buf XOR2X2_ASAP7_75T_R
+XU76 VSS VDD B[41] A[41] n76_buf XOR2X2_ASAP7_75T_R
+XU77 VSS VDD B[42] A[42] n75_buf XOR2X2_ASAP7_75T_R
+XU78 VSS VDD B[43] A[43] n74_buf XOR2X2_ASAP7_75T_R
+XU79 VSS VDD B[47] A[47] n81_buf XNOR2xp5_ASAP7_75t_R
+XU80 VSS VDD B[46] A[46] n80_buf XNOR2xp5_ASAP7_75t_R
+XU81 VSS VDD B[45] A[45] n79_buf XNOR2xp5_ASAP7_75t_R
+XU82 VSS VDD B[44] A[44] n78_buf XNOR2xp5_ASAP7_75t_R
+XU83 VSS VDD n42 n43 n44 n45 n1_buf NAND4XP75_ASAP7_75T_R
+XU84 VSS VDD n60 n61 n62 n63 n55_buf NAND4XP75_ASAP7_75T_R
+XU85 VSS VDD n51 n52 n53 n54 n46_buf NAND4XP75_ASAP7_75T_R
+XU86 VSS VDD n69 n70 n71 n72 n64_buf NAND4XP75_ASAP7_75T_R
+XU87 VSS VDD n78 n79 n80 n81 n73_buf NAND4XP75_ASAP7_75T_R
+XU88 VSS VDD n11 n12 n13 n14 n10_buf NOR4
+XU89 VSS VDD n20 n21 n22 n23 n19_buf NOR4
+XU90 VSS VDD n29 n30 n31 n32 n28_buf NOR4
+XU91 VSS VDD n38 n39 n40 n41 n37_buf NOR4
+
+* X_BUF2 VSS VDD OUT_buf1 OUT BUFX3_ASAP7_75T_R 
+* X_BUF3 VSS VDD OUT_buf1 OUT BUFX3_ASAP7_75T_R 
+* XU92 VSS VDD OUT_INV OUT INVx1_ASAP7_75t_R
+Cwire_loading0 n5 gnd 3fF
+Cwire_loading1 n14 gnd 3fF
+Cwire_loading2 n13 gnd 3fF
+Cwire_loading3 n12 gnd 3fF
+Cwire_loading4 n11 gnd 3fF
+Cwire_loading5 n9 gnd 3fF
+Cwire_loading6 n8 gnd 3fF
+Cwire_loading7 n7 gnd 3fF
+Cwire_loading8 n6 gnd 3fF
+Cwire_loading9 n4 gnd 3fF
+Cwire_loading10 n23 gnd 3fF
+Cwire_loading11 n22 gnd 3fF
+Cwire_loading12 n21 gnd 3fF
+Cwire_loading13 n20 gnd 3fF
+Cwire_loading14 n18 gnd 3fF
+Cwire_loading15 n17 gnd 3fF
+Cwire_loading16 n16 gnd 3fF
+Cwire_loading17 n15 gnd 3fF
+Cwire_loading18 n3 gnd 3fF
+Cwire_loading19 n32 gnd 3fF
+Cwire_loading20 n31 gnd 3fF
+Cwire_loading21 n30 gnd 3fF
+Cwire_loading22 n29 gnd 3fF
+Cwire_loading23 n27 gnd 3fF
+Cwire_loading24 n26 gnd 3fF
+Cwire_loading25 n25 gnd 3fF
+Cwire_loading26 n24 gnd 3fF
+Cwire_loading27 n2 gnd 3fF
+Cwire_loading28 n41 gnd 3fF
+Cwire_loading29 n40 gnd 3fF
+Cwire_loading30 n39 gnd 3fF
+Cwire_loading31 n38 gnd 3fF
+Cwire_loading32 n36 gnd 3fF
+Cwire_loading33 n35 gnd 3fF
+Cwire_loading34 n34 gnd 3fF
+Cwire_loading35 n33 gnd 3fF
+Cwire_loading36 n45 gnd 3fF
+Cwire_loading37 n50 gnd 3fF
+Cwire_loading38 n49 gnd 3fF
+Cwire_loading39 n48 gnd 3fF
+Cwire_loading40 n47 gnd 3fF
+Cwire_loading41 n54 gnd 3fF
+Cwire_loading42 n53 gnd 3fF
+Cwire_loading43 n52 gnd 3fF
+Cwire_loading44 n51 gnd 3fF
+Cwire_loading45 n44 gnd 3fF
+Cwire_loading46 n59 gnd 3fF
+Cwire_loading47 n58 gnd 3fF
+Cwire_loading48 n57 gnd 3fF
+Cwire_loading49 n56 gnd 3fF
+Cwire_loading50 n63 gnd 3fF
+Cwire_loading51 n62 gnd 3fF
+Cwire_loading52 n61 gnd 3fF
+Cwire_loading53 n60 gnd 3fF
+Cwire_loading54 n43 gnd 3fF
+Cwire_loading55 n68 gnd 3fF
+Cwire_loading56 n67 gnd 3fF
+Cwire_loading57 n66 gnd 3fF
+Cwire_loading58 n65 gnd 3fF
+Cwire_loading59 n72 gnd 3fF
+Cwire_loading60 n71 gnd 3fF
+Cwire_loading61 n70 gnd 3fF
+Cwire_loading62 n69 gnd 3fF
+Cwire_loading63 n42 gnd 3fF
+Cwire_loading64 n77 gnd 3fF
+Cwire_loading65 n76 gnd 3fF
+Cwire_loading66 n75 gnd 3fF
+Cwire_loading67 n74 gnd 3fF
+Cwire_loading68 n81 gnd 3fF
+Cwire_loading69 n80 gnd 3fF
+Cwire_loading70 n79 gnd 3fF
+Cwire_loading71 n78 gnd 3fF
+Cwire_loading72 n1 gnd 3fF
+Cwire_loading73 n55 gnd 3fF
+Cwire_loading74 n46 gnd 3fF
+Cwire_loading75 n64 gnd 3fF
+Cwire_loading76 n73 gnd 3fF
+Cwire_loading77 n10 gnd 3fF
+Cwire_loading78 n19 gnd 3fF
+Cwire_loading79 n28 gnd 3fF
+Cwire_loading80 n37 gnd 3fF
+X_wire_buf0 VSS VDD n5_buf n5 BUFX3_ASAP7_75T_R 
+X_wire_buf1 VSS VDD n14_buf n14 BUFX3_ASAP7_75T_R   
+X_wire_buf2 VSS VDD n13_buf n13 BUFX3_ASAP7_75T_R   
+X_wire_buf3 VSS VDD n12_buf n12 BUFX3_ASAP7_75T_R   
+X_wire_buf4 VSS VDD n11_buf n11 BUFX3_ASAP7_75T_R   
+X_wire_buf5 VSS VDD n9_buf n9 BUFX3_ASAP7_75T_R 
+X_wire_buf6 VSS VDD n8_buf n8 BUFX3_ASAP7_75T_R 
+X_wire_buf7 VSS VDD n7_buf n7 BUFX3_ASAP7_75T_R 
+X_wire_buf8 VSS VDD n6_buf n6 BUFX3_ASAP7_75T_R 
+X_wire_buf9 VSS VDD n4_buf n4 BUFX3_ASAP7_75T_R 
+X_wire_buf10 VSS VDD n23_buf n23 BUFX3_ASAP7_75T_R  
+X_wire_buf11 VSS VDD n22_buf n22 BUFX3_ASAP7_75T_R  
+X_wire_buf12 VSS VDD n21_buf n21 BUFX3_ASAP7_75T_R  
+X_wire_buf13 VSS VDD n20_buf n20 BUFX3_ASAP7_75T_R  
+X_wire_buf14 VSS VDD n18_buf n18 BUFX3_ASAP7_75T_R  
+X_wire_buf15 VSS VDD n17_buf n17 BUFX3_ASAP7_75T_R  
+X_wire_buf16 VSS VDD n16_buf n16 BUFX3_ASAP7_75T_R  
+X_wire_buf17 VSS VDD n15_buf n15 BUFX3_ASAP7_75T_R  
+X_wire_buf18 VSS VDD n3_buf n3 BUFX3_ASAP7_75T_R    
+X_wire_buf19 VSS VDD n32_buf n32 BUFX3_ASAP7_75T_R  
+X_wire_buf20 VSS VDD n31_buf n31 BUFX3_ASAP7_75T_R  
+X_wire_buf21 VSS VDD n30_buf n30 BUFX3_ASAP7_75T_R  
+X_wire_buf22 VSS VDD n29_buf n29 BUFX3_ASAP7_75T_R  
+X_wire_buf23 VSS VDD n27_buf n27 BUFX3_ASAP7_75T_R  
+X_wire_buf24 VSS VDD n26_buf n26 BUFX3_ASAP7_75T_R  
+X_wire_buf25 VSS VDD n25_buf n25 BUFX3_ASAP7_75T_R  
+X_wire_buf26 VSS VDD n24_buf n24 BUFX3_ASAP7_75T_R  
+X_wire_buf27 VSS VDD n2_buf n2 BUFX3_ASAP7_75T_R    
+X_wire_buf28 VSS VDD n41_buf n41 BUFX3_ASAP7_75T_R  
+X_wire_buf29 VSS VDD n40_buf n40 BUFX3_ASAP7_75T_R  
+X_wire_buf30 VSS VDD n39_buf n39 BUFX3_ASAP7_75T_R  
+X_wire_buf31 VSS VDD n38_buf n38 BUFX3_ASAP7_75T_R  
+X_wire_buf32 VSS VDD n36_buf n36 BUFX3_ASAP7_75T_R  
+X_wire_buf33 VSS VDD n35_buf n35 BUFX3_ASAP7_75T_R  
+X_wire_buf34 VSS VDD n34_buf n34 BUFX3_ASAP7_75T_R  
+X_wire_buf35 VSS VDD n33_buf n33 BUFX3_ASAP7_75T_R  
+X_wire_buf36 VSS VDD n45_buf n45 BUFX3_ASAP7_75T_R  
+X_wire_buf37 VSS VDD n50_buf n50 BUFX3_ASAP7_75T_R  
+X_wire_buf38 VSS VDD n49_buf n49 BUFX3_ASAP7_75T_R  
+X_wire_buf39 VSS VDD n48_buf n48 BUFX3_ASAP7_75T_R  
+X_wire_buf40 VSS VDD n47_buf n47 BUFX3_ASAP7_75T_R  
+X_wire_buf41 VSS VDD n54_buf n54 BUFX3_ASAP7_75T_R  
+X_wire_buf42 VSS VDD n53_buf n53 BUFX3_ASAP7_75T_R  
+X_wire_buf43 VSS VDD n52_buf n52 BUFX3_ASAP7_75T_R  
+X_wire_buf44 VSS VDD n51_buf n51 BUFX3_ASAP7_75T_R  
+X_wire_buf45 VSS VDD n44_buf n44 BUFX3_ASAP7_75T_R  
+X_wire_buf46 VSS VDD n59_buf n59 BUFX3_ASAP7_75T_R  
+X_wire_buf47 VSS VDD n58_buf n58 BUFX3_ASAP7_75T_R  
+X_wire_buf48 VSS VDD n57_buf n57 BUFX3_ASAP7_75T_R  
+X_wire_buf49 VSS VDD n56_buf n56 BUFX3_ASAP7_75T_R  
+X_wire_buf50 VSS VDD n63_buf n63 BUFX3_ASAP7_75T_R  
+X_wire_buf51 VSS VDD n62_buf n62 BUFX3_ASAP7_75T_R  
+X_wire_buf52 VSS VDD n61_buf n61 BUFX3_ASAP7_75T_R  
+X_wire_buf53 VSS VDD n60_buf n60 BUFX3_ASAP7_75T_R  
+X_wire_buf54 VSS VDD n43_buf n43 BUFX3_ASAP7_75T_R  
+X_wire_buf55 VSS VDD n68_buf n68 BUFX3_ASAP7_75T_R  
+X_wire_buf56 VSS VDD n67_buf n67 BUFX3_ASAP7_75T_R  
+X_wire_buf57 VSS VDD n66_buf n66 BUFX3_ASAP7_75T_R  
+X_wire_buf58 VSS VDD n65_buf n65 BUFX3_ASAP7_75T_R  
+X_wire_buf59 VSS VDD n72_buf n72 BUFX3_ASAP7_75T_R  
+X_wire_buf60 VSS VDD n71_buf n71 BUFX3_ASAP7_75T_R  
+X_wire_buf61 VSS VDD n70_buf n70 BUFX3_ASAP7_75T_R  
+X_wire_buf62 VSS VDD n69_buf n69 BUFX3_ASAP7_75T_R  
+X_wire_buf63 VSS VDD n42_buf n42 BUFX3_ASAP7_75T_R  
+X_wire_buf64 VSS VDD n77_buf n77 BUFX3_ASAP7_75T_R  
+X_wire_buf65 VSS VDD n76_buf n76 BUFX3_ASAP7_75T_R  
+X_wire_buf66 VSS VDD n75_buf n75 BUFX3_ASAP7_75T_R  
+X_wire_buf67 VSS VDD n74_buf n74 BUFX3_ASAP7_75T_R  
+X_wire_buf68 VSS VDD n81_buf n81 BUFX3_ASAP7_75T_R  
+X_wire_buf69 VSS VDD n80_buf n80 BUFX3_ASAP7_75T_R  
+X_wire_buf70 VSS VDD n79_buf n79 BUFX3_ASAP7_75T_R  
+X_wire_buf71 VSS VDD n78_buf n78 BUFX3_ASAP7_75T_R  
+X_wire_buf72 VSS VDD n1_buf n1 BUFX3_ASAP7_75T_R    
+X_wire_buf73 VSS VDD n55_buf n55 BUFX3_ASAP7_75T_R  
+X_wire_buf74 VSS VDD n46_buf n46 BUFX3_ASAP7_75T_R  
+X_wire_buf75 VSS VDD n64_buf n64 BUFX3_ASAP7_75T_R  
+X_wire_buf76 VSS VDD n73_buf n73 BUFX3_ASAP7_75T_R  
+X_wire_buf77 VSS VDD n10_buf n10 BUFX3_ASAP7_75T_R  
+X_wire_buf78 VSS VDD n19_buf n19 BUFX3_ASAP7_75T_R  
+X_wire_buf79 VSS VDD n28_buf n28 BUFX3_ASAP7_75T_R  
+X_wire_buf80 VSS VDD n37_buf n37 BUFX3_ASAP7_75T_R  
+
+
+.ENDS
+
+* .subckt NAND4 VSS VDD A B C D  out 
+*     X1 VSS VDD A B C Y NAND3X1_ASAP7_75T_R
+*     X3 VSS VDD Y buf_y INVX13_ASAP7_75T_R   
+*     X2 VSS VDD buf_y D  Out NAND2XP67_ASAP7_75T_R    
+* .ENDS
+* .subckt NAND5 VSS VDD A B C D E out 
+*     X1 VSS VDD A B C Y NAND3xp33_ASAP7_75t_R
+*     X3 0 VDD Y buf_y INVX13_ASAP7_75T_R
+*     X2 VSS VDD buf_y_ D E Out NAND3xp33_ASAP7_75t_R    
+* .ENDS
+.subckt NOR5 VSS VDD A B C D E out 
+    X1 VSS VDD A INV_A INVX1_ASAP7_75T_R
+    X2 VSS VDD B INV_B INVX1_ASAP7_75T_R
+    X3 VSS VDD C INV_C INVX1_ASAP7_75T_R
+    X4 VSS VDD D INV_D INVX1_ASAP7_75T_R
+    X5 VSS VDD E INV_E INVX1_ASAP7_75T_R
+    X6 VSS VDD INV_A INV_B INV_C INV_D INV_E y NAND5XP2_ASAP7_75T_R
+    X7 VSS VDD Y OUT INVX1_ASAP7_75T_R
+.ENDS
+
+.subckt NOR4 VSS VDD A B C D  out 
+    X1 VSS VDD A INV_A INVX1_ASAP7_75T_R
+    X2 VSS VDD B INV_B INVX1_ASAP7_75T_R
+    X3 VSS VDD C INV_C INVX1_ASAP7_75T_R
+    X4 VSS VDD D INV_D INVX1_ASAP7_75T_R
+    X6 VSS VDD INV_A INV_B INV_C INV_D Y NAND4XP25_ASAP7_75T_R
+    X7 VSS VDD Y OUT INVX1_ASAP7_75T_R
+.ENDS
