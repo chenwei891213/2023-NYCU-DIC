@@ -1,0 +1,3 @@
+export SYNOPSYS_LC_ROOT=SYNOPSYS_LC_ROOT
+pt_shell -f ptpx.tcl | tee CORE_power.log
+

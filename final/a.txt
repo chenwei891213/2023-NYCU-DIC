@@ -1,0 +1,146 @@
+module Convolution(
+	//input
+	clk,
+	rst_n,
+	in_valid,
+	weight_valid,
+	In_IFM,	
+	In_Weight,
+	//output
+	out_valid, 
+	Out_OFM	
+);
+
+input clk, rst_n, in_valid, weight_valid;
+
+input reg[3:0]In_IFM[0:31];
+input reg[3:0]In_Weight[0:31];
+output reg out_valid;
+output reg [12:0]Out_OFM;
+
+// reg [7:0] In_IFM[0:31];
+// reg [7:0] In_Weight[0:31];
+
+reg tmp_valid;
+reg [12:0]Reg_Out_OFM;
+reg [12:0]Reg_Out_OFM1;
+reg [12:0]Reg_Out_OFM2;
+reg [12:0]Reg_Out_OFM3;
+reg [12:0]Reg_Out_OFM4;
+reg [12:0]Reg_Out_OFM5;
+reg [12:0]Reg_Out_OFM6;
+reg [12:0]Reg_Out_OFM7;
+reg [12:0]Reg_Out_OFM8;
+reg [12:0]Reg_Out_OFM9;
+reg [12:0]Reg_Out_OFM10;
+reg [12:0]Reg_Out_OFM11;
+reg [12:0]Reg_Out_OFM12;
+reg [12:0]Reg_Out_OFM13;
+reg [12:0]Reg_Out_OFM14;
+reg [12:0]Reg_Out_OFM15;
+// always @(posedge clk or negedge rst_n) begin
+// 	if(!rst_n)begin
+// 		for(integer i=0;i<32;i=i+1)
+// 			In_IFM[i] <= 0;
+// 	end
+// 	else if(in_valid)begin
+// 		for(integer i=0;i<32;i=i+1)
+// 			In_IFM[i] <= In_IFM[i];
+// 		end
+// 	else begin
+// 		for(integer i=0;i<32;i=i+1)
+// 			In_IFM[i] <= In_IFM[i];
+// 	end
+// end
+
+// Receive Weight 
+// always @(posedge clk or negedge rst_n) begin
+// 	if(!rst_n)begin
+// 		for(integer i=0;i<32;i=i+1)
+// 			In_Weight[i] <= 0;
+//     end
+//     else if(weight_valid)begin
+//      	for(integer i=0;i<32;i=i+1)
+// 			In_Weight[i] <= In_Weight[i];
+//     end
+//     else begin
+//         for(integer i=0;i<32;i=i+1)
+// 			In_Weight[i] <= In_Weight[i];
+//     end
+// end
+
+
+always@(posedge clk or negedge rst_n)begin
+	if(!rst_n)
+	begin
+		Reg_Out_OFM		<= 0;
+		Reg_Out_OFM1	<= 0;
+		Reg_Out_OFM2	<= 0;
+		Reg_Out_OFM3	<= 0;
+	end
+	else begin
+		Reg_Out_OFM <=In_IFM[0]*In_Weight[0]+In_IFM[1]*In_Weight[1];
+		Reg_Out_OFM1 <= In_IFM[8]*In_Weight[8]+In_IFM[9]*In_Weight[9]; 
+		Reg_Out_OFM2 <=	In_IFM[16]*In_Weight[16]+In_IFM[17]*In_Weight[17];
+		Reg_Out_OFM3 <= In_IFM[24]*In_Weight[24]+In_IFM[25]*In_Weight[25];
+		Reg_Out_OFM4 <= In_IFM[4]*In_Weight[4]+In_IFM[5]*In_Weight[5];
+		Reg_Out_OFM5 <= In_IFM[12]*In_Weight[12]+In_IFM[13]*In_Weight[13];
+		Reg_Out_OFM6 <= In_IFM[20]*In_Weight[20]+In_IFM[21]*In_Weight[21];
+		Reg_Out_OFM7 <= In_IFM[28]*In_Weight[28]+In_IFM[29]*In_Weight[29];
+		Reg_Out_OFM8 <= In_IFM[2]*In_Weight[2]+In_IFM[3]*In_Weight[3];
+		Reg_Out_OFM9 <= In_IFM[10]*In_Weight[10]+In_IFM[11]*In_Weight[11];
+		Reg_Out_OFM10 <= In_IFM[18]*In_Weight[18]+In_IFM[19]*In_Weight[19];
+		Reg_Out_OFM11 <= In_IFM[26]*In_Weight[26]+In_IFM[27]*In_Weight[27];
+		Reg_Out_OFM12 <= In_IFM[6]*In_Weight[6]+In_IFM[7]*In_Weight[7];
+		Reg_Out_OFM13 <= In_IFM[14]*In_Weight[14]+In_IFM[15]*In_Weight[15];
+		Reg_Out_OFM14 <= In_IFM[22]*In_Weight[22]+In_IFM[23]*In_Weight[23];
+		Reg_Out_OFM15 <= In_IFM[30]*In_Weight[30]+In_IFM[31]*In_Weight[31];
+		// Reg_Out_OFM = 0;
+		// for (integer i=0;i<32;i=i+1)
+		// 	Reg_Out_OFM = Reg_Out_OFM + In_IFM[i]*In_Weight[i];
+	end
+end
+reg [12:0]out;
+reg [12:0]out1;
+reg [12:0]out2;
+reg [12:0]out3;
+always@(posedge clk or negedge rst_n) begin
+	if(!rst_n) begin
+		out <= 0;
+		out1 <= 0;
+  end
+	else begin
+		out <= Reg_Out_OFM + Reg_Out_OFM1 + Reg_Out_OFM2 + Reg_Out_OFM3 ;
+		out1 <= Reg_Out_OFM8 + Reg_Out_OFM9 + Reg_Out_OFM10 + Reg_Out_OFM11 ;
+		out2 <= Reg_Out_OFM4 + Reg_Out_OFM5 + Reg_Out_OFM6 + Reg_Out_OFM7;
+		out3 <=Reg_Out_OFM12 + Reg_Out_OFM13 + Reg_Out_OFM14 + Reg_Out_OFM15;
+
+  end
+end
+reg tmp_valid1;
+reg tmp_valid2;
+reg tmp_valid3;
+
+always@(posedge clk or negedge rst_n) begin
+	if(!rst_n) begin
+		tmp_valid <= 0;
+    out_valid <= 0;
+  end
+	else begin
+		tmp_valid <= in_valid;
+		tmp_valid1 <= tmp_valid;
+		out_valid <= tmp_valid1;
+    // out_valid <= tmp_valid2;
+  end
+end
+
+always@(posedge clk  or negedge rst_n) begin
+	if(!rst_n)begin
+		Out_OFM <= 0;
+	end
+	else begin
+		Out_OFM <= out + out1 + out2 + out3;
+	end
+end
+
+endmodule
